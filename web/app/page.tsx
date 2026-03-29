@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Caveat } from "next/font/google";
 import { galleryShots, services, testimonials } from "@/lib/static-content";
 import { formatUGX } from "@/lib/utils";
+
+const accentScript = Caveat({
+  subsets: ["latin"],
+  weight: ["700"],
+});
 
 export default function Home() {
   const featuredServices = services.slice(0, 3);
@@ -9,34 +15,61 @@ export default function Home() {
 
   return (
     <div className="pb-20">
-      <section className="shell pt-8 sm:pt-12">
-        <div className="luxury-card relative overflow-hidden p-8 sm:p-12">
-          <div className="absolute inset-0 bg-[linear-gradient(130deg,rgba(95,68,64,0.08),rgba(202,139,120,0.2),rgba(156,122,79,0.08))]" />
-          <div className="relative space-y-6">
-            <p className="inline-flex rounded-full border border-brand-cocoa/20 bg-white/80 px-4 py-1 text-xs tracking-[0.2em] text-brand-cocoa uppercase">
-              Luxury Nail Atelier • Kampala
-            </p>
-            <h1 className="max-w-3xl font-serif text-4xl leading-tight text-brand-cocoa sm:text-5xl lg:text-6xl">
-              Precision nail artistry and concierge-level care for women who love elegant detail.
+      <section className="relative min-h-[94vh] overflow-hidden bg-[#221b1a] text-white">
+        <div className="absolute inset-0 grid md:grid-cols-2">
+          <div className="relative">
+            <Image
+              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1500&q=80"
+              alt="Smiling beauty portrait"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/28 via-black/24 to-black/8" />
+          </div>
+          <div className="relative">
+            <Image
+              src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1500&q=80"
+              alt="Elegant manicured hand detail"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-[rgba(214,171,178,0.55)]" />
+          </div>
+        </div>
+
+        <div className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-px -translate-x-1/2 bg-white/22 md:block" />
+
+        <div className="relative z-10 shell flex min-h-[94vh] flex-col items-center justify-center pt-24 pb-8 text-center sm:pb-12">
+          <div className="max-w-5xl">
+            <h1 className="font-serif text-[3.2rem] leading-[0.96] tracking-[-0.01em] sm:text-[4.8rem] lg:text-[7rem]">
+              Beautiful you,
+              <br />
+              <span className="inline-flex items-end gap-3 sm:gap-5">
+                <span
+                  className={`${accentScript.className} -mt-2 text-[0.72em] leading-none text-[#f5d9dd] sm:-mt-3`}
+                >
+                  from
+                </span>
+                <span>head to toe</span>
+              </span>
             </h1>
-            <p className="max-w-2xl text-base leading-8 text-muted sm:text-lg">
-              Russ Nails pairs studio-grade craftsmanship with premium comfort. Book high-end
-              appointments, browse curated nail products, and choose how you checkout.
+            <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/92 sm:text-2xl sm:leading-10">
+              We are excited to offer a curated range of nail services and products designed for a
+              refined, modern beauty lifestyle.
             </p>
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <Link
-                href="/services"
-                className="inline-flex items-center justify-center rounded-full bg-brand-cocoa px-7 py-3 text-sm font-semibold tracking-[0.16em] text-white uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
-              >
-                Explore Services
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full border border-brand-cocoa/25 bg-white/70 px-7 py-3 text-sm font-semibold tracking-[0.16em] text-brand-cocoa uppercase transition hover:-translate-y-0.5"
-              >
-                Book a Visit
-              </Link>
-            </div>
+          </div>
+
+          <div className="mt-auto">
+            <Link
+              href="/services"
+              className="inline-flex h-36 w-36 items-center justify-center rounded-full border border-white/50 bg-white/88 px-8 text-center text-xs font-semibold tracking-[0.28em] text-brand-cocoa uppercase transition hover:-translate-y-1 hover:bg-white"
+            >
+              Our Services Menu
+            </Link>
           </div>
         </div>
       </section>
