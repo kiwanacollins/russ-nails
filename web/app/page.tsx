@@ -1,9 +1,31 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Caveat } from "next/font/google";
 import { galleryShots, services, testimonials } from "@/lib/static-content";
 import { formatUGX } from "@/lib/utils";
 import { QuickBookBar } from "@/components/quick-book-bar";
+
+export const metadata: Metadata = {
+  title: "Russ Nails  Luxury Nail Salon in Kampala, Uganda",
+  description:
+    "Kampala's premier luxury nail studio. Gel extensions, Russian manicures, bespoke nail art, bridal packages & more. Book your appointment today.",
+  keywords: [
+    "nail salon Kampala",
+    "luxury nail studio Uganda",
+    "gel nails Kampala",
+    "Russian manicure Kampala",
+    "nail art Uganda",
+    "bridal nails Kampala",
+    "Russ Nails",
+  ],
+  openGraph: {
+    title: "Russ Nails  Luxury Nail Salon in Kampala",
+    description:
+      "Kampala's premier nail studio. Gel extensions, Russian manicures, bespoke nail art & bridal packages. Book via WhatsApp today.",
+    type: "website",
+  },
+};
 
 const accentScript = Caveat({
   subsets: ["latin"],
@@ -46,21 +68,24 @@ export default function Home() {
 
         <div className="relative z-10 shell flex min-h-screen flex-col items-center justify-center pt-24 pb-8 text-center sm:pb-12">
           <div className="max-w-5xl">
+            <p className="text-xs font-semibold tracking-[0.22em] text-white/60 uppercase mb-5">
+              Kampala&apos;s Luxury Nail Studio
+            </p>
             <h1 className="font-serif text-[3.2rem] leading-[0.96] tracking-[-0.01em] sm:text-[4.8rem] lg:text-[7rem]">
-              Beautiful you,
+              Nails done
               <br />
               <span className="inline-flex items-end gap-3 sm:gap-5">
                 <span
                   className={`${accentScript.className} -mt-2 text-[0.72em] leading-none text-[#f5d9dd] sm:-mt-3`}
                 >
-                  from
+                  the
                 </span>
-                <span>head to toe</span>
+                <span>right way</span>
               </span>
             </h1>
-            <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/92 sm:text-2xl sm:leading-10">
-              We are excited to offer a curated range of nail services and products designed for a
-              refined, modern beauty lifestyle.
+            <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/85 sm:text-xl sm:leading-9">
+              Kampala&apos;s premier nail salon  gel extensions, Russian manicures, bespoke nail art,
+              and bridal packages crafted for women who expect the best.
             </p>
           </div>
 
