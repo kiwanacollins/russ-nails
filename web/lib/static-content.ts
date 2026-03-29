@@ -140,7 +140,7 @@ export const fallbackProducts: Product[] = [
     featured: false,
     images: [
       {
-        url: "https://images.unsplash.com/photo-1583241800698-6b213f8ff2a3?auto=format&fit=crop&w=900&q=80",
+        url: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80",
         alt: "Top coat bottle",
       },
     ],
