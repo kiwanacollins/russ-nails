@@ -48,7 +48,7 @@ export function SiteHeader() {
         </Link>
 
         {/* Nav */}
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav className={`hidden items-center gap-1 md:flex ${isHome ? "text-white" : "text-[#a06070]"}`}>
           {navLinks.map((item, i) => (
             <div key={item.href} className="flex items-center">
               {i !== 0 && (
@@ -59,10 +59,10 @@ export function SiteHeader() {
                 className={`rounded-full px-3 py-1.5 text-xs font-semibold tracking-[0.12em] uppercase transition ${
                   pathname === item.href
                     ? isHome
-                      ? "bg-white/20 text-white"
+                      ? "bg-white/25 text-white backdrop-blur-sm"
                       : "bg-[#fce8ea] text-[#c4717c]"
                     : isHome
-                    ? "text-white/85 hover:bg-white/15 hover:text-white"
+                    ? "text-white hover:bg-white/20"
                     : "text-[#a06070]/80 hover:bg-[#fce8ea] hover:text-[#c4717c]"
                 }`}
               >
@@ -86,13 +86,13 @@ export function SiteHeader() {
           >
             ♡ Book a Visit
           </a>
-          <CartPill variant={isHome ? "light" : "rose"} />
+          <CartPill />
         </div>
       </div>
 
       {/* Decorative bottom line on non-home */}
       {!isHome && (
-        <div className="h-px bg-gradient-to-r from-transparent via-[#f2b8c0] to-transparent" />
+        <div className="h-px bg-linear-to-r from-transparent via-[#f2b8c0] to-transparent" />
       )}
     </header>
   );
