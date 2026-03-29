@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Caveat } from "next/font/google";
 import { galleryShots, services, testimonials } from "@/lib/static-content";
 import { formatUGX } from "@/lib/utils";
+import { QuickBookBar } from "@/components/quick-book-bar";
 
 const accentScript = Caveat({
   subsets: ["latin"],
@@ -66,13 +67,15 @@ export default function Home() {
           <div className="mt-auto">
             <Link
               href="/services"
-              className="inline-flex h-36 w-36 items-center justify-center rounded-full border border-white/50 bg-white/88 px-8 text-center text-xs font-semibold tracking-[0.28em] text-brand-cocoa uppercase transition hover:-translate-y-1 hover:bg-white"
+              className="inline-flex h-36 w-36 items-center justify-center rounded-full border border-white/50 bg-white/88 px-8 text-center text-xs font-semibold tracking-[0.28em] text-black uppercase transition hover:-translate-y-1 hover:bg-white"
             >
               Our Services Menu
             </Link>
           </div>
         </div>
       </section>
+
+      <QuickBookBar />
 
       <section className="shell mt-20">
         <div className="mb-10 flex items-end justify-between gap-4">
