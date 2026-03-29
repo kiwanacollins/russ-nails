@@ -27,13 +27,13 @@ export function SiteHeader() {
       className={
         isHome
           ? "absolute inset-x-0 top-0 z-40"
-          : "sticky top-0 z-40 border-b border-brand-cocoa/10 bg-surface/85 backdrop-blur"
+          : "sticky top-0 z-40 border-b border-white/10 bg-brand-cocoa/90 backdrop-blur"
       }
     >
       <div className="shell flex h-20 items-center justify-between gap-4">
         <Link
           href="/"
-          className={`font-serif text-2xl ${isHome ? "text-white drop-shadow-[0_6px_22px_rgba(0,0,0,0.35)]" : "text-brand-cocoa"}`}
+          className={`font-serif text-2xl text-white drop-shadow-[0_6px_22px_rgba(0,0,0,0.35)]`}
         >
           Russ Nails
         </Link>
@@ -43,9 +43,7 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className={`text-sm font-semibold tracking-[0.14em] uppercase transition ${
-                isHome ? "text-white/90 hover:text-white" : "text-brand-cocoa/85 hover:text-brand-clay"
-              }`}
+              className="text-sm font-semibold tracking-[0.14em] uppercase transition text-white/90 hover:text-white"
             >
               {item.label}
             </Link>
@@ -57,15 +55,11 @@ export function SiteHeader() {
             href={bookingLink}
             target="_blank"
             rel="noreferrer"
-            className={`hidden rounded-full px-4 py-2 text-xs font-semibold tracking-[0.16em] uppercase transition hover:-translate-y-0.5 sm:inline-flex ${
-              isHome
-                ? "border border-white/45 bg-white/12 text-white backdrop-blur hover:bg-white/20"
-                : "border border-brand-cocoa/20 bg-white/80 text-brand-cocoa"
-            }`}
+            className="hidden rounded-full px-4 py-2 text-xs font-semibold tracking-[0.16em] uppercase transition hover:-translate-y-0.5 sm:inline-flex border border-white/45 bg-white/12 text-white backdrop-blur hover:bg-white/20"
           >
             Book a Visit
           </a>
-          <CartPill variant={isHome ? "light" : "default"} />
+          <CartPill variant="light" />
         </div>
       </div>
     </header>
