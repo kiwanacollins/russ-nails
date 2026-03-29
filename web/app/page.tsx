@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <div className="pb-20">
-      <section className="relative min-h-[94vh] overflow-hidden bg-[#221b1a] text-white">
+      <section className="relative min-h-screen overflow-hidden bg-[#221b1a] text-white">
         <div className="absolute inset-0 grid md:grid-cols-2">
           <div className="relative">
             <Image
@@ -44,7 +44,7 @@ export default function Home() {
 
         <div className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-px -translate-x-1/2 bg-white/22 md:block" />
 
-        <div className="relative z-10 shell flex min-h-[94vh] flex-col items-center justify-center pt-24 pb-8 text-center sm:pb-12">
+        <div className="relative z-10 shell flex min-h-screen flex-col items-center justify-center pt-24 pb-8 text-center sm:pb-12">
           <div className="max-w-5xl">
             <h1 className="font-serif text-[3.2rem] leading-[0.96] tracking-[-0.01em] sm:text-[4.8rem] lg:text-[7rem]">
               Beautiful you,
