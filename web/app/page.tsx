@@ -49,7 +49,7 @@ export default function Home() {
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/28 via-black/24 to-black/8" />
+            <div className="absolute inset-0 bg-linear-to-r from-black/28 via-black/24 to-black/8" />
           </div>
           <div className="relative">
             <Image
@@ -93,6 +93,7 @@ export default function Home() {
             <Link
               href="/services"
               className="inline-flex h-36 w-36 items-center justify-center rounded-full border border-white/50 bg-white/88 px-8 text-center text-xs font-semibold tracking-[0.28em] text-black uppercase transition hover:-translate-y-1 hover:bg-white"
+              style={{ color: "#000000" }}
             >
               Our Services Menu
             </Link>
