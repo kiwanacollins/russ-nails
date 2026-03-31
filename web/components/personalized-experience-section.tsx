@@ -21,11 +21,11 @@ export function PersonalizedExperienceSection({
     offset: ["start end", "end start"],
   });
 
-  const firstImageY = useTransform(scrollYProgress, [0, 1], [36, -38]);
-  const secondImageY = useTransform(scrollYProgress, [0, 1], [-44, 44]);
-  const detailCardY = useTransform(scrollYProgress, [0, 1], [18, -20]);
-  const firstImageRotate = useTransform(scrollYProgress, [0, 1], [-11, -5]);
-  const secondImageRotate = useTransform(scrollYProgress, [0, 1], [11, 5]);
+  const leftImageY = useTransform(scrollYProgress, [0, 1], [24, -30]);
+  const rightImageY = useTransform(scrollYProgress, [0, 1], [-30, 30]);
+  const contentCardY = useTransform(scrollYProgress, [0, 1], [14, -16]);
+  const leftImageRotate = useTransform(scrollYProgress, [0, 1], [-12, -7]);
+  const rightImageRotate = useTransform(scrollYProgress, [0, 1], [12, 7]);
 
   return (
     <section ref={sectionRef} className="shell mt-20">
@@ -42,36 +42,37 @@ export function PersonalizedExperienceSection({
             </h2>
           </div>
 
-          <div className="relative mx-auto w-full max-w-176 min-h-144 sm:min-h-160">
+          <div className="relative mx-auto w-full max-w-176 min-h-144 sm:min-h-168">
             <motion.figure
-              style={{ y: firstImageY, rotate: firstImageRotate }}
-              className="absolute left-[8%] top-[8%] z-20 h-72 w-[52%] overflow-hidden rounded-[1.9rem] border border-white/40 shadow-[0_26px_60px_-35px_rgba(37,23,20,0.55)] sm:h-96"
+              style={{ y: leftImageY, rotate: leftImageRotate }}
+              className="absolute left-[-1%] top-[7%] z-10 h-72 w-[54%] overflow-hidden rounded-[1.9rem] border border-white/40 shadow-[0_26px_60px_-35px_rgba(37,23,20,0.55)] sm:h-96"
             >
               <Image
                 src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80"
                 alt="Luxury manicure setup"
                 fill
-                sizes="(max-width: 1024px) 52vw, 24vw"
+                sizes="(max-width: 1024px) 54vw, 24vw"
                 className="object-cover"
               />
             </motion.figure>
 
             <motion.figure
-              style={{ y: secondImageY, rotate: secondImageRotate }}
-              className="absolute right-[8%] top-[6%] z-30 h-72 w-[52%] overflow-hidden rounded-[1.9rem] border border-white/35 shadow-[0_26px_60px_-35px_rgba(37,23,20,0.55)] sm:h-96"
+              style={{ y: rightImageY, rotate: rightImageRotate }}
+              className="absolute right-[-1%] top-[7%] z-20 h-72 w-[54%] overflow-hidden rounded-[1.9rem] border border-white/35 shadow-[0_26px_60px_-35px_rgba(37,23,20,0.55)] sm:h-96"
             >
               <Image
-                src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=80"
-                alt="Nail artist preparing tools"
+                src="https://images.unsplash.com/photo-1515688594390-b649af70d282?auto=format&fit=crop&w=900&q=80"
+                alt="Nail mood board"
                 fill
-                sizes="(max-width: 1024px) 52vw, 24vw"
+                sizes="(max-width: 1024px) 54vw, 24vw"
                 className="object-cover"
               />
+              <div className="absolute inset-0 bg-linear-to-tr from-black/58 via-black/40 to-black/20" />
             </motion.figure>
 
             <motion.div
-              style={{ y: detailCardY }}
-              className="absolute right-0 bottom-[1%] z-40 w-[84%] rounded-[1.8rem] border border-brand-cocoa/14 bg-surface/97 p-5 shadow-[0_24px_40px_-28px_rgba(44,28,22,0.45)] backdrop-blur sm:w-[64%] sm:p-6"
+              style={{ y: contentCardY }}
+              className="absolute bottom-0 left-1/2 z-30 w-[92%] -translate-x-1/2 rounded-[1.8rem] border border-brand-cocoa/14 bg-surface/97 p-5 shadow-[0_24px_40px_-28px_rgba(44,28,22,0.45)] backdrop-blur sm:w-[67%] sm:p-6"
             >
               <p className="text-sm leading-7 text-brand-cocoa/82 sm:text-[1.05rem] sm:leading-8">
                 We created this studio as a calm, elegant destination where every appointment is mapped
