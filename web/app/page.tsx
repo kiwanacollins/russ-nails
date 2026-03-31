@@ -5,6 +5,7 @@ import { Caveat } from "next/font/google";
 import { galleryShots, services, testimonials } from "@/lib/static-content";
 import { formatUGX } from "@/lib/utils";
 import { QuickBookBar } from "@/components/quick-book-bar";
+import { PersonalizedExperienceSection } from "@/components/personalized-experience-section";
 
 export const metadata: Metadata = {
   title: "Russ Nails  Luxury Nail Salon in Kampala, Uganda",
@@ -162,75 +163,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="shell mt-20">
-        <div className="grid gap-8 lg:grid-cols-[1.05fr_1fr] lg:items-center">
-          <div className="relative min-h-130 rounded-[2.2rem] border border-brand-cocoa/10 bg-[#f6e9e4] p-4 sm:p-6">
-            <div className="absolute -right-2 -top-2 hidden rounded-full border border-brand-cocoa/20 bg-surface px-4 py-1 text-[11px] tracking-[0.14em] text-brand-cocoa/70 uppercase sm:inline-flex">
-              A Space For You
-            </div>
-            <div className="grid h-full gap-4 sm:grid-cols-[0.9fr_1.1fr]">
-              <div className="relative overflow-hidden rounded-[1.7rem]">
-                <Image
-                  src="https://images.unsplash.com/photo-1607006344380-b6775a0824cd?auto=format&fit=crop&w=900&q=80"
-                  alt="Nail artist preparing tools"
-                  fill
-                  sizes="(max-width: 640px) 100vw, 40vw"
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative overflow-hidden rounded-[1.7rem]">
-                <Image
-                  src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&w=900&q=80"
-                  alt="Luxury manicure setup"
-                  fill
-                  sizes="(max-width: 640px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <p className="text-sm tracking-[0.18em] text-brand-cocoa/70 uppercase">Personalized Experience</p>
-            <h2 className="mt-3 font-serif text-3xl leading-tight text-brand-cocoa sm:text-4xl">
-              Personalized beauty treatments tailored to your rhythm.
-            </h2>
-            <p className="mt-4 text-sm leading-7 text-muted sm:text-base">
-              We created this studio as a calm, elegant destination where every appointment is mapped
-              to your preferences. From shape profiling to aftercare planning, each step is intentional.
-            </p>
-
-            <ul className="mt-6 space-y-2">
-              {packagePoints.map((point) => (
-                <li
-                  key={point}
-                  className="flex items-start gap-3 rounded-xl border border-brand-cocoa/10 bg-surface/80 px-4 py-3 text-sm text-brand-cocoa"
-                >
-                  <span className="mt-1 inline-flex h-4 w-4 items-center justify-center rounded-full bg-brand-cocoa text-[10px] text-white">
-                    ✓
-                  </span>
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-brand-cocoa px-7 py-3 text-xs font-semibold tracking-[0.16em] text-white uppercase transition hover:-translate-y-0.5"
-              >
-                More About Us
-              </Link>
-              <Link
-                href="/services"
-                className="inline-flex items-center justify-center rounded-full border border-brand-cocoa/35 px-7 py-3 text-xs font-semibold tracking-[0.16em] text-brand-cocoa uppercase transition hover:-translate-y-0.5"
-              >
-                View Packages
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PersonalizedExperienceSection accentClassName={accentScript.className} points={packagePoints} />
 
       <section className="shell mt-20">
         <div className="mb-10 flex items-end justify-between gap-4">
