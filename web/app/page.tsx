@@ -76,7 +76,7 @@ export default function Home() {
         <div className="absolute inset-0 grid md:grid-cols-2">
           <div className="relative">
             <Image
-              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1500&q=80"
+              src="https://images.unsplash.com/photo-1690749138086-7422f71dc159?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Smiling beauty portrait"
               fill
               priority
@@ -87,7 +87,7 @@ export default function Home() {
           </div>
           <div className="relative">
             <Image
-              src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1500&q=80"
+              src="https://images.unsplash.com/photo-1619607146034-5a05296c8f9a?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Elegant manicured hand detail"
               fill
               priority
