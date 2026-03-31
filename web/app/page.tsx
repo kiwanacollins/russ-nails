@@ -156,38 +156,50 @@ export default function Home() {
 
       <section className="shell mt-14">
         <div
-          className="relative overflow-hidden rounded-[2.7rem] border border-brand-cocoa/12 bg-[#efe7e2] px-4 py-6 sm:px-8 sm:py-10"
+          className="relative overflow-hidden rounded-[2.9rem] border border-brand-cocoa/12 bg-[#efe7e2] px-4 py-8 sm:px-8 sm:py-12"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG5haWwlMjBhcnR8ZW58MHx8MHx8fDA%3D')",
+              "url('https://images.unsplash.com/photo-1604654894610-df63bc536371?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmFpbHxlbnwwfHwwfHx8MA%3D%3D')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <div className="relative grid gap-4 lg:grid-cols-[0.9fr_2fr_0.9fr] lg:items-center">
-            <div className="order-2 flex flex-wrap justify-center gap-3 lg:order-1 lg:flex-col lg:items-end lg:justify-center">
-              <span className="inline-flex rounded-full border border-brand-cocoa/20 bg-white/75 px-4 py-2 text-[10px] font-semibold tracking-[0.2em] text-brand-cocoa/70 uppercase lg:rotate-[-8deg]">
-                Precision
-              </span>
-              <span className="inline-flex rounded-full border border-brand-cocoa/20 bg-white/75 px-4 py-2 text-[10px] font-semibold tracking-[0.2em] text-brand-cocoa/70 uppercase lg:rotate-[5deg]">
-                Care
-              </span>
-            </div>
+          <div className="absolute inset-0 bg-[#f6ede9]/60 backdrop-blur-[1px]" />
+          <div className="promise-glow-pulse absolute -left-20 top-10 h-52 w-52 rounded-full bg-[#f0b5c8]/32 blur-3xl" />
+          <div className="promise-glow-pulse absolute -right-18 bottom-8 h-56 w-56 rounded-full bg-[#e6c7a3]/28 blur-3xl" />
 
-            <div className="order-1 rounded-4xl border border-brand-cocoa/12 bg-surface/94 px-5 py-8 text-center shadow-[0_24px_60px_-35px_rgba(56,34,29,0.45)] sm:px-9 sm:py-10 lg:order-2">
+          <div className="relative mx-auto max-w-6xl">
+            <div className="promise-card-float mx-auto rounded-[2.2rem] border border-white/75 bg-surface/92 px-6 py-8 text-center shadow-[0_32px_70px_-40px_rgba(77,47,58,0.62)] backdrop-blur-sm sm:px-10 sm:py-12 lg:max-w-3xl">
               <p className="text-xs font-semibold tracking-[0.24em] text-brand-cocoa/65 uppercase">Our Promise</p>
-              <h2 className="mx-auto mt-4 max-w-4xl font-serif text-[2rem] leading-[1.15] text-brand-cocoa sm:text-[2.8rem]">
+              <h2 className="mx-auto mt-4 max-w-4xl font-serif text-[2rem] leading-[1.14] text-brand-cocoa sm:text-[2.95rem]">
                 We are here for you and excited to bring your beauty vision to life with precision, artistry, and care.
               </h2>
             </div>
 
-            <div className="order-3 flex flex-wrap justify-center gap-3 lg:flex-col lg:items-start lg:justify-center">
-              <span className="inline-flex rounded-full border border-brand-cocoa/20 bg-white/75 px-4 py-2 text-[10px] font-semibold tracking-[0.2em] text-brand-cocoa/70 uppercase lg:rotate-[8deg]">
-                Artistry
-              </span>
-              <span className="inline-flex rounded-full border border-brand-cocoa/20 bg-white/75 px-4 py-2 text-[10px] font-semibold tracking-[0.2em] text-brand-cocoa/70 uppercase lg:rotate-[-5deg]">
-                Intention
-              </span>
+            <div className="pointer-events-none absolute left-0 top-1/2 hidden -translate-y-1/2 flex-col gap-3 lg:flex">
+              <div className="-rotate-8">
+                <span className="promise-chip-bob inline-flex rounded-full border border-brand-cocoa/15 bg-white/86 px-5 py-2.5 text-xs font-semibold tracking-[0.2em] text-brand-cocoa/70 uppercase">
+                  Precision
+                </span>
+              </div>
+              <div className="rotate-5 pl-6">
+                <span className="promise-chip-bob-delayed inline-flex rounded-full border border-brand-cocoa/15 bg-white/86 px-5 py-2.5 text-xs font-semibold tracking-[0.2em] text-brand-cocoa/70 uppercase">
+                  Care
+                </span>
+              </div>
+            </div>
+
+            <div className="pointer-events-none absolute right-0 top-1/2 hidden -translate-y-1/2 flex-col gap-3 lg:flex">
+              <div className="rotate-8 pr-6">
+                <span className="promise-chip-bob-delayed inline-flex rounded-full border border-brand-cocoa/15 bg-white/86 px-5 py-2.5 text-xs font-semibold tracking-[0.2em] text-brand-cocoa/70 uppercase">
+                  Artistry
+                </span>
+              </div>
+              <div className="-rotate-6">
+                <span className="promise-chip-bob inline-flex rounded-full border border-brand-cocoa/15 bg-white/86 px-5 py-2.5 text-xs font-semibold tracking-[0.2em] text-brand-cocoa/70 uppercase">
+                  Intention
+                </span>
+              </div>
             </div>
           </div>
         </div>
