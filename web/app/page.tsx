@@ -155,11 +155,41 @@ export default function Home() {
       <QuickBookBar />
 
       <section className="shell mt-14">
-        <div className="luxury-card p-8 text-center sm:p-12">
-          <p className="text-xs font-semibold tracking-[0.2em] text-brand-cocoa/65 uppercase">Our Promise</p>
-          <h2 className="mx-auto mt-3 max-w-4xl font-serif text-3xl leading-tight text-brand-cocoa sm:text-4xl">
-            We are here for you and excited to bring your beauty vision to life with precision, artistry, and care.
-          </h2>
+        <div
+          className="relative overflow-hidden rounded-[2.7rem] border border-brand-cocoa/12 bg-[#efe7e2] px-4 py-6 sm:px-8 sm:py-10"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG5haWwlMjBhcnR8ZW58MHx8MHx8fDA%3D')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="relative grid gap-4 lg:grid-cols-[0.9fr_2fr_0.9fr] lg:items-center">
+            <div className="order-2 flex flex-wrap justify-center gap-3 lg:order-1 lg:flex-col lg:items-end lg:justify-center">
+              <span className="inline-flex rounded-full border border-brand-cocoa/20 bg-white/75 px-4 py-2 text-[10px] font-semibold tracking-[0.2em] text-brand-cocoa/70 uppercase lg:rotate-[-8deg]">
+                Precision
+              </span>
+              <span className="inline-flex rounded-full border border-brand-cocoa/20 bg-white/75 px-4 py-2 text-[10px] font-semibold tracking-[0.2em] text-brand-cocoa/70 uppercase lg:rotate-[5deg]">
+                Care
+              </span>
+            </div>
+
+            <div className="order-1 rounded-4xl border border-brand-cocoa/12 bg-surface/94 px-5 py-8 text-center shadow-[0_24px_60px_-35px_rgba(56,34,29,0.45)] sm:px-9 sm:py-10 lg:order-2">
+              <p className="text-xs font-semibold tracking-[0.24em] text-brand-cocoa/65 uppercase">Our Promise</p>
+              <h2 className="mx-auto mt-4 max-w-4xl font-serif text-[2rem] leading-[1.15] text-brand-cocoa sm:text-[2.8rem]">
+                We are here for you and excited to bring your beauty vision to life with precision, artistry, and care.
+              </h2>
+            </div>
+
+            <div className="order-3 flex flex-wrap justify-center gap-3 lg:flex-col lg:items-start lg:justify-center">
+              <span className="inline-flex rounded-full border border-brand-cocoa/20 bg-white/75 px-4 py-2 text-[10px] font-semibold tracking-[0.2em] text-brand-cocoa/70 uppercase lg:rotate-[8deg]">
+                Artistry
+              </span>
+              <span className="inline-flex rounded-full border border-brand-cocoa/20 bg-white/75 px-4 py-2 text-[10px] font-semibold tracking-[0.2em] text-brand-cocoa/70 uppercase lg:rotate-[-5deg]">
+                Intention
+              </span>
+            </div>
+          </div>
         </div>
       </section>
 
