@@ -260,9 +260,15 @@ a {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
+  p {
+    color: var(--ink) !important;
+  }
+
   html {
     @apply font-sans;
   }

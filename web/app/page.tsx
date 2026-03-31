@@ -324,10 +324,10 @@ export default function Home() {
 
       <section className="shell mt-20">
         <div className="grid gap-6 md:grid-cols-2">
-          <article className="luxury-card bg-brand-cocoa p-8 text-white sm:p-10">
-            <p className="text-xs tracking-[0.16em] text-white/70 uppercase">Salon Locations</p>
+          <article className="luxury-card bg-[#f3e5dc] p-8 text-brand-cocoa sm:p-10">
+            <p className="text-xs tracking-[0.16em] text-brand-cocoa/70 uppercase">Salon Locations</p>
             <h3 className="mt-3 font-serif text-3xl">Plan Your Visit</h3>
-            <p className="mt-4 max-w-md text-sm leading-7 text-white/80">
+            <p className="mt-4 max-w-md text-sm leading-7 text-muted">
               We host private and regular appointments in central Kampala with concierge-level service.
             </p>
             <Link
