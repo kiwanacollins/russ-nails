@@ -76,14 +76,14 @@ export function SiteHeader() {
               )}
               <Link
                 href={item.href}
-                className={`rounded-full px-3 py-1.5 text-xs font-semibold tracking-[0.12em] uppercase transition ${
+                className={`rounded-full px-3 py-1.5 text-sm font-bold tracking-[0.14em] uppercase transition ${
                   pathname === item.href
                     ? isHome
-                      ? "bg-white/25 text-white backdrop-blur-sm"
-                      : "bg-[#fce8ea] text-[#c4717c]"
+                      ? "bg-white/30 text-white ring-1 ring-white/35 backdrop-blur-sm drop-shadow-[0_1px_8px_rgba(0,0,0,0.32)]"
+                      : "bg-[#fce8ea] text-[#8d4f5e]"
                     : isHome
-                    ? "text-white hover:bg-white/20"
-                    : "text-[#a06070]/80 hover:bg-[#fce8ea] hover:text-[#c4717c]"
+                    ? "text-white drop-shadow-[0_1px_8px_rgba(0,0,0,0.45)] hover:bg-white/24"
+                    : "text-[#8d4f5e] hover:bg-[#fce8ea] hover:text-[#8d4f5e]"
                 }`}
               >
                 <span className="inline-flex items-center gap-1">
