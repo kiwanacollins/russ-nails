@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Manrope, Playfair_Display } from "next/font/google";
+import { Manrope, Playfair_Display, Geist } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { WhatsAppFab } from "../components/whatsapp-fab";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const bodyFont = Manrope({
   variable: "--font-body",
@@ -38,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${bodyFont.variable} ${headingFont.variable} h-full`}>
+    <html lang="en" className={cn("h-full", bodyFont.variable, headingFont.variable, "font-sans", geist.variable)}>
       <body className="min-h-full bg-background font-sans text-ink antialiased">
         <div className="relative flex min-h-full flex-col">
           <SiteHeader />

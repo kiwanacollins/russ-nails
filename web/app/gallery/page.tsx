@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { galleryShots } from "@/lib/static-content";
+import CircularGallery from "@/components/CircularGallery";
 
 export const metadata: Metadata = {
   title: "Gallery",
@@ -8,6 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function GalleryPage() {
+  const galleryItems = galleryShots.map((shot) => ({
+    image: shot.imageUrl,
+    text: shot.title,
+  }));
+
   return (
     <div className="shell py-12 sm:py-16">
       <header className="luxury-card p-8 sm:p-10">
@@ -19,16 +24,17 @@ export default function GalleryPage() {
         </p>
       </header>
 
-      <section className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {galleryShots.map((shot) => (
-          <figure key={shot.id} className="luxury-card overflow-hidden">
-            <Image src={shot.imageUrl} alt={shot.alt} width={900} height={1150} className="h-80 w-full object-cover" />
-            <figcaption className="p-4">
-              <p className="text-xs tracking-[0.16em] text-brand-cocoa/70 uppercase">{shot.category}</p>
-              <p className="mt-2 text-sm font-semibold text-brand-cocoa">{shot.title}</p>
-            </figcaption>
-          </figure>
-        ))}
+      <section className="mt-10">
+        <div className="luxury-card h-110 overflow-hidden bg-[#4b5b49] sm:h-140">
+          <CircularGallery
+            items={galleryItems}
+            bend={1.2}
+            textColor="#f7f2eb"
+            borderRadius={0.06}
+            scrollSpeed={1.9}
+            scrollEase={0.04}
+          />
+        </div>
       </section>
     </div>
   );

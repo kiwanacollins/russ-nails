@@ -1,3 +1,5 @@
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
 import type { CartItem } from "@/lib/types";
 
 const ugxFormatter = new Intl.NumberFormat("en-UG", {
@@ -5,6 +7,10 @@ const ugxFormatter = new Intl.NumberFormat("en-UG", {
   currency: "UGX",
   maximumFractionDigits: 0,
 });
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
 
 export function formatUGX(value: number): string {
   return ugxFormatter.format(value);

@@ -6,6 +6,7 @@ import { galleryShots, services, testimonials } from "@/lib/static-content";
 import { QuickBookBar } from "@/components/quick-book-bar";
 import { PersonalizedExperienceSection } from "@/components/personalized-experience-section";
 import { ServicesShowcaseSection } from "@/components/services-showcase-section";
+import CircularGallery from "@/components/CircularGallery";
 
 export const metadata: Metadata = {
   title: "Russ Nails  Luxury Nail Salon in Kampala, Uganda",
@@ -64,7 +65,10 @@ const blogHighlights = [
 
 export default function Home() {
   const featuredServices = services.slice(0, 5);
-  const featuredGallery = galleryShots.slice(0, 5);
+  const galleryItems = galleryShots.map((shot) => ({
+    image: shot.imageUrl,
+    text: shot.title,
+  }));
 
   return (
     <div className="pb-20">
@@ -290,24 +294,15 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-12">
-          <figure className="luxury-card overflow-hidden md:col-span-7">
-            <Image
-              src={featuredGallery[0]?.imageUrl ?? galleryShots[0].imageUrl}
-              alt={featuredGallery[0]?.alt ?? galleryShots[0].alt}
-              width={1400}
-              height={900}
-              className="h-110 w-full object-cover"
-            />
-          </figure>
-
-          <div className="grid gap-4 md:col-span-5">
-            {featuredGallery.slice(1, 3).map((item) => (
-              <figure key={item.id} className="luxury-card overflow-hidden">
-                <Image src={item.imageUrl} alt={item.alt} width={900} height={520} className="h-53 w-full object-cover" />
-              </figure>
-            ))}
-          </div>
+        <div className="luxury-card h-110 overflow-hidden bg-[#4b5b49] sm:h-140">
+          <CircularGallery
+            items={galleryItems}
+            bend={1.1}
+            textColor="#f7f2eb"
+            borderRadius={0.06}
+            scrollSpeed={1.8}
+            scrollEase={0.04}
+          />
         </div>
       </section>
 
