@@ -34,8 +34,6 @@ const accentScript = Caveat({
   weight: ["700"],
 });
 
-const partnerLogos = ["Luxe Bridal", "Kampala Vogue", "City Life", "Pearl Style", "Beauty Week", "Urbn Bride"];
-
 const packagePoints = [
   "Tailored treatments for every client.",
   "A full range of premium nail services.",
@@ -303,22 +301,6 @@ export default function Home() {
             scrollSpeed={1.8}
             scrollEase={0.04}
           />
-        </div>
-      </section>
-
-      <section className="shell mt-20">
-        <div className="rounded-[2.2rem] border border-brand-cocoa/10 bg-surface px-6 py-10 sm:px-10">
-          <p className="text-center text-xs tracking-[0.18em] text-brand-cocoa/60 uppercase">As Featured In</p>
-          <div className="mt-6 grid gap-3 sm:grid-cols-3 lg:grid-cols-6">
-            {partnerLogos.map((logo) => (
-              <div
-                key={logo}
-                className="flex h-14 items-center justify-center rounded-xl border border-brand-cocoa/10 bg-white text-sm font-semibold tracking-[0.12em] text-brand-cocoa/60 uppercase"
-              >
-                {logo}
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
