@@ -33,39 +33,18 @@ const accentScript = Caveat({
   weight: ["700"],
 });
 
-const teamMembers = [
-  {
-    name: "Mariam N.",
-    role: "Lead Nail Artist",
-    image:
-      "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    name: "Sharon K.",
-    role: "Gel Specialist",
-    image:
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    name: "Lydia A.",
-    role: "Bridal Styling Director",
-    image:
-      "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    name: "Natasha T.",
-    role: "Aftercare Consultant",
-    image:
-      "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=900&q=80",
-  },
-];
-
 const partnerLogos = ["Luxe Bridal", "Kampala Vogue", "City Life", "Pearl Style", "Beauty Week", "Urbn Bride"];
 
 const packagePoints = [
   "Tailored treatments for every client.",
   "A full range of premium nail services.",
   "Top-rated service quality and retention.",
+];
+
+const aboutPoints = [
+  "Tailored one-on-one consultations for every client.",
+  "High-quality products, artistry, and long-wear results.",
+  "A calm, premium studio atmosphere in Kampala.",
 ];
 
 const blogHighlights = [
@@ -169,7 +148,7 @@ export default function Home() {
           <div className="promise-glow-pulse absolute -right-18 bottom-8 h-56 w-56 rounded-full bg-[#e6c7a3]/28 blur-3xl" />
 
           <div className="relative mx-auto max-w-6xl">
-            <div className="promise-card-float mx-auto rounded-[2.2rem] border border-white/75 bg-surface/92 px-6 py-8 text-center shadow-[0_32px_70px_-40px_rgba(77,47,58,0.62)] backdrop-blur-sm sm:px-10 sm:py-12 lg:max-w-3xl">
+            <div className="promise-card-float mx-auto rounded-[2.2rem] border border-white/75 bg-transparent px-6 py-8 text-center shadow-none sm:px-10 sm:py-12 lg:max-w-3xl">
               <p className="text-xs font-semibold tracking-[0.24em] text-brand-cocoa/65 uppercase">Our Promise</p>
               <h2 className="mx-auto mt-4 max-w-4xl font-serif text-[2rem] leading-[1.14] text-brand-cocoa sm:text-[2.95rem]">
                 We are here for you and excited to bring your beauty vision to life with precision, artistry, and care.
@@ -209,63 +188,73 @@ export default function Home() {
 
       <ServicesShowcaseSection services={featuredServices} />
 
-      <section className="mt-20 border-y border-brand-cocoa/10 bg-[#f4e9e5] py-16">
-        <div className="shell">
-          <div className="mb-9 flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <p className="text-sm tracking-[0.18em] text-brand-cocoa/70 uppercase">Meet Our Stylists</p>
-              <h2 className="mt-2 max-w-3xl font-serif text-3xl text-brand-cocoa sm:text-4xl">
-                Creative artists, each with a distinct style and meticulous technique.
-              </h2>
+      <section className="shell mt-20">
+        <div className="overflow-hidden rounded-[2.4rem] border border-brand-cocoa/12">
+          <div className="grid md:grid-cols-2">
+            <div className="relative min-h-80 md:min-h-140">
+              <Image
+                src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1400&q=80"
+                alt="Elegant woman showing manicure"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+              />
             </div>
-            <Link
-              href="/contact"
-              className="inline-flex rounded-full border border-brand-cocoa/30 px-6 py-3 text-xs font-semibold tracking-[0.14em] text-brand-cocoa uppercase transition hover:-translate-y-0.5"
-            >
-              Meet The Team
-            </Link>
-          </div>
 
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {teamMembers.map((member) => (
-              <article key={member.name} className="overflow-hidden rounded-[1.8rem] border border-brand-cocoa/10 bg-surface">
-                <div className="relative h-64">
-                  <Image src={member.image} alt={member.name} fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-serif text-xl text-brand-cocoa">{member.name}</h3>
-                  <p className="mt-1 text-xs tracking-[0.14em] text-brand-cocoa/70 uppercase">{member.role}</p>
-                </div>
-              </article>
-            ))}
+            <div className="bg-[#6c7865] px-6 py-10 text-white sm:px-10 sm:py-12 lg:px-14 lg:py-14">
+              <p className="text-xs tracking-[0.24em] text-white/70 uppercase">About Us</p>
+              <h2 className="mt-4 font-serif text-[2.35rem] leading-[1.02] tracking-[-0.01em] sm:text-[3.2rem]">
+                A calming all-in-one
+                <br />
+                glow-up space
+                <span className={`${accentScript.className} ml-2 text-[0.8em] text-[#efd3de]`}>for you</span>
+              </h2>
+              <p className="mt-6 max-w-xl text-sm leading-7 text-white/92 sm:text-base">
+                Russ Nails is a boutique beauty studio designed around comfort, precision, and your personal style.
+                From classic maintenance to statement sets, we create a relaxing experience that still feels premium at every step.
+              </p>
+
+              <div className="mt-7 space-y-3">
+                {aboutPoints.map((point) => (
+                  <p key={point} className="flex items-start gap-3 text-sm leading-7 text-white/95 sm:text-base">
+                    <span className="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#d7a7b8] text-[0.72rem] font-bold text-white">
+                      ✓
+                    </span>
+                    <span>{point}</span>
+                  </p>
+                ))}
+              </div>
+
+              <Link
+                href="/contact"
+                className="mt-8 inline-flex items-center justify-center border border-black bg-black px-8 py-3 text-xs font-semibold tracking-[0.24em] text-white uppercase transition hover:bg-black/90"
+              >
+                Learn More
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="shell mt-20">
         <div className="relative overflow-hidden rounded-[2.4rem] border border-brand-cocoa/15">
-          <Image
-            src="https://images.unsplash.com/photo-1542820790-7606f5f0fd01?auto=format&fit=crop&w=1800&q=80"
-            alt="Salon ambiance video cover"
-            width={1800}
-            height={780}
+          <video
             className="h-75 w-full object-cover sm:h-110"
-          />
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-label="Salon ambiance background video"
+          >
+            <source src="/vidoes/russ-nails-demo-saloon.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-linear-to-r from-black/65 via-black/35 to-black/20" />
           <div className="absolute inset-0 flex flex-col justify-end p-7 text-white sm:p-10">
             <p className="text-xs tracking-[0.18em] text-white/70 uppercase">Studio Film</p>
             <h2 className="mt-2 max-w-xl font-serif text-3xl leading-tight sm:text-4xl">
               Step inside the Russ Nails experience.
             </h2>
-            <a
-              href="https://www.youtube.com/watch?v=1c_gHonRtYI"
-              target="_blank"
-              rel="noreferrer"
-              className="mt-5 inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-xl text-brand-cocoa transition hover:scale-105"
-              aria-label="Play studio video"
-            >
-              ▶
-            </a>
           </div>
         </div>
       </section>
