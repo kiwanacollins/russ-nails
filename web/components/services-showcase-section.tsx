@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import type { Service } from "@/lib/types";
 import { formatUGX } from "@/lib/utils";
 
@@ -46,17 +46,33 @@ const fallbackVisual = {
 
 export function ServicesShowcaseSection({ services }: ServicesShowcaseSectionProps) {
   const sliderRef = useRef<HTMLDivElement | null>(null);
+  const cardRefs = useRef<Array<HTMLElement | null>>([]);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const maxIndex = Math.max(services.length - 1, 0);
 
-  const scrollByCard = (direction: "prev" | "next") => {
+  const scrollToIndex = (index: number) => {
     const slider = sliderRef.current;
-    if (!slider) {
+    const targetCard = cardRefs.current[index];
+    if (!slider || !targetCard) {
       return;
     }
 
-    const step = Math.max(280, Math.round(slider.clientWidth * 0.62));
-    slider.scrollBy({
-      left: direction === "next" ? step : -step,
+    slider.scrollTo({
+      left: targetCard.offsetLeft,
       behavior: "smooth",
+    });
+  };
+
+  const goTo = (direction: "prev" | "next") => {
+    if (services.length === 0) {
+      return;
+    }
+
+    setActiveIndex((prev) => {
+      const currentIndex = Math.min(prev, maxIndex);
+      const nextIndex = direction === "next" ? Math.min(currentIndex + 1, maxIndex) : Math.max(currentIndex - 1, 0);
+      scrollToIndex(nextIndex);
+      return nextIndex;
     });
   };
 
@@ -74,17 +90,20 @@ export function ServicesShowcaseSection({ services }: ServicesShowcaseSectionPro
           </h2>
         </div>
 
-        <div className="relative">
+        <div className="relative overflow-visible">
           <div
             ref={sliderRef}
             className="flex snap-x snap-mandatory gap-5 overflow-x-auto pr-9 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
-            {services.map((service) => {
+            {services.map((service, index) => {
               const visual = serviceVisuals[service.slug] ?? fallbackVisual;
 
               return (
                 <article
                   key={service.slug}
+                  ref={(node) => {
+                    cardRefs.current[index] = node;
+                  }}
                   className="group relative h-124 w-[76vw] min-w-[18rem] max-w-110 snap-start overflow-hidden border border-white/30"
                 >
                   <Image
@@ -120,25 +139,43 @@ export function ServicesShowcaseSection({ services }: ServicesShowcaseSectionPro
             })}
           </div>
 
-          <div className="pointer-events-none absolute inset-y-0 left-0 right-0 flex items-center justify-between px-1 sm:px-2">
-            <button
-              type="button"
-              aria-label="Previous services"
-              onClick={() => scrollByCard("prev")}
-              className="pointer-events-auto hidden h-18 w-18 items-center justify-center rounded-full bg-[#c88da0] text-4xl leading-none text-white shadow-[0_18px_35px_-20px_rgba(40,20,24,0.6)] transition hover:scale-105 sm:inline-flex"
-            >
-              <span className="-mt-1">\u2190</span>
-            </button>
+          <button
+            type="button"
+            aria-label="Previous services"
+            onClick={() => goTo("prev")}
+            disabled={activeIndex <= 0}
+            className="absolute left-0 top-1/2 z-30 inline-flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#c892a8] text-white shadow-[0_20px_35px_-20px_rgba(40,20,24,0.75)] transition hover:scale-105 disabled:cursor-not-allowed disabled:opacity-45"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" className="h-9 w-9">
+              <path
+                d="M15.5 6.5L9.5 12L15.5 17.5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.9"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
 
-            <button
-              type="button"
-              aria-label="Next services"
-              onClick={() => scrollByCard("next")}
-              className="pointer-events-auto hidden h-18 w-18 items-center justify-center rounded-full bg-[#c88da0] text-4xl leading-none text-white shadow-[0_18px_35px_-20px_rgba(40,20,24,0.6)] transition hover:scale-105 sm:inline-flex"
-            >
-              <span className="-mt-1">\u2192</span>
-            </button>
-          </div>
+          <button
+            type="button"
+            aria-label="Next services"
+            onClick={() => goTo("next")}
+            disabled={activeIndex >= maxIndex}
+            className="absolute right-0 top-1/2 z-30 inline-flex h-20 w-20 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#c892a8] text-white shadow-[0_20px_35px_-20px_rgba(40,20,24,0.75)] transition hover:scale-105 disabled:cursor-not-allowed disabled:opacity-45"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" className="h-9 w-9">
+              <path
+                d="M8.5 6.5L14.5 12L8.5 17.5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.9"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </section>
