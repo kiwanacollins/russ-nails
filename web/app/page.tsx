@@ -393,12 +393,12 @@ export default function Home() {
       </section>
 
       <section className="shell mt-20">
-        <div className="luxury-card overflow-hidden bg-brand-cocoa p-8 text-white sm:p-12">
-          <p className="text-sm tracking-[0.18em] text-white/70 uppercase">Booking + Shop</p>
+        <div className="luxury-card overflow-hidden bg-[#f3e5dc] p-8 text-brand-cocoa sm:p-12">
+          <p className="text-sm tracking-[0.18em] text-brand-cocoa/70 uppercase">Booking + Shop</p>
           <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight sm:text-4xl">
             Service-first experience with product checkout when your clients are ready.
           </h2>
-          <p className="mt-4 max-w-2xl text-sm leading-7 text-white/80 sm:text-base">
+          <p className="mt-4 max-w-2xl text-sm leading-7 text-muted sm:text-base">
             Start with appointments via WhatsApp and seamlessly let clients continue to the normal
             checkout flow when they prefer card payments.
           </p>
@@ -411,7 +411,7 @@ export default function Home() {
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-full border border-white/35 px-7 py-3 text-sm font-semibold tracking-[0.16em] text-white uppercase transition hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center rounded-full border border-brand-cocoa/35 px-7 py-3 text-sm font-semibold tracking-[0.16em] text-brand-cocoa uppercase transition hover:-translate-y-0.5"
             >
               Contact Studio
             </Link>
