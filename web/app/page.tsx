@@ -117,7 +117,7 @@ export default function Home() {
                 <span>right way</span>
               </span>
             </h1>
-            <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/85 sm:text-xl sm:leading-9">
+            <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-white sm:text-xl sm:leading-9">
               Kampala&apos;s premier nail salon: gel extensions, Russian manicures, bespoke nail art,
               and bridal packages crafted for women who expect the best.
             </p>

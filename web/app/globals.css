@@ -266,7 +266,7 @@ a {
   }
 
   p {
-    color: var(--ink) !important;
+    color: var(--ink);
   }
 
   html {
