@@ -21,10 +21,11 @@ export function PersonalizedExperienceSection({
     offset: ["start end", "end start"],
   });
 
-  const firstImageY = useTransform(scrollYProgress, [0, 1], [44, -44]);
-  const secondImageY = useTransform(scrollYProgress, [0, 1], [-52, 52]);
-  const firstImageRotate = useTransform(scrollYProgress, [0, 1], [6, 1]);
-  const secondImageRotate = useTransform(scrollYProgress, [0, 1], [-8, -2]);
+  const firstImageY = useTransform(scrollYProgress, [0, 1], [36, -38]);
+  const secondImageY = useTransform(scrollYProgress, [0, 1], [-44, 44]);
+  const detailCardY = useTransform(scrollYProgress, [0, 1], [18, -20]);
+  const firstImageRotate = useTransform(scrollYProgress, [0, 1], [-11, -5]);
+  const secondImageRotate = useTransform(scrollYProgress, [0, 1], [11, 5]);
 
   return (
     <section ref={sectionRef} className="shell mt-20">
@@ -41,43 +42,46 @@ export function PersonalizedExperienceSection({
             </h2>
           </div>
 
-          <div className="relative mx-auto w-full max-w-176 min-h-144 sm:min-h-168">
+          <div className="relative mx-auto w-full max-w-176 min-h-144 sm:min-h-160">
             <motion.figure
               style={{ y: firstImageY, rotate: firstImageRotate }}
-              className="absolute right-0 top-0 h-76 w-[64%] overflow-hidden rounded-3xl shadow-[0_26px_60px_-35px_rgba(37,23,20,0.55)] sm:h-96"
+              className="absolute left-[8%] top-[8%] z-20 h-72 w-[52%] overflow-hidden rounded-[1.9rem] border border-white/40 shadow-[0_26px_60px_-35px_rgba(37,23,20,0.55)] sm:h-96"
             >
               <Image
                 src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80"
                 alt="Luxury manicure setup"
                 fill
-                sizes="(max-width: 1024px) 60vw, 28vw"
+                sizes="(max-width: 1024px) 52vw, 24vw"
                 className="object-cover"
               />
             </motion.figure>
 
             <motion.figure
               style={{ y: secondImageY, rotate: secondImageRotate }}
-              className="absolute left-[5%] top-[42%] h-72 w-[54%] overflow-hidden rounded-3xl shadow-[0_26px_60px_-35px_rgba(37,23,20,0.55)] sm:h-96"
+              className="absolute right-[8%] top-[6%] z-30 h-72 w-[52%] overflow-hidden rounded-[1.9rem] border border-white/35 shadow-[0_26px_60px_-35px_rgba(37,23,20,0.55)] sm:h-96"
             >
               <Image
                 src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=80"
                 alt="Nail artist preparing tools"
                 fill
-                sizes="(max-width: 1024px) 50vw, 24vw"
+                sizes="(max-width: 1024px) 52vw, 24vw"
                 className="object-cover"
               />
             </motion.figure>
 
-            <div className="absolute right-0 bottom-0 w-[78%] rounded-[1.6rem] border border-brand-cocoa/12 bg-surface/95 p-5 shadow-[0_24px_40px_-28px_rgba(44,28,22,0.45)] backdrop-blur sm:w-[62%] sm:p-6">
-              <p className="text-sm leading-7 text-muted sm:text-base">
+            <motion.div
+              style={{ y: detailCardY }}
+              className="absolute right-0 bottom-[1%] z-40 w-[84%] rounded-[1.8rem] border border-brand-cocoa/14 bg-surface/97 p-5 shadow-[0_24px_40px_-28px_rgba(44,28,22,0.45)] backdrop-blur sm:w-[64%] sm:p-6"
+            >
+              <p className="text-sm leading-7 text-brand-cocoa/82 sm:text-[1.05rem] sm:leading-8">
                 We created this studio as a calm, elegant destination where every appointment is mapped
                 to your preferences. From shape profiling to aftercare planning, each step is intentional.
               </p>
 
               <ul className="mt-4 space-y-2">
                 {points.map((point) => (
-                  <li key={point} className="flex items-start gap-2 text-xs leading-6 text-brand-cocoa sm:text-sm">
-                    <span className="mt-1 inline-flex h-4 w-4 items-center justify-center rounded-full bg-brand-cocoa text-[10px] text-white">
+                  <li key={point} className="flex items-start gap-2.5 text-[0.82rem] leading-6 text-brand-cocoa/88 sm:text-base">
+                    <span className="mt-[0.34rem] inline-flex h-4 w-4 items-center justify-center rounded-full bg-brand-cocoa/88 text-[10px] text-white">
                       ✓
                     </span>
                     <span>{point}</span>
@@ -87,11 +91,11 @@ export function PersonalizedExperienceSection({
 
               <Link
                 href="/contact"
-                className="mt-5 inline-flex items-center justify-center rounded-sm border border-brand-cocoa/28 px-5 py-2 text-[11px] font-semibold tracking-[0.26em] text-brand-cocoa uppercase transition hover:-translate-y-0.5"
+                className="mt-5 inline-flex items-center justify-center rounded-lg border border-brand-cocoa/26 bg-white/80 px-5 py-2.5 text-[11px] font-semibold tracking-[0.24em] text-brand-cocoa uppercase transition hover:-translate-y-0.5 hover:bg-white"
               >
                 More About Us
               </Link>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

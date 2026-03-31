@@ -179,19 +179,21 @@ export default function Home() {
         </div>
         <div className="grid gap-6 md:grid-cols-3">
           {featuredServices.map((service) => (
-            <article key={service.slug} className="luxury-card p-6">
-              <p className="text-xs tracking-[0.2em] text-brand-cocoa/70 uppercase">{service.duration}</p>
-              <h3 className="mt-3 font-serif text-2xl text-brand-cocoa">{service.name}</h3>
-              <p className="mt-3 text-sm leading-7 text-muted">{service.description}</p>
-              <p className="mt-5 text-sm font-semibold tracking-[0.12em] text-brand-gold uppercase">
-                From {formatUGX(service.priceFrom)}
-              </p>
-              <Link
-                href="/services"
-                className="mt-4 inline-flex items-center text-xs font-semibold tracking-[0.14em] text-brand-cocoa/75 uppercase transition hover:text-brand-cocoa"
-              >
-                Explore Service →
-              </Link>
+            <article key={service.slug} className="stacked-card">
+              <div className="luxury-card h-full p-6">
+                <p className="text-xs tracking-[0.2em] text-brand-cocoa/70 uppercase">{service.duration}</p>
+                <h3 className="mt-3 font-serif text-2xl text-brand-cocoa">{service.name}</h3>
+                <p className="mt-3 text-sm leading-7 text-muted">{service.description}</p>
+                <p className="mt-5 text-sm font-semibold tracking-[0.12em] text-brand-gold uppercase">
+                  From {formatUGX(service.priceFrom)}
+                </p>
+                <Link
+                  href="/services"
+                  className="mt-4 inline-flex items-center text-xs font-semibold tracking-[0.14em] text-brand-cocoa/75 uppercase transition hover:text-brand-cocoa"
+                >
+                  Explore Service →
+                </Link>
+              </div>
             </article>
           ))}
         </div>
@@ -267,11 +269,13 @@ export default function Home() {
         </div>
         <div className="grid gap-6 md:grid-cols-3">
           {testimonials.map((testimonial) => (
-            <blockquote key={testimonial.name} className="luxury-card p-6">
-              <div className="mb-4 text-brand-gold">★★★★★</div>
-              <p className="text-sm leading-7 text-muted">{`"${testimonial.quote}"`}</p>
-              <footer className="mt-5 text-sm font-semibold text-brand-cocoa">{testimonial.name}</footer>
-            </blockquote>
+            <div key={testimonial.name} className="stacked-card">
+              <blockquote className="luxury-card h-full p-6">
+                <div className="mb-4 text-brand-gold">★★★★★</div>
+                <p className="text-sm leading-7 text-muted">{`"${testimonial.quote}"`}</p>
+                <footer className="mt-5 text-sm font-semibold text-brand-cocoa">{testimonial.name}</footer>
+              </blockquote>
+            </div>
           ))}
         </div>
       </section>
@@ -369,17 +373,25 @@ export default function Home() {
 
         <div className="grid gap-6 md:grid-cols-2">
           {blogHighlights.map((post) => (
-            <article key={post.title} className="luxury-card overflow-hidden">
-              <Image src={post.image} alt={post.title} width={1200} height={800} className="h-64 w-full object-cover" />
-              <div className="p-6">
-                <h3 className="font-serif text-2xl text-brand-cocoa">{post.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-muted">{post.excerpt}</p>
-                <Link
-                  href="/contact"
-                  className="mt-4 inline-flex text-xs font-semibold tracking-[0.14em] text-brand-cocoa/75 uppercase transition hover:text-brand-cocoa"
-                >
-                  Continue Reading →
-                </Link>
+            <article key={post.title} className="stacked-card group">
+              <div className="luxury-card h-full overflow-hidden transition duration-300 group-hover:-translate-y-1">
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  width={1200}
+                  height={800}
+                  className="h-64 w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                />
+                <div className="p-6">
+                  <h3 className="font-serif text-2xl text-brand-cocoa">{post.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-muted">{post.excerpt}</p>
+                  <Link
+                    href="/contact"
+                    className="mt-4 inline-flex text-xs font-semibold tracking-[0.14em] text-brand-cocoa/75 uppercase transition hover:text-brand-cocoa"
+                  >
+                    Continue Reading →
+                  </Link>
+                </div>
               </div>
             </article>
           ))}

@@ -29,23 +29,25 @@ export default function ServicesPage() {
           );
 
           return (
-            <article key={service.slug} className="luxury-card p-6">
-              <p className="text-xs tracking-[0.18em] text-brand-cocoa/65 uppercase">{service.duration}</p>
-              <h2 className="mt-3 font-serif text-3xl text-brand-cocoa">{service.name}</h2>
-              <p className="mt-3 text-sm leading-7 text-muted">{service.description}</p>
+            <article key={service.slug} className="stacked-card">
+              <div className="luxury-card h-full p-6">
+                <p className="text-xs tracking-[0.18em] text-brand-cocoa/65 uppercase">{service.duration}</p>
+                <h2 className="mt-3 font-serif text-3xl text-brand-cocoa">{service.name}</h2>
+                <p className="mt-3 text-sm leading-7 text-muted">{service.description}</p>
 
-              <div className="mt-6 flex items-center justify-between gap-4">
-                <p className="text-sm font-semibold tracking-[0.14em] text-brand-gold uppercase">
-                  From {formatUGX(service.priceFrom)}
-                </p>
-                <a
-                  href={bookingLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-full bg-brand-cocoa px-5 py-2.5 text-xs font-semibold tracking-[0.14em] text-white uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
-                >
-                  Book now
-                </a>
+                <div className="mt-6 flex items-center justify-between gap-4">
+                  <p className="text-sm font-semibold tracking-[0.14em] text-brand-gold uppercase">
+                    From {formatUGX(service.priceFrom)}
+                  </p>
+                  <a
+                    href={bookingLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-full bg-brand-cocoa px-5 py-2.5 text-xs font-semibold tracking-[0.14em] text-white uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
+                  >
+                    Book now
+                  </a>
+                </div>
               </div>
             </article>
           );
