@@ -110,16 +110,16 @@ export function SiteHeader() {
                       </div>
 
                       <div>
-                        <p className="text-xs font-semibold tracking-[0.16em] text-[#a06070] uppercase">Services Menu</p>
+                        <p className="text-xs font-semibold tracking-[0.16em] text-[#1f1a18] uppercase">Services Menu</p>
                         <ul className="mt-3 grid gap-2 sm:grid-cols-2">
                           {item.children.map((child) => (
                             <li key={`${child.label}-${child.href}`}>
                               <Link
                                 href={child.href}
-                                className="flex items-center justify-between rounded-xl border border-transparent px-3 py-2 text-sm text-[#6a4a50] transition hover:border-[#efd4d9] hover:bg-white"
+                                className="flex items-center justify-between rounded-xl border border-transparent px-3 py-2 text-sm text-[#1f1a18] transition hover:border-[#efd4d9] hover:bg-white"
                               >
                                 <span>{child.label}</span>
-                                <span className="text-[#b57a88]">→</span>
+                                <span className="text-[#1f1a18]">→</span>
                               </Link>
                             </li>
                           ))}

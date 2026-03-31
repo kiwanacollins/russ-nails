@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const footerPages = [
   { label: "Home", href: "/" },
@@ -78,22 +80,13 @@ export function SiteFooter() {
 
             <div className="flex items-center gap-6 text-brand-cocoa/65">
               <a href="https://instagram.com" target="_blank" rel="noreferrer" className="transition hover:text-brand-cocoa" aria-label="Instagram">
-                <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <rect x="3.5" y="3.5" width="17" height="17" rx="4" />
-                  <circle cx="12" cy="12" r="4" />
-                  <circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none" />
-                </svg>
+                <FaInstagram className="h-6 w-6" aria-hidden="true" />
               </a>
               <a href="https://x.com" target="_blank" rel="noreferrer" className="transition hover:text-brand-cocoa" aria-label="X">
-                <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M4 4L20 20" />
-                  <path d="M20 4L4 20" />
-                </svg>
+                <FaXTwitter className="h-6 w-6" aria-hidden="true" />
               </a>
               <a href="https://facebook.com" target="_blank" rel="noreferrer" className="transition hover:text-brand-cocoa" aria-label="Facebook">
-                <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor">
-                  <path d="M14 8h3V4h-3c-2.8 0-5 2.2-5 5v3H6v4h3v4h4v-4h3.2l.8-4H13V9c0-.6.4-1 1-1z" />
-                </svg>
+                <FaFacebookF className="h-6 w-6" aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -122,19 +115,23 @@ export function SiteFooter() {
               </label>
             </div>
 
-            <div className="relative">
+            <div className="group relative">
               <label className="sr-only" htmlFor="footer-service">Choose a service</label>
               <select
                 id="footer-service"
                 defaultValue=""
-                className="w-full appearance-none border-b border-white/45 bg-transparent pb-3 pr-10 text-lg text-white focus:outline-none sm:text-xl"
+                className="w-full appearance-none border-b border-white/45 bg-transparent pb-3 pr-12 text-lg text-white/95 focus:border-white focus:outline-none sm:text-xl"
               >
                 <option value="" disabled className="text-brand-cocoa">Choose a Service</option>
                 <option value="extensions" className="text-brand-cocoa">Gel Extensions</option>
                 <option value="russian" className="text-brand-cocoa">Russian Manicure</option>
                 <option value="bridal" className="text-brand-cocoa">Bridal Suite</option>
               </select>
-              <span className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 text-xl text-white/90">v</span>
+              <span className="pointer-events-none absolute right-1 top-1/2 -translate-y-1/2 text-white/90 transition group-focus-within:rotate-180">
+                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
             </div>
 
             <label className="block">
@@ -153,15 +150,6 @@ export function SiteFooter() {
             </button>
           </form>
 
-          <button
-            type="button"
-            aria-label="Back to top"
-            className="mt-16 ml-auto inline-flex h-9 w-9 items-center justify-center rounded-full text-white/90 transition hover:text-white"
-          >
-            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M6 14l6-6 6 6" />
-            </svg>
-          </button>
         </aside>
       </div>
     </footer>
