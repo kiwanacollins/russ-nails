@@ -43,6 +43,39 @@ a {
   text-decoration: none;
 }
 
+@keyframes promise-card-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes promise-chip-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes promise-glow-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+
+  50% {
+    opacity: 0.76;
+  }
+}
+
 @layer utilities {
   .shell {
     @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
@@ -92,5 +125,21 @@ a {
 
   .stacked-card:hover::after {
     transform: rotate(4deg) translate(0.85rem, 0.45rem);
+  }
+
+  .promise-card-float {
+    animation: promise-card-float 7s ease-in-out infinite;
+  }
+
+  .promise-chip-bob {
+    animation: promise-chip-bob 6.2s ease-in-out infinite;
+  }
+
+  .promise-chip-bob-delayed {
+    animation: promise-chip-bob 6.8s ease-in-out 0.45s infinite;
+  }
+
+  .promise-glow-pulse {
+    animation: promise-glow-pulse 5.8s ease-in-out infinite;
   }
 }

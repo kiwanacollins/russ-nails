@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Service } from "@/lib/types";
 
 type ServicesShowcaseSectionProps = {
@@ -76,6 +76,33 @@ export function ServicesShowcaseSection({ services }: ServicesShowcaseSectionPro
   const cardRefs = useRef<Array<HTMLElement | null>>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const maxIndex = Math.max(services.length - 1, 0);
+
+  useEffect(() => {
+    if (services.length < 2) {
+      return;
+    }
+
+    const intervalId = window.setInterval(() => {
+      setActiveIndex((prev) => {
+        const nextIndex = prev >= maxIndex ? 0 : prev + 1;
+        const slider = sliderRef.current;
+        const targetCard = cardRefs.current[nextIndex];
+
+        if (slider && targetCard) {
+          slider.scrollTo({
+            left: targetCard.offsetLeft,
+            behavior: "smooth",
+          });
+        }
+
+        return nextIndex;
+      });
+    }, 4200);
+
+    return () => {
+      window.clearInterval(intervalId);
+    };
+  }, [maxIndex, services.length]);
 
   const scrollToIndex = (index: number) => {
     const slider = sliderRef.current;
