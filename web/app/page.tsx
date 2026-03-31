@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Caveat } from "next/font/google";
 import { galleryShots, services, testimonials } from "@/lib/static-content";
-import { formatUGX } from "@/lib/utils";
 import { QuickBookBar } from "@/components/quick-book-bar";
 import { PersonalizedExperienceSection } from "@/components/personalized-experience-section";
+import { ServicesShowcaseSection } from "@/components/services-showcase-section";
 
 export const metadata: Metadata = {
   title: "Russ Nails  Luxury Nail Salon in Kampala, Uganda",
@@ -195,39 +195,7 @@ export default function Home() {
 
       <PersonalizedExperienceSection accentClassName={accentScript.className} points={packagePoints} />
 
-      <section className="shell mt-20">
-        <div className="mb-10 flex items-end justify-between gap-4">
-          <div>
-            <p className="text-sm tracking-[0.18em] text-brand-cocoa/70 uppercase">Our Services</p>
-            <h2 className="mt-2 font-serif text-3xl text-brand-cocoa sm:text-4xl">
-              A Range Of High-Quality Beauty Services
-            </h2>
-          </div>
-          <Link href="/services" className="text-sm font-semibold text-brand-cocoa underline-offset-4 hover:underline">
-            View all services
-          </Link>
-        </div>
-        <div className="grid gap-6 md:grid-cols-3">
-          {featuredServices.map((service) => (
-            <article key={service.slug} className="stacked-card">
-              <div className="luxury-card h-full p-6">
-                <p className="text-xs tracking-[0.2em] text-brand-cocoa/70 uppercase">{service.duration}</p>
-                <h3 className="mt-3 font-serif text-2xl text-brand-cocoa">{service.name}</h3>
-                <p className="mt-3 text-sm leading-7 text-muted">{service.description}</p>
-                <p className="mt-5 text-sm font-semibold tracking-[0.12em] text-brand-gold uppercase">
-                  From {formatUGX(service.priceFrom)}
-                </p>
-                <Link
-                  href="/services"
-                  className="mt-4 inline-flex items-center text-xs font-semibold tracking-[0.14em] text-brand-cocoa/75 uppercase transition hover:text-brand-cocoa"
-                >
-                  Explore Service →
-                </Link>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
+      <ServicesShowcaseSection services={featuredServices} />
 
       <section className="mt-20 border-y border-brand-cocoa/10 bg-[#f4e9e5] py-16">
         <div className="shell">
