@@ -52,27 +52,6 @@ export function SiteFooter() {
             </div>
           </div>
 
-          <div className="mt-14 border-t border-brand-cocoa/15 pt-10">
-            <h3 className="font-serif text-5xl leading-none text-brand-cocoa sm:text-6xl">Stay Updated</h3>
-
-            <form className="mt-8 flex flex-col gap-4 xl:flex-row xl:items-end xl:gap-6">
-              <label className="block flex-1">
-                <span className="sr-only">Email address</span>
-                <input
-                  type="email"
-                  placeholder="Your email for product drops and booking updates"
-                  className="w-full border-b border-brand-cocoa/25 bg-transparent pb-3 text-lg text-brand-cocoa placeholder:text-brand-cocoa/55 focus:outline-none sm:text-xl"
-                />
-              </label>
-              <button
-                type="submit"
-                className="inline-flex h-14 w-full max-w-52 items-center justify-center border border-brand-cocoa/35 bg-[#f4f1ee] px-8 text-xs font-semibold tracking-[0.24em] text-brand-cocoa uppercase transition hover:-translate-y-0.5"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
-
           <div className="mt-12 flex flex-col gap-5 border-t border-brand-cocoa/15 pt-8 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-sm leading-snug text-brand-cocoa/90 sm:text-base">
               Russ Nails &copy;{new Date().getFullYear()} - All Rights Reserved.
