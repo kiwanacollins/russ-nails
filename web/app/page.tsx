@@ -7,6 +7,7 @@ import { QuickBookBar } from "@/components/quick-book-bar";
 import { PersonalizedExperienceSection } from "@/components/personalized-experience-section";
 import { ServicesShowcaseSection } from "@/components/services-showcase-section";
 import CircularGallery from "@/components/CircularGallery";
+import { formatUGX } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Russ Nails  Luxury Nail Salon in Kampala, Uganda",
@@ -51,13 +52,13 @@ const polishShowcase = [
     id: "768",
     title: "Gel Effect Nail Polish 768",
     image: "/images/product1.png",
-    price: "14.99",
+    price: 55000,
   },
   {
     id: "680",
     title: "Gel Effect Nail Polish 680",
     image: "/images/product2.png",
-    price: "14.99",
+    price: 55000,
     badge: "Out Of Stock",
     badgeTone: "rose",
   },
@@ -65,8 +66,8 @@ const polishShowcase = [
     id: "165",
     title: "Gel Effect Nail Polish 165",
     image: "/images/product3.png",
-    price: "10.99",
-    compareAt: "14.99",
+    price: 40000,
+    compareAt: 55000,
     badge: "Sale",
     badgeTone: "olive",
   },
@@ -74,7 +75,7 @@ const polishShowcase = [
     id: "883",
     title: "Gel Effect Nail Polish 883",
     image: "/images/product4.png",
-    price: "14.99",
+    price: 55000,
   },
 ];
 
@@ -387,10 +388,10 @@ export default function Home() {
         <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
             <div>
-              <h2 className="font-serif text-[2.8rem] leading-[0.94] tracking-[-0.02em] text-brand-cocoa sm:text-[4.4rem] lg:text-[5.3rem]">
+              <h2 className="font-serif text-[2.3rem] leading-[0.95] tracking-[-0.02em] text-brand-cocoa sm:text-[3.5rem] lg:text-[4.3rem]">
                 Professional products
               </h2>
-              <p className="mt-7 max-w-2xl text-lg text-brand-cocoa/85 sm:text-2xl">
+              <p className="mt-6 max-w-2xl text-base text-brand-cocoa/85 sm:text-xl">
                 Shop your favorite beauty products through our online store
               </p>
             </div>
@@ -436,19 +437,48 @@ export default function Home() {
                 </div>
 
                 <p className="mt-6 text-2xl tracking-[0.12em] text-[#c58a9d]">★★★★★</p>
-                <h3 className="mt-4 text-[2rem] leading-[1.15]">{product.title}</h3>
-                <p className="mt-3 text-[2rem] font-semibold">
+                <h3 className="mt-4 text-[1.4rem] leading-[1.18] sm:text-[1.6rem]">{product.title}</h3>
+                <p className="mt-3 text-[1.8rem] font-semibold sm:text-[2rem]">
                   {product.compareAt ? (
                     <>
-                      <span className="mr-3 text-[1.8rem] text-brand-cocoa/45 line-through">${product.compareAt}</span>
-                      <span>${product.price}</span>
+                      <span className="mr-3 text-[1.45rem] text-brand-cocoa/45 line-through sm:text-[1.6rem]">
+                        {formatUGX(product.compareAt)}
+                      </span>
+                      <span>{formatUGX(product.price)}</span>
                     </>
                   ) : (
-                    <span>${product.price}</span>
+                    <span>{formatUGX(product.price)}</span>
                   )}
                 </p>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="shell mt-20">
+        <div className="luxury-card overflow-hidden bg-[#f3e5dc] p-8 text-brand-cocoa sm:p-12">
+          <p className="text-sm tracking-[0.18em] text-brand-cocoa/70 uppercase">Booking + Shop</p>
+          <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight sm:text-4xl">
+            Service-first experience with product checkout when your clients are ready.
+          </h2>
+          <p className="mt-4 max-w-2xl text-sm leading-7 text-muted sm:text-base">
+            Start with appointments via WhatsApp and seamlessly let clients continue to the normal
+            checkout flow when they prefer card payments.
+          </p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Link
+              href="/products"
+              className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold tracking-[0.16em] text-brand-cocoa uppercase transition hover:-translate-y-0.5"
+            >
+              Browse Products
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-full border border-brand-cocoa/35 px-7 py-3 text-sm font-semibold tracking-[0.16em] text-brand-cocoa uppercase transition hover:-translate-y-0.5"
+            >
+              Contact Studio
+            </Link>
           </div>
         </div>
       </section>
@@ -488,33 +518,6 @@ export default function Home() {
               </div>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section className="shell mt-20">
-        <div className="luxury-card overflow-hidden bg-[#f3e5dc] p-8 text-brand-cocoa sm:p-12">
-          <p className="text-sm tracking-[0.18em] text-brand-cocoa/70 uppercase">Booking + Shop</p>
-          <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight sm:text-4xl">
-            Service-first experience with product checkout when your clients are ready.
-          </h2>
-          <p className="mt-4 max-w-2xl text-sm leading-7 text-muted sm:text-base">
-            Start with appointments via WhatsApp and seamlessly let clients continue to the normal
-            checkout flow when they prefer card payments.
-          </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link
-              href="/products"
-              className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold tracking-[0.16em] text-brand-cocoa uppercase transition hover:-translate-y-0.5"
-            >
-              Browse Products
-            </Link>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-full border border-brand-cocoa/35 px-7 py-3 text-sm font-semibold tracking-[0.16em] text-brand-cocoa uppercase transition hover:-translate-y-0.5"
-            >
-              Contact Studio
-            </Link>
-          </div>
         </div>
       </section>
     </div>
