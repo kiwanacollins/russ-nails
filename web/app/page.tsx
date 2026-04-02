@@ -134,7 +134,8 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-px -translate-x-1/2 bg-white/22 md:block" />
 
         <div className="relative z-10 shell flex min-h-screen flex-col items-center justify-center pt-24 pb-8 text-center sm:pb-12">
-          <div className="max-w-5xl">
+          <div className="relative mx-auto max-w-5xl px-4 py-6 sm:px-8 sm:py-8">
+            <div className="pointer-events-none absolute inset-0 -z-10 rounded-[2rem] border border-white/16 bg-linear-to-br from-black/55 via-black/35 to-[#9b7085]/24 shadow-[0_30px_90px_-50px_rgba(0,0,0,0.75)] backdrop-blur-[2px]" />
             <p className="text-xs font-semibold tracking-[0.22em] text-white/85 uppercase mb-5">
               Kampala&apos;s Luxury Nail Studio
             </p>
