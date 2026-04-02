@@ -114,7 +114,7 @@ export default function Home() {
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-linear-to-r from-black/28 via-black/24 to-black/8" />
+            <div className="absolute inset-0 bg-linear-to-r from-black/58 via-black/44 to-black/24" />
           </div>
           <div className="relative">
             <Image
@@ -125,18 +125,23 @@ export default function Home() {
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-[rgba(214,171,178,0.55)]" />
+            <div className="absolute inset-0 bg-[rgba(89,58,70,0.5)]" />
           </div>
         </div>
+
+        <div className="absolute inset-0 bg-black/26" />
 
         <div className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-px -translate-x-1/2 bg-white/22 md:block" />
 
         <div className="relative z-10 shell flex min-h-screen flex-col items-center justify-center pt-24 pb-8 text-center sm:pb-12">
           <div className="max-w-5xl">
-            <p className="text-xs font-semibold tracking-[0.22em] text-white/60 uppercase mb-5">
+            <p className="text-xs font-semibold tracking-[0.22em] text-white/85 uppercase mb-5">
               Kampala&apos;s Luxury Nail Studio
             </p>
-            <h1 className="font-serif text-[3.2rem] leading-[0.96] tracking-[-0.01em] sm:text-[4.8rem] lg:text-[7rem]">
+            <h1
+              className="font-serif text-[3.2rem] leading-[0.96] tracking-[-0.01em] sm:text-[4.8rem] lg:text-[7rem]"
+              style={{ textShadow: "0 10px 32px rgba(0, 0, 0, 0.6)" }}
+            >
               Nails done
               <br />
               <span className="inline-flex items-end gap-3 sm:gap-5">
@@ -148,7 +153,10 @@ export default function Home() {
                 <span>right way</span>
               </span>
             </h1>
-            <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-white sm:text-xl sm:leading-9">
+            <p
+              className="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/95 sm:text-xl sm:leading-9"
+              style={{ textShadow: "0 6px 20px rgba(0, 0, 0, 0.55)" }}
+            >
               Kampala&apos;s premier nail salon: gel extensions, Russian manicures, bespoke nail art,
               and bridal packages crafted for women who expect the best.
             </p>

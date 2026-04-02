@@ -28,13 +28,13 @@ export function PersonalizedExperienceSection({
   const rightImageRotate = useTransform(scrollYProgress, [0, 1], [12, 7]);
 
   return (
-    <section ref={sectionRef} className="shell mt-20">
-      <div className="overflow-hidden rounded-[2.4rem] border border-brand-cocoa/10 bg-[#efeeee] px-6 py-10 sm:px-10 lg:px-12 lg:py-14">
+    <section ref={sectionRef} className="mt-20 w-full">
+      <div className="w-full overflow-hidden rounded-[2.4rem] border border-brand-cocoa/10 bg-[#efeeee] px-6 py-10 sm:px-10 lg:px-12 lg:py-14">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div className="max-w-xl">
             <p className="text-[11px] font-semibold tracking-[0.28em] text-brand-cocoa/65 uppercase">A Space For You</p>
             <p className="mt-4 text-xs tracking-[0.2em] text-brand-cocoa/70 uppercase">Personalized Experience</p>
-            <h2 className="mt-5 font-serif text-[2.25rem] leading-[1.05] text-brand-cocoa sm:text-[3.5rem]">
+            <h2 className="mt-5 font-serif text-[2.25rem] leading-[1.05] text-brand-cocoa sm:text-[3.5rem] lg:text-[6.0rem]">
               Personalized beauty treatments
               <br />
               <span className={`${accentClassName} text-[0.74em] leading-none text-[#b88491]`}>tailored</span>{" "}
