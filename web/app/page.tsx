@@ -190,8 +190,8 @@ export default function Home() {
 
       <ServicesShowcaseSection services={featuredServices} />
 
-      <section className="shell mt-20">
-        <div className="overflow-hidden rounded-[2.4rem] border border-brand-cocoa/12">
+      <section className="mt-20 w-full">
+        <div className="w-full overflow-hidden rounded-[2.4rem] border border-brand-cocoa/12">
           <div className="grid md:grid-cols-2">
             <div className="relative min-h-80 md:min-h-140">
               <Image
@@ -233,6 +233,53 @@ export default function Home() {
               >
                 Learn More
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-20 w-full">
+        <div className="w-full overflow-hidden border border-brand-cocoa/12">
+          <div className="grid md:grid-cols-2">
+            <div className="relative min-h-90 md:min-h-168">
+              <Image
+                src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=1600&q=80"
+                alt="Nail technician applying treatment during a manicure"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+
+            <div className="bg-[#e8dfde] px-6 py-10 text-brand-cocoa sm:px-10 sm:py-12 lg:px-14 lg:py-14">
+              <p className="text-xs tracking-[0.24em] text-brand-cocoa/70 uppercase">More Than Just Nails</p>
+              <h2 className="mt-4 max-w-2xl font-serif text-[2.2rem] leading-[1.05] tracking-[-0.01em] sm:text-[3.4rem]">
+                <span className={`${accentScript.className} mr-3 text-[0.8em] text-[#b68096]`}>There&apos;s</span>
+                nothing a fresh manicure can&apos;t fix
+              </h2>
+
+              <div className="mt-10 space-y-9">
+                <div className="grid gap-2 sm:grid-cols-[auto_1fr] sm:items-start sm:gap-6">
+                  <p className="font-serif text-5xl leading-none text-[#6d7b68] sm:text-6xl">5,000+</p>
+                  <div className="max-w-lg">
+                    <p className="text-2xl font-semibold text-brand-cocoa">Cuticles removed every year</p>
+                    <p className="mt-3 text-base leading-8 text-brand-cocoa/80">
+                      Our skilled technicians provide a range of nail treatments that keep your nails looking and
+                      feeling their best.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid gap-2 sm:grid-cols-[auto_1fr] sm:items-start sm:gap-6">
+                  <p className="font-serif text-5xl leading-none text-[#6d7b68] sm:text-6xl">1325</p>
+                  <div className="max-w-lg">
+                    <p className="text-2xl font-semibold text-brand-cocoa">Unique nail designs created</p>
+                    <p className="mt-3 text-base leading-8 text-brand-cocoa/80">
+                      Our nail specialists can replicate any design and nail art from customers&apos; ideas.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
