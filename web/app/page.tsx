@@ -46,6 +46,38 @@ const aboutPoints = [
   "A calm, premium studio atmosphere in Kampala.",
 ];
 
+const polishShowcase = [
+  {
+    id: "768",
+    title: "Gel Effect Nail Polish 768",
+    image: "/images/product1.png",
+    price: "14.99",
+  },
+  {
+    id: "680",
+    title: "Gel Effect Nail Polish 680",
+    image: "/images/product2.png",
+    price: "14.99",
+    badge: "Out Of Stock",
+    badgeTone: "rose",
+  },
+  {
+    id: "165",
+    title: "Gel Effect Nail Polish 165",
+    image: "/images/product3.png",
+    price: "10.99",
+    compareAt: "14.99",
+    badge: "Sale",
+    badgeTone: "olive",
+  },
+  {
+    id: "883",
+    title: "Gel Effect Nail Polish 883",
+    image: "/images/product4.png",
+    price: "14.99",
+  },
+];
+
 const blogHighlights = [
   {
     title: "How To Keep Your Gel Set Fresh For 3+ Weeks",
@@ -351,35 +383,73 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="shell mt-20">
-        <div className="grid gap-6 md:grid-cols-2">
-          <article className="luxury-card bg-[#f3e5dc] p-8 text-brand-cocoa sm:p-10">
-            <p className="text-xs tracking-[0.16em] text-brand-cocoa/70 uppercase">Salon Locations</p>
-            <h3 className="mt-3 font-serif text-3xl">Plan Your Visit</h3>
-            <p className="mt-4 max-w-md text-sm leading-7 text-muted">
-              We host private and regular appointments in central Kampala with concierge-level service.
-            </p>
-            <Link
-              href="/contact"
-              className="mt-6 inline-flex rounded-full bg-white px-6 py-3 text-xs font-semibold tracking-[0.14em] text-brand-cocoa uppercase transition hover:-translate-y-0.5"
-            >
-              Plan Your Visit
-            </Link>
-          </article>
+      <section className="mt-20 bg-[#f4f4f4] py-14 sm:py-16">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
+            <div>
+              <h2 className="font-serif text-[2.8rem] leading-[0.94] tracking-[-0.02em] text-brand-cocoa sm:text-[4.4rem] lg:text-[5.3rem]">
+                Professional products
+              </h2>
+              <p className="mt-7 max-w-2xl text-lg text-brand-cocoa/85 sm:text-2xl">
+                Shop your favorite beauty products through our online store
+              </p>
+            </div>
 
-          <article className="luxury-card bg-[#f3e5dc] p-8 sm:p-10">
-            <p className="text-xs tracking-[0.16em] text-brand-cocoa/70 uppercase">Gift Cards</p>
-            <h3 className="mt-3 font-serif text-3xl text-brand-cocoa">Gift Luxury Beauty</h3>
-            <p className="mt-4 max-w-md text-sm leading-7 text-muted">
-              Send a service or product gift card for birthdays, bridal events, and milestone celebrations.
-            </p>
             <Link
               href="/products"
-              className="mt-6 inline-flex rounded-full border border-brand-cocoa/25 px-6 py-3 text-xs font-semibold tracking-[0.14em] text-brand-cocoa uppercase transition hover:-translate-y-0.5"
+              className="hidden h-40 w-40 shrink-0 items-center justify-center rounded-full border border-brand-cocoa/28 text-center text-sm font-semibold tracking-[0.24em] text-brand-cocoa uppercase transition hover:-translate-y-0.5 hover:bg-white/75 sm:inline-flex"
             >
-              Shop Gift Options
+              <span className="leading-7">View all products</span>
             </Link>
-          </article>
+
+            <Link
+              href="/products"
+              className="inline-flex items-center justify-center border border-brand-cocoa/28 px-6 py-3 text-xs font-semibold tracking-[0.22em] text-brand-cocoa uppercase transition hover:bg-white/75 sm:hidden"
+            >
+              View all products
+            </Link>
+          </div>
+
+          <div className="mt-12 grid gap-7 md:grid-cols-2 xl:grid-cols-4">
+            {polishShowcase.map((product) => (
+              <article key={product.id} className="text-center text-brand-cocoa">
+                <div className="relative border border-brand-cocoa/14 bg-[#f7f7f7] px-4 pt-6 pb-5 sm:px-6 sm:pt-8 sm:pb-6">
+                  {product.badge ? (
+                    <span
+                      className={`absolute left-4 top-4 inline-flex rounded-full px-4 py-1.5 text-xs font-semibold tracking-[0.2em] text-white uppercase ${
+                        product.badgeTone === "rose" ? "bg-[#bc8298]" : "bg-[#6f7d6a]"
+                      }`}
+                    >
+                      {product.badge}
+                    </span>
+                  ) : null}
+
+                  <div className="relative mx-auto h-80 w-full max-w-56 sm:h-88">
+                    <Image
+                      src={product.image}
+                      alt={product.title}
+                      fill
+                      sizes="(max-width: 768px) 90vw, (max-width: 1280px) 45vw, 24vw"
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+
+                <p className="mt-6 text-2xl tracking-[0.12em] text-[#c58a9d]">★★★★★</p>
+                <h3 className="mt-4 text-[2rem] leading-[1.15]">{product.title}</h3>
+                <p className="mt-3 text-[2rem] font-semibold">
+                  {product.compareAt ? (
+                    <>
+                      <span className="mr-3 text-[1.8rem] text-brand-cocoa/45 line-through">${product.compareAt}</span>
+                      <span>${product.price}</span>
+                    </>
+                  ) : (
+                    <span>${product.price}</span>
+                  )}
+                </p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
