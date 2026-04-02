@@ -101,7 +101,7 @@ export default function Home() {
   }));
 
   return (
-    <div className="pb-20">
+    <div className="pb-20 [&_p]:text-center">
       <section className="relative min-h-screen overflow-hidden bg-[#221b1a] text-white">
         <div className="absolute inset-0 grid md:grid-cols-2">
           <div className="relative">
