@@ -10,22 +10,25 @@ import CircularGallery from "@/components/CircularGallery";
 import { formatUGX } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Russ Nails  Luxury Nail Salon in Kampala, Uganda",
+  title: "Russ Nails | Luxury Nail Salon in Kampala, Uganda",
   description:
-    "Kampala's premier luxury nail studio. Gel extensions, Russian manicures, bespoke nail art, bridal packages & more. Book your appointment today.",
+    "Russ Nails is a trusted luxury nail salon in Kampala, Uganda for Russian manicures, gel nails, extensions, custom nail art, and bridal nails. Book your appointment via WhatsApp today.",
   keywords: [
     "nail salon Kampala",
-    "luxury nail studio Uganda",
+    "luxury nail salon Kampala",
     "gel nails Kampala",
     "Russian manicure Kampala",
-    "nail art Uganda",
+    "nail extensions Kampala",
     "bridal nails Kampala",
+    "nail art Kampala",
+    "manicure Kampala Uganda",
+    "pedicure Kampala",
     "Russ Nails",
   ],
   openGraph: {
-    title: "Russ Nails  Luxury Nail Salon in Kampala",
+    title: "Russ Nails | Luxury Nail Salon in Kampala",
     description:
-      "Kampala's premier nail studio. Gel extensions, Russian manicures, bespoke nail art & bridal packages. Book via WhatsApp today.",
+      "Looking for a luxury nail salon in Kampala? Russ Nails offers Russian manicures, gel extensions, bridal nail packages, and custom nail art with premium care.",
     type: "website",
   },
 };
@@ -36,15 +39,15 @@ const accentScript = Caveat({
 });
 
 const packagePoints = [
-  "Tailored treatments for every client.",
-  "A full range of premium nail services.",
-  "Top-rated service quality and retention.",
+  "Personalized consultations matched to your lifestyle in Kampala.",
+  "Russian manicures, gel overlays, extensions, and premium nail art in one studio.",
+  "Long-wear retention trusted by brides, professionals, and regular clients.",
 ];
 
 const aboutPoints = [
-  "Tailored one-on-one consultations for every client.",
-  "High-quality products, artistry, and long-wear results.",
-  "A calm, premium studio atmosphere in Kampala.",
+  "One-on-one nail consultation tailored to your routine and style goals.",
+  "Premium products, clean prep, and expert artistry for longer-lasting results.",
+  "A calm, hygienic, luxury nail salon experience in central Kampala.",
 ];
 
 const polishShowcase = [
@@ -81,14 +84,14 @@ const polishShowcase = [
 
 const blogHighlights = [
   {
-    title: "How To Keep Your Gel Set Fresh For 3+ Weeks",
-    excerpt: "Daily hydration routines, cuticle care, and polish protection habits used by our regular clients.",
+    title: "How To Make Gel Nails Last Longer In Kampala",
+    excerpt: "Protect your manicure against daily wear with simple aftercare tips our Kampala nail technicians recommend.",
     image:
       "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "Bridal Nail Timeline: What To Book And When",
-    excerpt: "A practical booking guide for trials, design lock-in, and perfect wedding-day finish confidence.",
+    title: "Bridal Nail Booking Timeline For Kampala Brides",
+    excerpt: "Know exactly when to book your trial, final set, and touch-up so your wedding nails stay flawless.",
     image:
       "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=80",
   },
@@ -137,7 +140,7 @@ export default function Home() {
           <div className="relative mx-auto max-w-5xl px-4 py-6 sm:px-8 sm:py-8">
             <div className="pointer-events-none absolute inset-0 -z-10 rounded-[2rem] border border-white/16 bg-linear-to-br from-black/55 via-black/35 to-[#9b7085]/24 shadow-[0_30px_90px_-50px_rgba(0,0,0,0.75)] backdrop-blur-[2px]" />
             <p className="text-xs font-semibold tracking-[0.22em] text-white/85 uppercase mb-5">
-              Kampala&apos;s Luxury Nail Studio
+              Luxury Nail Salon In Kampala, Uganda
             </p>
             <h1
               className="font-serif text-[3.2rem] leading-[0.96] tracking-[-0.01em] sm:text-[4.8rem] lg:text-[7rem]"
@@ -158,8 +161,8 @@ export default function Home() {
               className="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/95 sm:text-xl sm:leading-9"
               style={{ textShadow: "0 6px 20px rgba(0, 0, 0, 0.55)" }}
             >
-              Kampala&apos;s premier nail salon: gel extensions, Russian manicures, bespoke nail art,
-              and bridal packages crafted for women who expect the best.
+              Looking for a trusted nail salon in Kampala? Russ Nails delivers Russian manicures,
+              gel extensions, custom nail art, and bridal nail packages with premium care and lasting results.
             </p>
           </div>
 
@@ -195,7 +198,7 @@ export default function Home() {
             <div className="promise-card-float mx-auto rounded-[2.2rem] border border-white/75 bg-transparent px-6 py-8 text-center shadow-none sm:px-10 sm:py-12 lg:max-w-3xl">
               <p className="text-xs font-semibold tracking-[0.24em] text-brand-cocoa/65 uppercase">Our Promise</p>
               <h2 className="mx-auto mt-4 max-w-4xl font-serif text-[2rem] leading-[1.14] text-brand-cocoa sm:text-[2.95rem]">
-                We are here for you and excited to bring your beauty vision to life with precision, artistry, and care.
+                We help Kampala women feel confident with clean prep, elegant finishes, and retention that lasts.
               </h2>
             </div>
 
@@ -246,16 +249,17 @@ export default function Home() {
             </div>
 
             <div className="bg-[#6c7865] px-6 py-10 text-white sm:px-10 sm:py-12 lg:px-14 lg:py-14">
-              <p className="text-xs tracking-[0.24em] text-white/70 uppercase">About Us</p>
+              <p className="text-xs tracking-[0.24em] text-white/70 uppercase">About Russ Nails</p>
               <h2 className="mt-4 font-serif text-[2.35rem] leading-[1.02] tracking-[-0.01em] sm:text-[3.2rem]">
-                A calming all-in-one
+                Kampala&apos;s trusted studio
                 <br />
-                glow-up space
-                <span className={`${accentScript.className} ml-2 text-[0.8em] text-[#efd3de]`}>for you</span>
+                for clean, lasting
+                <span className={`${accentScript.className} ml-2 text-[0.8em] text-[#efd3de]`}>luxury nails</span>
               </h2>
               <p className="mt-6 max-w-xl text-sm leading-7 text-white/92 sm:text-base">
-                Russ Nails is a boutique beauty studio designed around comfort, precision, and your personal style.
-                From classic maintenance to statement sets, we create a relaxing experience that still feels premium at every step.
+                Russ Nails is a premium nail salon in Kampala, Uganda known for careful prep, elegant finishes,
+                and nail designs that truly last. From everyday maintenance to bridal and statement sets,
+                every appointment is tailored to your style and schedule.
               </p>
 
               <div className="mt-7 space-y-3">
@@ -273,7 +277,7 @@ export default function Home() {
                 href="/contact"
                 className="mt-8 inline-flex items-center justify-center border border-black bg-black px-8 py-3 text-xs font-semibold tracking-[0.24em] text-white uppercase transition hover:bg-black/90"
               >
-                Learn More
+                Book Appointment
               </Link>
             </div>
           </div>
@@ -304,10 +308,10 @@ export default function Home() {
                 <div className="grid gap-2 sm:grid-cols-[auto_1fr] sm:items-start sm:gap-6">
                   <p className="font-serif text-5xl leading-none text-[#6d7b68] sm:text-6xl">5,000+</p>
                   <div className="max-w-lg">
-                    <p className="text-2xl font-semibold text-brand-cocoa">Cuticles removed every year</p>
+                    <p className="text-2xl font-semibold text-brand-cocoa">Precision cuticle treatments every year</p>
                     <p className="mt-3 text-base leading-8 text-brand-cocoa/80">
-                      Our skilled technicians provide a range of nail treatments that keep your nails looking and
-                      feeling their best.
+                      Our Kampala nail technicians deliver safe prep, clean detail work, and long-wear results
+                      clients can trust.
                     </p>
                   </div>
                 </div>
@@ -315,9 +319,9 @@ export default function Home() {
                 <div className="grid gap-2 sm:grid-cols-[auto_1fr] sm:items-start sm:gap-6">
                   <p className="font-serif text-5xl leading-none text-[#6d7b68] sm:text-6xl">1325</p>
                   <div className="max-w-lg">
-                    <p className="text-2xl font-semibold text-brand-cocoa">Unique nail designs created</p>
+                    <p className="text-2xl font-semibold text-brand-cocoa">Custom nail designs created</p>
                     <p className="mt-3 text-base leading-8 text-brand-cocoa/80">
-                      Our nail specialists can replicate any design and nail art from customers&apos; ideas.
+                      Bring your inspiration and our artists recreate it with premium products and detail-focused artistry.
                     </p>
                   </div>
                 </div>
@@ -344,7 +348,7 @@ export default function Home() {
           <div className="absolute inset-0 flex flex-col justify-end p-7 text-white sm:p-10">
             <p className="text-xs tracking-[0.18em] text-white/70 uppercase">Studio Film</p>
             <h2 className="mt-2 max-w-xl font-serif text-3xl leading-tight sm:text-4xl">
-              Step inside the Russ Nails experience.
+              Take a look inside our luxury nail studio in Kampala.
             </h2>
           </div>
         </div>
@@ -354,7 +358,7 @@ export default function Home() {
         <div className="mb-10 flex items-end justify-between gap-4">
           <div>
             <p className="text-sm tracking-[0.18em] text-brand-cocoa/70 uppercase">Client Notes</p>
-            <h2 className="mt-2 font-serif text-3xl text-brand-cocoa sm:text-4xl">What Clients Say About The Experience</h2>
+            <h2 className="mt-2 font-serif text-3xl text-brand-cocoa sm:text-4xl">What Kampala Clients Say About Russ Nails</h2>
           </div>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
@@ -374,7 +378,7 @@ export default function Home() {
         <div className="mb-10 flex items-end justify-between gap-4">
           <div>
             <p className="text-sm tracking-[0.18em] text-brand-cocoa/70 uppercase">Photo Gallery</p>
-            <h2 className="mt-2 font-serif text-3xl text-brand-cocoa sm:text-4xl">Your Beauty Is Our Priority</h2>
+            <h2 className="mt-2 font-serif text-3xl text-brand-cocoa sm:text-4xl">Nail Art Gallery From Our Kampala Studio</h2>
           </div>
           <Link href="/gallery" className="text-sm font-semibold text-brand-cocoa underline-offset-4 hover:underline">
             Open full gallery
@@ -401,7 +405,7 @@ export default function Home() {
                 Professional products
               </h2>
               <p className="mt-6 max-w-2xl text-base text-brand-cocoa/85 sm:text-xl">
-                Shop your favorite beauty products through our online store
+                Shop salon-grade nail care in Kampala and keep your results fresh between appointments.
               </p>
             </div>
 
@@ -469,18 +473,18 @@ export default function Home() {
         <div className="luxury-card overflow-hidden bg-[#f3e5dc] p-8 text-center text-brand-cocoa sm:p-12">
           <p className="text-sm tracking-[0.18em] text-brand-cocoa/70 uppercase">Booking + Shop</p>
           <h2 className="mx-auto mt-3 max-w-2xl font-serif text-3xl leading-tight sm:text-4xl">
-            Service-first experience with product checkout when your clients are ready.
+            Book your Kampala nail appointment and shop aftercare in one smooth experience.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-muted sm:text-base">
-            Start with appointments via WhatsApp and seamlessly let clients continue to the normal
-            checkout flow when they prefer card payments.
+            Chat with our team on WhatsApp to secure your slot, then checkout trusted nail products
+            when you are ready. Simple, fast, and built for busy Kampala schedules.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
               href="/products"
               className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold tracking-[0.16em] text-brand-cocoa uppercase transition hover:-translate-y-0.5"
             >
-              Browse Products
+              Shop Products
             </Link>
             <Link
               href="/contact"
@@ -495,11 +499,11 @@ export default function Home() {
       <section className="shell mt-20">
         <div className="mb-10 flex items-end justify-between gap-4">
           <div>
-            <p className="text-sm tracking-[0.18em] text-brand-cocoa/70 uppercase">Read Our Blog</p>
-            <h2 className="mt-2 font-serif text-3xl text-brand-cocoa sm:text-4xl">Inspiring Stories</h2>
+            <p className="text-sm tracking-[0.18em] text-brand-cocoa/70 uppercase">Kampala Nail Care Blog</p>
+            <h2 className="mt-2 font-serif text-3xl text-brand-cocoa sm:text-4xl">Nail Tips, Trends, and Bridal Prep Guides</h2>
           </div>
           <Link href="/contact" className="text-sm font-semibold text-brand-cocoa underline-offset-4 hover:underline">
-            Read more articles
+            Read more tips
           </Link>
         </div>
 
