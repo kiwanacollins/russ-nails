@@ -2,8 +2,23 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ChevronDown, Menu } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { CartPill } from "@/components/cart-pill";
-import { buildWhatsAppLink } from "@/lib/utils";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { buildWhatsAppLink, cn } from "@/lib/utils";
 import { services } from "@/lib/static-content";
 import { Caveat } from "next/font/google";
 
@@ -39,11 +54,39 @@ const navLinks: NavLink[] = [
 export function SiteHeader() {
   const pathname = usePathname();
   const isHome = pathname === "/";
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [isDesktopServicesOpen, setIsDesktopServicesOpen] = useState(false);
+  const servicesMenuRef = useRef<HTMLDivElement | null>(null);
 
   const bookingLink = buildWhatsAppLink(
     process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "256762267569",
     "Hello Russ Nails, I would like to book a luxury nail appointment.",
   );
+
+  const closeNavigationOverlays = () => {
+    setIsDesktopServicesOpen(false);
+    setIsMobileMenuOpen(false);
+    setIsMobileServicesOpen(false);
+  };
+
+  useEffect(() => {
+    const handleMouseDown = (event: MouseEvent) => {
+      if (!servicesMenuRef.current) {
+        return;
+      }
+
+      if (!servicesMenuRef.current.contains(event.target as Node)) {
+        setIsDesktopServicesOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleMouseDown);
+
+    return () => {
+      document.removeEventListener("mousedown", handleMouseDown);
+    };
+  }, []);
 
   return (
     <header
@@ -56,7 +99,7 @@ export function SiteHeader() {
       <div className="shell flex h-20 items-center justify-between gap-4">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-1.5 group">
+        <Link href="/" onClick={closeNavigationOverlays} className="flex items-center gap-1.5 group">
           <span className="text-[#e8a0a8] text-xl select-none transition group-hover:scale-110">✿</span>
           <span
             className={`${script.className} text-3xl leading-none transition ${
@@ -69,32 +112,55 @@ export function SiteHeader() {
 
         {/* Nav */}
         <nav className={`hidden items-center gap-1 md:flex ${isHome ? "text-white" : "text-[#a06070]"}`}>
-          {navLinks.map((item, i) => (
-            <div key={item.href} className="relative flex items-center group/menu">
-              {i !== 0 && (
-                <span className={`mx-1 text-[10px] ${isHome ? "text-white/40" : "text-[#e8a0a8]"}`}>·</span>
-              )}
-              <Link
-                href={item.href}
-                className={`rounded-full px-3 py-1.5 text-sm font-bold tracking-[0.14em] uppercase transition ${
-                  pathname === item.href
-                    ? isHome
-                      ? "bg-white/30 text-white ring-1 ring-white/35 backdrop-blur-sm drop-shadow-[0_1px_8px_rgba(0,0,0,0.32)]"
-                      : "bg-[#fce8ea] text-[#8d4f5e]"
-                    : isHome
-                    ? "text-white drop-shadow-[0_1px_8px_rgba(0,0,0,0.45)] hover:bg-white/24"
-                    : "text-[#8d4f5e] hover:bg-[#fce8ea] hover:text-[#8d4f5e]"
-                }`}
-              >
-                <span className="inline-flex items-center gap-1">
-                  {item.label}
-                  {item.children && <span className="text-[10px]">▾</span>}
-                </span>
-              </Link>
+          {navLinks.map((item, i) => {
+            const linkClass = `rounded-full px-3 py-1.5 text-sm font-bold tracking-[0.14em] uppercase transition ${
+              pathname === item.href
+                ? isHome
+                  ? "bg-white/30 text-white ring-1 ring-white/35 backdrop-blur-sm drop-shadow-[0_1px_8px_rgba(0,0,0,0.32)]"
+                  : "bg-[#fce8ea] text-[#8d4f5e]"
+                : isHome
+                ? "text-white drop-shadow-[0_1px_8px_rgba(0,0,0,0.45)] hover:bg-white/24"
+                : "text-[#8d4f5e] hover:bg-[#fce8ea] hover:text-[#8d4f5e]"
+            }`;
 
-              {item.children && (
-                <div className="pointer-events-none absolute left-1/2 top-full z-50 hidden w-[min(92vw,760px)] -translate-x-1/2 pt-4 group-hover/menu:block group-focus-within/menu:block">
-                  <div className="pointer-events-auto overflow-hidden rounded-3xl border border-[#efd4d9] bg-[#fff7f8]/95 p-6 shadow-[0_35px_90px_-45px_rgba(98,56,67,0.55)] backdrop-blur-xl">
+            if (!item.children) {
+              return (
+                <div key={item.href} className="relative flex items-center">
+                  {i !== 0 && (
+                    <span className={`mx-1 text-[10px] ${isHome ? "text-white/40" : "text-[#e8a0a8]"}`}>·</span>
+                  )}
+                  <Link href={item.href} onClick={closeNavigationOverlays} className={linkClass}>
+                    <span className="inline-flex items-center gap-1">{item.label}</span>
+                  </Link>
+                </div>
+              );
+            }
+
+            return (
+              <div key={item.href} ref={servicesMenuRef} className="relative flex items-center">
+                {i !== 0 && (
+                  <span className={`mx-1 text-[10px] ${isHome ? "text-white/40" : "text-[#e8a0a8]"}`}>·</span>
+                )}
+                <button
+                  type="button"
+                  className={linkClass}
+                  aria-haspopup="menu"
+                  aria-expanded={isDesktopServicesOpen}
+                  onClick={() => setIsDesktopServicesOpen((previous) => !previous)}
+                >
+                  <span className="inline-flex items-center gap-1">
+                    {item.label}
+                    <ChevronDown className={cn("h-3 w-3 transition", isDesktopServicesOpen && "rotate-180")} />
+                  </span>
+                </button>
+
+                <div
+                  className={cn(
+                    "absolute left-1/2 top-full z-50 w-[min(92vw,760px)] -translate-x-1/2 pt-2 transition duration-150",
+                    isDesktopServicesOpen ? "visible opacity-100" : "pointer-events-none invisible opacity-0",
+                  )}
+                >
+                  <div className="overflow-hidden rounded-3xl border border-[#efd4d9] bg-[#fff7f8]/95 p-6 shadow-[0_35px_90px_-45px_rgba(98,56,67,0.55)] backdrop-blur-xl">
                     <div className="grid gap-6 md:grid-cols-[0.95fr_1.3fr]">
                       <div className="rounded-2xl border border-[#efccd3] bg-[#fcecef] p-5">
                         <p className="text-xs font-semibold tracking-[0.16em] text-[#a06070] uppercase">Need Guidance?</p>
@@ -125,6 +191,7 @@ export function SiteHeader() {
                             <li key={`${child.label}-${child.href}`}>
                               <Link
                                 href={child.href}
+                                onClick={closeNavigationOverlays}
                                 className="group/service-link flex items-center justify-between rounded-xl border border-transparent bg-white/60 px-3 py-2 text-sm font-medium !text-brand-cocoa transition hover:border-[#efd4d9] hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cocoa/25"
                               >
                                 <span className="!text-brand-cocoa">{child.label}</span>
@@ -137,9 +204,9 @@ export function SiteHeader() {
                     </div>
                   </div>
                 </div>
-              )}
-            </div>
-          ))}
+              </div>
+            );
+          })}
         </nav>
 
         {/* Actions */}
@@ -157,6 +224,108 @@ export function SiteHeader() {
             ♡ Book a Visit
           </a>
           <CartPill />
+
+          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+            <SheetTrigger asChild>
+              <button
+                type="button"
+                aria-label="Open navigation menu"
+                className={cn(
+                  "inline-flex h-10 w-10 items-center justify-center rounded-full border transition md:hidden",
+                  isHome
+                    ? "border-white/45 bg-white/15 text-white backdrop-blur hover:bg-white/25"
+                    : "border-[#f0b8bf] bg-[#f9d0d5] text-[#b05060] hover:bg-[#f5bfc6]",
+                )}
+              >
+                <Menu className="h-5 w-5" />
+              </button>
+            </SheetTrigger>
+
+            <SheetContent side="right" className="flex h-full w-[86vw] max-w-sm flex-col border-l-[#efd4d9] bg-[#fff7f8] p-0">
+              <SheetHeader className="border-b border-[#efd4d9] px-5 py-4">
+                <SheetTitle className="font-serif text-3xl text-[#8d4f5e]">Russ Nails</SheetTitle>
+                <SheetDescription className="text-xs font-semibold tracking-[0.16em] text-[#a06070] uppercase">
+                  Navigation
+                </SheetDescription>
+              </SheetHeader>
+
+              <nav className="flex-1 overflow-y-auto px-4 py-4">
+                <ul className="space-y-2">
+                  {navLinks.map((item) => {
+                    const mobileLinkClass = cn(
+                      "flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold tracking-[0.08em] uppercase transition",
+                      pathname === item.href
+                        ? "bg-[#f3cfd5] text-[#8d4f5e]"
+                        : "text-[#6a4a50] hover:bg-[#fcecef]",
+                    );
+
+                    if (!item.children) {
+                      return (
+                        <li key={item.href}>
+                          <Link href={item.href} onClick={closeNavigationOverlays} className={mobileLinkClass}>
+                            <span>{item.label}</span>
+                            <span aria-hidden="true">→</span>
+                          </Link>
+                        </li>
+                      );
+                    }
+
+                    return (
+                      <li key={item.href}>
+                        <Collapsible open={isMobileServicesOpen} onOpenChange={setIsMobileServicesOpen}>
+                          <CollapsibleTrigger asChild>
+                            <button
+                              type="button"
+                              className={cn(
+                                "flex w-full items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold tracking-[0.08em] uppercase transition",
+                                isMobileServicesOpen || pathname === item.href
+                                  ? "bg-[#f3cfd5] text-[#8d4f5e]"
+                                  : "text-[#6a4a50] hover:bg-[#fcecef]",
+                              )}
+                            >
+                              <span>{item.label}</span>
+                              <ChevronDown
+                                className={cn(
+                                  "h-4 w-4 transition-transform",
+                                  isMobileServicesOpen && "rotate-180",
+                                )}
+                              />
+                            </button>
+                          </CollapsibleTrigger>
+
+                          <CollapsibleContent className="mt-2 space-y-2 pl-2">
+                            {item.children.map((child) => (
+                              <Link
+                                key={`${child.label}-${child.href}`}
+                                href={child.href}
+                                onClick={closeNavigationOverlays}
+                                className="flex items-center justify-between rounded-xl bg-white/70 px-4 py-2.5 text-sm font-medium text-[#5f4440] transition hover:bg-white"
+                              >
+                                <span>{child.label}</span>
+                                <span aria-hidden="true">→</span>
+                              </Link>
+                            ))}
+                          </CollapsibleContent>
+                        </Collapsible>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </nav>
+
+              <div className="border-t border-[#efd4d9] px-4 py-4">
+                <a
+                  href={bookingLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={closeNavigationOverlays}
+                  className="inline-flex w-full items-center justify-center rounded-full bg-[#b05060] px-5 py-3 text-xs font-bold tracking-[0.16em] text-white uppercase transition hover:bg-[#9f4354]"
+                >
+                  Book a Visit
+                </a>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
 
