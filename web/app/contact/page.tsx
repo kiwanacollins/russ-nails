@@ -7,8 +7,16 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  const whatsappLink = buildWhatsAppLink(
-    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "256700000000",
+  const primaryContactNumber = "256762267569";
+  const secondaryContactNumber = "256708420038";
+
+  const whatsappPrimaryLink = buildWhatsAppLink(
+    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? primaryContactNumber,
+    "Hello Russ Nails, I would like to make a booking.",
+  );
+
+  const whatsappSecondaryLink = buildWhatsAppLink(
+    secondaryContactNumber,
     "Hello Russ Nails, I would like to make a booking.",
   );
 
@@ -33,26 +41,54 @@ export default function ContactPage() {
             </div>
             <div>
               <dt className="font-semibold text-brand-cocoa">Phone</dt>
-              <dd>+256 700 000 000</dd>
+              <dd>
+                <a href="tel:+256762267569" className="underline decoration-dotted underline-offset-2">
+                  +256 762 267 569
+                </a>
+                {" / "}
+                <a href="tel:+256708420038" className="underline decoration-dotted underline-offset-2">
+                  +256 708 420 038
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-brand-cocoa">WhatsApp</dt>
+              <dd>
+                <a href={whatsappPrimaryLink} target="_blank" rel="noreferrer" className="underline decoration-dotted underline-offset-2">
+                  +256 762 267 569
+                </a>
+                {" / "}
+                <a href={whatsappSecondaryLink} target="_blank" rel="noreferrer" className="underline decoration-dotted underline-offset-2">
+                  +256 708 420 038
+                </a>
+              </dd>
             </div>
             <div>
               <dt className="font-semibold text-brand-cocoa">Email</dt>
-              <dd>hello@russnails.com</dd>
+              <dd>info@russnails.com</dd>
             </div>
             <div>
               <dt className="font-semibold text-brand-cocoa">Opening Hours</dt>
-              <dd>Mon - Sat: 9:00 AM - 7:00 PM</dd>
+              <dd>Opens at 7:00 AM (Mon - Sat), Sunday by reservation</dd>
             </div>
           </dl>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a
-              href={whatsappLink}
+              href={whatsappPrimaryLink}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-brand-cocoa px-6 py-3 text-xs font-semibold tracking-[0.14em] text-white uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
             >
-              Book via WhatsApp
+              Book via WhatsApp (Line 1)
+            </a>
+            <a
+              href={whatsappSecondaryLink}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-brand-cocoa/25 bg-white/70 px-6 py-3 text-xs font-semibold tracking-[0.14em] text-brand-cocoa uppercase transition hover:-translate-y-0.5"
+            >
+              WhatsApp Line 2
             </a>
             <a
               href="https://maps.google.com/?q=Kololo+Kampala"

@@ -13,11 +13,12 @@ Service-first luxury website built with Next.js App Router.
 Copy `.env.example` to `.env.local` and fill in values.
 
 ```bash
-NEXT_PUBLIC_WHATSAPP_NUMBER=256700000000
+NEXT_PUBLIC_WHATSAPP_NUMBER=256762267569
+# Secondary calls/WhatsApp line: 256708420038
 PAYLOAD_API_URL=http://localhost:4000
 RESEND_API_KEY=re_xxx
-ORDER_NOTIFICATION_FROM_EMAIL=orders@russnails.com
-ORDER_NOTIFICATION_TO_EMAIL=owner@russnails.com
+ORDER_NOTIFICATION_FROM_EMAIL=info@russnails.com
+ORDER_NOTIFICATION_TO_EMAIL=info@russnails.com
 ENABLE_WHATSAPP_INQUIRY_EMAIL=true
 ```
 

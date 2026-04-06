@@ -33,7 +33,7 @@ export default function WhatsAppCheckoutPage() {
   const [orderRef, setOrderRef] = useState<string | null>(null);
 
   const subtotal = useMemo(() => calculateSubtotal(items), [items]);
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "256700000000";
+  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "256762267569";
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { services } from "@/lib/static-content";
 
 const footerPages = [
   { label: "Home", href: "/" },
@@ -43,10 +44,11 @@ export function SiteFooter() {
               <p className="text-xs font-semibold tracking-[0.25em] text-brand-cocoa/58 uppercase">Contacts</p>
               <div className="mt-6 space-y-6 text-lg leading-normal text-brand-cocoa sm:text-xl">
                 <p>Kololo, Kampala, Uganda</p>
-                <p>Mon - Sat: 9:00 AM - 7:00 PM, Sunday: By reservation only</p>
+                <p>Opens at 7:00 AM (Mon - Sat), Sunday by reservation</p>
                 <div>
-                  <p className="font-semibold text-brand-cocoa/86">+256 700 000 000</p>
-                  <p className="mt-2 text-brand-cocoa/75">hello@russnails.com</p>
+                  <p className="font-semibold text-brand-cocoa/86">+256 762 267 569</p>
+                  <p className="mt-1 font-semibold text-brand-cocoa/86">+256 708 420 038</p>
+                  <p className="mt-2 text-brand-cocoa/75">info@russnails.com</p>
                 </div>
               </div>
             </div>
@@ -102,9 +104,11 @@ export function SiteFooter() {
                 className="w-full appearance-none border-b border-white/45 bg-transparent pb-3 pr-12 text-lg text-white/95 focus:border-white focus:outline-none sm:text-xl"
               >
                 <option value="" disabled className="text-brand-cocoa">Choose a Service</option>
-                <option value="extensions" className="text-brand-cocoa">Gel Extensions</option>
-                <option value="russian" className="text-brand-cocoa">Russian Manicure</option>
-                <option value="bridal" className="text-brand-cocoa">Bridal Suite</option>
+                {services.map((service) => (
+                  <option key={service.slug} value={service.slug} className="text-brand-cocoa">
+                    {service.name}
+                  </option>
+                ))}
               </select>
               <span className="pointer-events-none absolute right-1 top-1/2 -translate-y-1/2 text-white/90 transition group-focus-within:rotate-180">
                 <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">

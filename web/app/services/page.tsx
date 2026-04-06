@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesPage() {
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "256700000000";
+  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "256762267569";
 
   return (
     <div className="shell py-12 sm:py-16">

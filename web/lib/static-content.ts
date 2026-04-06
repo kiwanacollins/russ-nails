@@ -2,44 +2,52 @@ import type { GalleryShot, Product, Service, Testimonial } from "@/lib/types";
 
 export const services: Service[] = [
   {
-    slug: "couture-gel-extensions",
-    name: "Couture Gel Extensions",
+    slug: "gel-extensions",
+    name: "Gel Extensions",
     duration: "120 minutes",
-    priceFrom: 120000,
+    priceFrom: 100000,
     description:
-      "Structured gel extension set with tailored shape analysis, precision apex building, and glossy finish.",
+      "Structured gel extension set with shape balancing, precise apex work, and a high-gloss finish.",
   },
   {
-    slug: "signature-russian-manicure",
-    name: "Signature Russian Manicure",
-    duration: "95 minutes",
-    priceFrom: 85000,
-    description:
-      "Detailed dry manicure technique for a refined cuticle line, perfect polish longevity, and clean contouring.",
-  },
-  {
-    slug: "bridal-nail-suite",
-    name: "Bridal Nail Suite",
-    duration: "150 minutes",
-    priceFrom: 180000,
-    description:
-      "Consultation-led bridal package with trial design, wedding-day set, and hand treatment for camera-ready elegance.",
-  },
-  {
-    slug: "executive-pedicure",
-    name: "Executive Pedicure Ritual",
+    slug: "gel-overlay",
+    name: "Gel Overlay",
     duration: "90 minutes",
-    priceFrom: 95000,
+    priceFrom: 70000,
     description:
-      "Luxury soak, exfoliation, massage, and precision polish finished with a long-wear gel top coat.",
+      "Protective overlay on natural nails for added strength, smooth contouring, and long-wear shine.",
   },
   {
-    slug: "nail-art-bespoke",
-    name: "Bespoke Nail Art",
-    duration: "45 minutes add-on",
+    slug: "gel-manicure",
+    name: "Gel Manicure",
+    duration: "75 minutes",
+    priceFrom: 50000,
+    description:
+      "Cuticle care, shaping, and gel polish application designed for a clean and durable everyday finish.",
+  },
+  {
+    slug: "gel-toe-nails",
+    name: "Gel Toe Nails",
+    duration: "60 minutes",
     priceFrom: 30000,
     description:
-      "Custom hand-painted art and embellishment work matched to events, wardrobe palettes, and editorial references.",
+      "Long-lasting gel polish for toes with prep, shaping, and refined color application.",
+  },
+  {
+    slug: "gel-with-pedicure",
+    name: "Gel with Pedicure",
+    duration: "105 minutes",
+    priceFrom: 70000,
+    description:
+      "Classic pedicure treatment completed with gel application for a polished and longer-lasting result.",
+  },
+  {
+    slug: "pedicure",
+    name: "Pedicure",
+    duration: "75 minutes",
+    priceFrom: 40000,
+    description:
+      "Full pedicure with soak, exfoliation, nail shaping, and finishing for refreshed feet and neat toes.",
   },
 ];
 

@@ -24,7 +24,7 @@ export function QuickBookBar() {
     const message = `Hello Russ Nails, I'd like to book an appointment.\n\nName: ${name}\nPhone: ${phone}\nService: ${selectedService}`;
     window.open(
       buildWhatsAppLink(
-        process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "256700000000",
+        process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "256762267569",
         message,
       ),
       "_blank",

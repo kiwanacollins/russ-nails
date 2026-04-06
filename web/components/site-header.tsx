@@ -41,7 +41,7 @@ export function SiteHeader() {
   const isHome = pathname === "/";
 
   const bookingLink = buildWhatsAppLink(
-    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "256700000000",
+    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "256762267569",
     "Hello Russ Nails, I would like to book a luxury nail appointment.",
   );
 
@@ -102,11 +102,20 @@ export function SiteHeader() {
                           Not sure which service fits your look? Our team can help you choose the right treatment.
                         </p>
                         <a
-                          href="tel:+256700000000"
+                          href="tel:+256762267569"
                           className="mt-4 inline-flex rounded-full bg-[#f3cfd5] px-4 py-2 text-xs font-semibold tracking-[0.12em] text-[#8d4f5e] uppercase transition hover:-translate-y-0.5"
                         >
-                          Call: +256 700 000 000
+                          Call: +256 762 267 569
                         </a>
+                        <p className="mt-2 text-xs text-[#6a4a50]">
+                          Alt line:{" "}
+                          <a
+                            href="tel:+256708420038"
+                            className="underline decoration-dotted underline-offset-2 hover:text-[#8d4f5e]"
+                          >
+                            +256 708 420 038
+                          </a>
+                        </p>
                       </div>
 
                       <div>

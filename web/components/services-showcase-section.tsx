@@ -10,30 +10,35 @@ type ServicesShowcaseSectionProps = {
 };
 
 const serviceVisuals: Record<string, { imageUrl: string; alt: string }> = {
-  "couture-gel-extensions": {
+  "gel-extensions": {
     imageUrl:
       "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1200&q=80",
     alt: "Gel extension treatment",
   },
-  "signature-russian-manicure": {
+  "gel-overlay": {
     imageUrl:
       "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=80",
-    alt: "Russian manicure close-up",
+    alt: "Gel overlay manicure close-up",
   },
-  "bridal-nail-suite": {
+  "gel-manicure": {
     imageUrl:
       "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80",
-    alt: "Bridal nail styling",
+    alt: "Gel manicure styling",
   },
-  "executive-pedicure": {
+  "gel-toe-nails": {
     imageUrl:
       "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=1200&q=80",
-    alt: "Pedicure and foot care session",
+    alt: "Gel toe nails treatment",
   },
-  "nail-art-bespoke": {
+  "gel-with-pedicure": {
     imageUrl:
       "https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=1200&q=80",
-    alt: "Bespoke nail art detail",
+    alt: "Gel with pedicure session",
+  },
+  "pedicure": {
+    imageUrl:
+      "https://images.unsplash.com/photo-1619451334792-150fd785ee74?auto=format&fit=crop&w=1200&q=80",
+    alt: "Classic pedicure treatment",
   },
 };
 
@@ -44,25 +49,29 @@ const fallbackVisual = {
 };
 
 const serviceCopy: Record<string, { title: string; summary: string }> = {
-  "couture-gel-extensions": {
+  "gel-extensions": {
     title: "Gel Extensions",
-    summary: "Structured extensions with shape analysis and a long-wear glossy finish.",
+    summary: "Structured extensions with shape balancing, apex precision, and long-wear shine.",
   },
-  "signature-russian-manicure": {
-    title: "Russian Manicure",
-    summary: "Detailed dry manicure work for clean cuticles and longer polish life.",
+  "gel-overlay": {
+    title: "Gel Overlay",
+    summary: "A strengthening overlay for natural nails with smooth contouring and clean finish.",
   },
-  "bridal-nail-suite": {
-    title: "Bridal Suite",
-    summary: "Consultation-led bridal set with trial design and wedding-day polish confidence.",
+  "gel-manicure": {
+    title: "Gel Manicure",
+    summary: "Refined cuticle care and gel polish application built for everyday durability.",
   },
-  "executive-pedicure": {
-    title: "Executive Pedicure",
-    summary: "Luxury soak, exfoliation, and massage finished with a durable gel top coat.",
+  "gel-toe-nails": {
+    title: "Gel Toe Nails",
+    summary: "Toe prep and precise gel color application for a neat and lasting result.",
   },
-  "nail-art-bespoke": {
-    title: "Nail Art Studio",
-    summary: "Custom hand-painted art and embellishments matched to your event palette.",
+  "gel-with-pedicure": {
+    title: "Gel with Pedicure",
+    summary: "Classic pedicure steps followed by gel finishing for added longevity.",
+  },
+  "pedicure": {
+    title: "Pedicure",
+    summary: "A full soak, exfoliation, and grooming ritual for refreshed, polished feet.",
   },
 };
 

@@ -2,7 +2,7 @@ import { buildWhatsAppLink } from "@/lib/utils";
 
 export function WhatsAppFab() {
   const link = buildWhatsAppLink(
-    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "256700000000",
+    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "256762267569",
     "Hello Russ Nails, I would like to book or order products.",
   );
 
