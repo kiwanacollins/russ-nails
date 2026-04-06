@@ -120,15 +120,15 @@ export function SiteHeader() {
 
                       <div>
                         <p className="text-xs font-semibold tracking-[0.16em] text-[#1f1a18] uppercase">Services Menu</p>
-                        <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+                        <ul className="mt-3 grid gap-2 text-brand-cocoa sm:grid-cols-2">
                           {item.children.map((child) => (
                             <li key={`${child.label}-${child.href}`}>
                               <Link
                                 href={child.href}
-                                className="flex items-center justify-between rounded-xl border border-transparent px-3 py-2 text-sm text-[#1f1a18] transition hover:border-[#efd4d9] hover:bg-white"
+                                className="group/service-link flex items-center justify-between rounded-xl border border-transparent bg-white/60 px-3 py-2 text-sm font-medium !text-brand-cocoa transition hover:border-[#efd4d9] hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cocoa/25"
                               >
-                                <span>{child.label}</span>
-                                <span className="text-[#1f1a18]">→</span>
+                                <span className="!text-brand-cocoa">{child.label}</span>
+                                <span className="!text-brand-cocoa" aria-hidden="true">→</span>
                               </Link>
                             </li>
                           ))}
