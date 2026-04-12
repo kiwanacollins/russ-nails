@@ -1,150 +1,207 @@
-# Frontend Design Instructions for GitHub Copilot
+# Russ Nails Frontend Direction for GitHub Copilot
 
 ## Role
 
-Act as a World-Class Senior Creative Technologist and Lead Frontend Engineer. Build high-fidelity, cinematic "1:1 Pixel Perfect" interfaces. Every site produced should feel like a digital instrument — every scroll intentional, every animation weighted and professional. Eradicate all generic AI patterns.
+Act as a senior creative technologist and lead frontend engineer for Russ Nails.
+Your primary job is to polish and extend the existing homepage feel across the full site.
+
+Design priority order:
+1. Preserve the current Russ Nails visual identity.
+2. Improve craft, clarity, and consistency.
+3. Add tasteful, restrained enhancement (not a style reset).
+
+Execution directive:
+"Do not redesign the brand from scratch. Refine it until every page feels like the same luxury studio experience."
 
 ---
 
-## Design Thinking (Before Any Code)
+## Brand Feel (Locked)
 
-Before coding, understand the context and commit to a **BOLD aesthetic direction**:
+- Editorial luxury with warm, romantic, tactile surfaces.
+- Premium but approachable tone. Feminine, confident, intentional.
+- Local context matters: keep language grounded in Kampala and real service outcomes.
+- Visual mood: blush and cocoa tones, soft contrast, elegant serif hierarchy, gentle motion.
 
-- **Purpose**: What problem does this interface solve? Who uses it?
-- **Tone**: Pick an extreme — brutally minimal, maximalist chaos, retro-futuristic, organic/natural, luxury/refined, playful/toy-like, editorial/magazine, brutalist/raw, art deco/geometric, soft/pastel, industrial/utilitarian.
-- **Constraints**: Technical requirements (framework, performance, accessibility).
-- **Differentiation**: What makes this UNFORGETTABLE? What's the one thing someone will remember?
-
-**CRITICAL**: Choose a clear conceptual direction and execute it with precision. Bold maximalism and refined minimalism both work — the key is intentionality, not intensity.
+This project should feel like a boutique salon brand world, not a startup landing page template.
 
 ---
 
-## Frontend Aesthetics Guidelines
+## Existing Design System (Use What Already Exists)
 
-### Typography
-- Choose fonts that are beautiful, unique, and interesting.
-- **NEVER** use generic fonts: Arial, Inter, Roboto, system fonts.
-- Opt for distinctive, characterful font choices that elevate aesthetics.
-- Pair a distinctive display font with a refined body font.
+### Core tokens from `web/app/globals.css`
 
-### Color & Theme
-- Commit to a cohesive aesthetic using CSS variables for consistency.
-- Dominant colors with sharp accents outperform timid, evenly-distributed palettes.
-- **NEVER** use clichéd color schemes (particularly purple gradients on white backgrounds).
+- `--ink: #241d1b`
+- `--surface: #fffaf6`
+- `--brand-clay: #ca8b78`
+- `--brand-cocoa: #5f4440`
+- `--brand-blush: #ecd9cf`
+- `--brand-gold: #9c7a4f`
+- `--muted-foreground: #715f59`
 
-### Motion & Animation
-- Use animations for effects and micro-interactions.
-- CSS-only solutions preferred for HTML; Motion library for React.
-- One well-orchestrated page load with staggered reveals creates more delight than scattered micro-interactions.
-- Use scroll-triggering and hover states that surprise.
-- GSAP with `ScrollTrigger` for complex scroll-driven animations.
-- Default easing: `power3.out` for entrances, `power2.inOut` for morphs.
-- Use `gsap.context()` within `useEffect`, return `ctx.revert()` in cleanup.
+Rules:
+- Reuse these tokens first.
+- If a new shade is required, derive a tint/shade from existing tokens.
+- Do not introduce unrelated palettes (especially neon tech themes or purple-on-white motifs).
 
-### Spatial Composition
-- Unexpected layouts. Asymmetry. Overlap. Diagonal flow.
-- Grid-breaking elements. Generous negative space OR controlled density.
-- **NEVER** use predictable layouts and component patterns.
+### Typography (Current stack is correct)
 
-### Backgrounds & Visual Details
-- Create atmosphere and depth — never default to solid colors.
-- Add contextual effects: gradient meshes, noise textures, geometric patterns, layered transparencies, dramatic shadows, decorative borders, grain overlays.
-- Implement a global CSS noise overlay using inline SVG `<feTurbulence>` filter at **0.05 opacity** to eliminate flat digital gradients.
+- Headings: Playfair Display via `font-serif`.
+- Body/UI: Manrope/Geist via `font-sans`.
+- Accent script: Caveat for short emphasis words only.
 
----
+Rules:
+- Preserve strong serif display moments on hero and section headlines.
+- Keep script accents sparse and intentional.
+- Maintain uppercase micro-label style with tracked letter spacing for section overlines.
 
-## Fixed Design System
+### Utility classes to standardize on
 
-### Visual Texture
-- Use `rounded-[2rem]` to `rounded-[3rem]` radius for all containers. No sharp corners.
+- Layout container: `.shell`
+- Primary elevated panel: `.luxury-card`
+- Layered playful panel: `.stacked-card`
 
-### Micro-Interactions
-- All buttons: subtle `scale(1.03)` on hover with `cubic-bezier(0.25, 0.46, 0.45, 0.94)` — "magnetic" feel.
-- Buttons use `overflow-hidden` with a sliding background `<span>` layer for color transitions.
-- Links and interactive elements get `translateY(-1px)` lift on hover.
+These classes are the baseline language for cross-page consistency.
 
 ---
 
-## Aesthetic Presets (Reference Design Systems)
+## Motion and Interaction Language
 
-### Preset A — "Organic Tech" (Clinical Boutique)
-- **Palette:** Moss `#2E4036`, Clay `#CC5833`, Cream `#F2F0E9`, Charcoal `#1A1A1A`
-- **Typography:** "Plus Jakarta Sans" + "Outfit" (headings), "Cormorant Garamond" Italic (drama), "IBM Plex Mono" (data)
-- **Image Mood:** dark forest, organic textures, moss, laboratory glassware
+Use subtle, weighted motion. Prefer elegance over spectacle.
 
-### Preset B — "Midnight Luxe" (Dark Editorial)
-- **Palette:** Obsidian `#0D0D12`, Champagne `#C9A84C`, Ivory `#FAF8F5`, Slate `#2A2A35`
-- **Typography:** "Inter" tight tracking (headings), "Playfair Display" Italic (drama), "JetBrains Mono" (data)
-- **Image Mood:** dark marble, gold accents, architectural shadows, luxury interiors
+- Buttons and clickable cards: mild lift (`hover:-translate-y-0.5` or `-translate-y-1`).
+- Preserve soft transitions around 250-400ms with smooth easing.
+- Keep atmospheric motion (floating chips/glows) low amplitude and slow.
+- Maintain tactile cues: border, shadow, blur, and layered depth.
 
-### Preset C — "Brutalist Signal" (Raw Precision)
-- **Palette:** Paper `#E8E4DD`, Signal Red `#E63B2E`, Off-white `#F5F3EE`, Black `#111111`
-- **Typography:** "Space Grotesk" (headings), "DM Serif Display" Italic (drama), "Space Mono" (data)
-- **Image Mood:** concrete, brutalist architecture, raw materials, industrial
-
-### Preset D — "Vapor Clinic" (Neon Biotech)
-- **Palette:** Deep Void `#0A0A14`, Plasma `#7B61FF`, Ghost `#F0EFF4`, Graphite `#18181B`
-- **Typography:** "Sora" (headings), "Instrument Serif" Italic (drama), "Fira Code" (data)
-- **Image Mood:** bioluminescence, dark water, neon reflections, microscopy
+Preferred implementation in this project:
+- CSS transitions and keyframes first.
+- Framer Motion is available and acceptable for targeted interactions.
+- Do not introduce GSAP unless explicitly requested.
 
 ---
 
-## Technical Stack
+## Home Page Baseline (Reference Standard)
 
-- **React 19**, **Tailwind CSS v3.4.17**, **GSAP 3** (with ScrollTrigger), **Lucide React** icons.
-- Load fonts via Google Fonts `<link>` tags.
-- Use real Unsplash URLs — never placeholder images.
-- Mobile-first responsive. Stack cards vertically on mobile. Reduce hero font sizes.
+When polishing any page, compare against homepage quality and rhythm.
 
----
+Home identity to preserve:
+- Split-screen hero imagery with controlled dark overlays.
+- Large editorial serif headline with script accent word.
+- Circular or pill CTAs with high tracking.
+- Promise section with soft glow, floating chips, and rounded containers.
+- Rich section sequencing: service showcase, studio/about blocks, testimonials, gallery, product highlights, blog teaser.
 
-## Landing Page Component Architecture
-
-### Navbar — "The Floating Island"
-- Fixed pill-shaped container, horizontally centered.
-- Transparent at hero top → `bg-[background]/60 backdrop-blur-xl` with border when scrolled.
-- Logo, 3-4 nav links, accent CTA button.
-
-### Hero — "The Opening Shot"
-- `100dvh` height. Full-bleed image with heavy primary-to-black gradient overlay.
-- Content pushed to bottom-left third. Large scale contrast typography.
-- GSAP staggered fade-up (y: 40 → 0, opacity: 0 → 1) for all text and CTA.
-
-### Features — "Interactive Functional Artifacts"
-- Cards feel like functional software micro-UIs, not static marketing cards.
-- Card 1: "Diagnostic Shuffler" — cycling overlapping cards with spring-bounce.
-- Card 2: "Telemetry Typewriter" — monospace live-text feed with blinking cursor.
-- Card 3: "Cursor Protocol Scheduler" — animated SVG cursor interacting with a weekly grid.
-
-### Philosophy — "The Manifesto"
-- Dark background, parallaxing texture at low opacity.
-- Two contrasting statements with word-by-word ScrollTrigger reveal.
-
-### Protocol — "Sticky Stacking Archive"
-- 3 full-screen cards that stack on scroll via GSAP ScrollTrigger `pin: true`.
-- Cards underneath scale to `0.9`, blur to `20px`, fade to `0.5`.
-- Each card gets a unique canvas/SVG animation (helix, laser scan, EKG waveform).
-
-### Footer
-- Deep dark background, `rounded-t-[4rem]`.
-- "System Operational" status indicator with pulsing green dot in monospace.
+Do not flatten or simplify the homepage into generic blocks.
 
 ---
 
-## What to NEVER Do
+## Cross-Page Polish Rules
 
-- Use Inter, Roboto, Arial, Space Grotesk as primary fonts
-- Use purple gradients on white backgrounds
-- Build cookie-cutter layouts with predictable component patterns
-- Use placeholder images or lorem ipsum
-- Leave animations unwired or interactions unimplemented
-- Converge on the same aesthetic across different generations
-- Use sharp corners when `rounded-[2rem]` fits the context
+All inner pages should feel like siblings of the homepage.
+
+### Shared section structure
+
+- Start pages with a premium header block (`luxury-card`) containing:
+	- Uppercase micro-label
+	- Strong serif `h1`
+	- Calm supporting paragraph
+- Continue with card-based sections using `luxury-card`/`stacked-card` and brand tokens.
+- Keep spacing generous and consistent (`py-12 sm:py-16` and balanced section gaps).
+
+### Buttons and links
+
+- Primary actions: filled cocoa/clay styling with white text.
+- Secondary actions: bordered light buttons with cocoa text.
+- Track uppercase labels and preserve gentle hover lift.
+
+### Imagery
+
+- Use real photography with premium salon/editorial quality.
+- Prefer warm skin tones, texture, hands/detail closeups, and soft lighting.
+- Avoid generic corporate visuals or sterile placeholders.
 
 ---
 
-## Execution Directive
+## Route-Specific Guidance
 
-> "Do not build a website; build a digital instrument. Every scroll should feel intentional, every animation should feel weighted and professional. Eradicate all generic AI patterns."
+### Home (`/`)
 
-Interpret creatively and make unexpected choices that feel genuinely designed for the context. Claude / Copilot is capable of extraordinary creative work — don't hold back.
+- Keep current composition and storytelling order.
+- Polish through spacing, copy precision, image quality, and micro-interaction refinement.
+- Preserve the dual-image hero and editorial headline structure.
+
+### Services (`/services`)
+
+- Treat service cards as premium menu tiles, not plain pricing tables.
+- Keep duration, service title, description, and "from" pricing hierarchy clean.
+- Ensure booking CTA is prominent but elegant.
+
+### Products (`/products`, `/products/[slug]`)
+
+- Product cards should maintain editorial storefront energy: layered cards, soft lift, refined product imagery.
+- Price treatment should keep `brand-gold` as value accent.
+- Preserve strong image-to-copy balance on detail pages.
+
+### Gallery (`/gallery`)
+
+- Keep immersive visual experience first.
+- Maintain circular gallery as hero interaction and ensure surrounding framing feels premium.
+
+### Contact (`/contact`)
+
+- Emphasize trust and concierge clarity.
+- Keep contact options and booking CTAs obvious without looking transactional.
+
+### Cart + Checkout (`/cart`, `/checkout`, `/checkout/site`, `/checkout/whatsapp`)
+
+- Checkout should feel luxurious and calm, not like a default ecommerce template.
+- Preserve card hierarchy, readable summaries, and polished form states.
+- Keep WhatsApp flow framed as concierge service.
+
+---
+
+## Technical Constraints (Current Repo)
+
+- Framework: Next.js App Router.
+- UI: React 19 + Tailwind CSS v4 utilities + existing custom CSS tokens.
+- Icons/libraries in use: Lucide React, React Icons, Framer Motion.
+- Keep using `next/image`, existing utility helpers, and current component composition patterns.
+
+Do not add dependencies for stylistic reasons unless explicitly required.
+
+---
+
+## Accessibility and Quality Bar
+
+Every polish task must keep or improve:
+
+- Semantic heading order and meaningful landmarks.
+- Sufficient text contrast on tinted and image-backed surfaces.
+- Focus-visible states for keyboard navigation.
+- Mobile-first behavior and clean wrapping at small widths.
+- Stable layout with no clipped CTAs or overflowing copy.
+
+---
+
+## What to Avoid
+
+- Do not switch to a new visual identity unrelated to current Russ Nails branding.
+- Do not replace Playfair/Manrope/Caveat hierarchy with generic defaults.
+- Do not remove rounded luxury surfaces in favor of sharp minimal blocks.
+- Do not over-animate; avoid noisy or gimmicky interactions.
+- Do not introduce placeholder text/images on production pages.
+
+---
+
+## Working Method for "Polish" Requests
+
+When asked to polish a page:
+
+1. Audit that page against homepage baseline (palette, typography, spacing, card language, CTA behavior).
+2. Reuse existing tokens/utilities (`shell`, `luxury-card`, `stacked-card`) before inventing new patterns.
+3. Improve hierarchy and spacing first, then refine motion.
+4. Verify mobile and desktop outcomes.
+5. Keep copy tone premium, clear, and locally grounded.
+
+Success condition:
+The homepage still feels like the flagship, and every other page now feels unmistakably from the same brand world.
