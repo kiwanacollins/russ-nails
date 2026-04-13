@@ -1,5 +1,15 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import {
+  ArrowRight,
+  CalendarDays,
+  Clock3,
+  Mail,
+  MapPin,
+  MessageCircle,
+  Phone,
+  Sparkles,
+} from "lucide-react";
 import { buildWhatsAppLink } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -133,85 +143,216 @@ export default function ContactPage() {
       </section>
 
       <div className="shell mt-8">
-        <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-          <article className="luxury-card p-6 sm:p-8 lg:p-10">
-          <p className="text-xs tracking-[0.18em] text-brand-cocoa/70 uppercase">Studio Details</p>
-          <h2 className="mt-3 font-serif text-3xl text-brand-cocoa sm:text-4xl">Visit us in Kololo</h2>
+        <section className="grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
+          <article className="relative overflow-hidden rounded-3xl border border-brand-cocoa/10 bg-linear-to-br from-[#fffdf8] via-[#fff9f4] to-[#f3e6dc] p-6 shadow-[0_24px_90px_-52px_rgba(95,68,64,0.48)] sm:p-8 lg:p-10">
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(202,139,120,0.14),transparent_40%),radial-gradient(circle_at_bottom_left,rgba(156,122,79,0.1),transparent_32%)]" />
 
-          <dl className="mt-6 space-y-4 text-sm leading-7 text-muted sm:text-base">
-            <div>
-              <dt className="font-semibold text-brand-cocoa">Address</dt>
-              <dd>Kololo, Kampala, Uganda</dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-brand-cocoa">Phone</dt>
-              <dd>
-                <a href="tel:+256762267569" className="underline decoration-dotted underline-offset-2">
-                  +256 762 267 569
-                </a>
-                {" / "}
-                <a href="tel:+256708420038" className="underline decoration-dotted underline-offset-2">
-                  +256 708 420 038
-                </a>
-              </dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-brand-cocoa">WhatsApp</dt>
-              <dd>
+            <div className="relative">
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <p className="text-xs tracking-[0.18em] text-brand-cocoa/70 uppercase">Studio Details</p>
+                <span className="inline-flex items-center gap-2 rounded-full border border-brand-cocoa/10 bg-white/60 px-3 py-1 text-[0.64rem] font-semibold tracking-[0.18em] text-brand-cocoa/70 uppercase shadow-[0_10px_24px_-18px_rgba(95,68,64,0.45)]">
+                  <Clock3 className="h-3.5 w-3.5 text-brand-clay" />
+                  Same-day replies
+                </span>
+              </div>
+
+              <h2 className="mt-3 font-serif text-3xl text-brand-cocoa sm:text-4xl">Visit us in Kololo</h2>
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-muted sm:text-base">
+                We welcome scheduled visits, quick questions, and pre-booking consultations.
+              </p>
+
+              <div className="mt-7 grid gap-3 sm:grid-cols-3">
+                <div className="rounded-2xl border border-brand-cocoa/10 bg-white/65 px-4 py-4 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
+                  <div className="flex items-center gap-2 text-[0.64rem] font-semibold tracking-[0.18em] text-brand-cocoa/60 uppercase">
+                    <MapPin className="h-4 w-4 text-brand-clay" />
+                    Location
+                  </div>
+                  <p className="mt-3 text-sm leading-6 text-brand-cocoa">Kololo, Kampala</p>
+                </div>
+                <div className="rounded-2xl border border-brand-cocoa/10 bg-white/65 px-4 py-4 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
+                  <div className="flex items-center gap-2 text-[0.64rem] font-semibold tracking-[0.18em] text-brand-cocoa/60 uppercase">
+                    <MessageCircle className="h-4 w-4 text-brand-clay" />
+                    Booking
+                  </div>
+                  <p className="mt-3 text-sm leading-6 text-brand-cocoa">WhatsApp first</p>
+                </div>
+                <div className="rounded-2xl border border-brand-cocoa/10 bg-white/65 px-4 py-4 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
+                  <div className="flex items-center gap-2 text-[0.64rem] font-semibold tracking-[0.18em] text-brand-cocoa/60 uppercase">
+                    <Sparkles className="h-4 w-4 text-brand-clay" />
+                    Support
+                  </div>
+                  <p className="mt-3 text-sm leading-6 text-brand-cocoa">Concierge guidance</p>
+                </div>
+              </div>
+
+              <div className="mt-7 grid gap-3 sm:grid-cols-2">
+                <div className="rounded-2xl border border-white/75 bg-white/70 p-4 shadow-[0_16px_40px_-30px_rgba(95,68,64,0.5)] backdrop-blur-sm">
+                  <div className="flex items-center gap-2 text-[0.64rem] font-semibold tracking-[0.18em] text-brand-cocoa/60 uppercase">
+                    <MapPin className="h-4 w-4 text-brand-clay" />
+                    Address
+                  </div>
+                  <p className="mt-3 text-sm leading-6 text-brand-cocoa">Kololo, Kampala, Uganda</p>
+                  <p className="mt-2 text-xs leading-5 text-muted">Private studio visits by appointment.</p>
+                </div>
+
+                <div className="rounded-2xl border border-white/75 bg-white/70 p-4 shadow-[0_16px_40px_-30px_rgba(95,68,64,0.5)] backdrop-blur-sm">
+                  <div className="flex items-center gap-2 text-[0.64rem] font-semibold tracking-[0.18em] text-brand-cocoa/60 uppercase">
+                    <Phone className="h-4 w-4 text-brand-clay" />
+                    Phone
+                  </div>
+                  <p className="mt-3 text-sm leading-6 text-brand-cocoa">
+                    <a href="tel:+256762267569" className="transition hover:text-brand-clay">
+                      +256 762 267 569
+                    </a>
+                    <span className="mx-2 text-brand-cocoa/35">/</span>
+                    <a href="tel:+256708420038" className="transition hover:text-brand-clay">
+                      +256 708 420 038
+                    </a>
+                  </p>
+                  <p className="mt-2 text-xs leading-5 text-muted">Call if you need a same-day confirmation.</p>
+                </div>
+
+                <div className="rounded-2xl border border-white/75 bg-white/70 p-4 shadow-[0_16px_40px_-30px_rgba(95,68,64,0.5)] backdrop-blur-sm">
+                  <div className="flex items-center gap-2 text-[0.64rem] font-semibold tracking-[0.18em] text-brand-cocoa/60 uppercase">
+                    <MessageCircle className="h-4 w-4 text-brand-clay" />
+                    WhatsApp
+                  </div>
+                  <p className="mt-3 text-sm leading-6 text-brand-cocoa">
+                    <a
+                      href={whatsappPrimaryLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="transition hover:text-brand-clay"
+                    >
+                      +256 762 267 569
+                    </a>
+                    <span className="mx-2 text-brand-cocoa/35">/</span>
+                    <a
+                      href={whatsappSecondaryLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="transition hover:text-brand-clay"
+                    >
+                      +256 708 420 038
+                    </a>
+                  </p>
+                  <p className="mt-2 text-xs leading-5 text-muted">Fastest route for bookings and updates.</p>
+                </div>
+
+                <div className="rounded-2xl border border-white/75 bg-white/70 p-4 shadow-[0_16px_40px_-30px_rgba(95,68,64,0.5)] backdrop-blur-sm">
+                  <div className="flex items-center gap-2 text-[0.64rem] font-semibold tracking-[0.18em] text-brand-cocoa/60 uppercase">
+                    <Mail className="h-4 w-4 text-brand-clay" />
+                    Email
+                  </div>
+                  <p className="mt-3 text-sm leading-6 text-brand-cocoa">info@russnails.com</p>
+                  <p className="mt-2 text-xs leading-5 text-muted">For longer notes, references, and special requests.</p>
+                </div>
+              </div>
+
+              <div className="mt-8 flex flex-wrap gap-3">
                 <a
                   href={whatsappPrimaryLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="underline decoration-dotted underline-offset-2"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-cocoa px-6 py-3 text-xs font-semibold tracking-[0.14em] text-white uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
                 >
-                  +256 762 267 569
+                  Confirm on WhatsApp
+                  <ArrowRight className="h-3.5 w-3.5" />
                 </a>
-                {" / "}
                 <a
-                  href={whatsappSecondaryLink}
+                  href={studioMapLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="underline decoration-dotted underline-offset-2"
+                  className="inline-flex items-center justify-center rounded-full border border-brand-cocoa/20 bg-white/70 px-6 py-3 text-xs font-semibold tracking-[0.14em] text-brand-cocoa uppercase transition hover:-translate-y-0.5 hover:bg-white"
                 >
-                  +256 708 420 038
+                  Open map
                 </a>
-              </dd>
+              </div>
             </div>
-            <div>
-              <dt className="font-semibold text-brand-cocoa">Email</dt>
-              <dd>info@russnails.com</dd>
-            </div>
-          </dl>
-
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href={whatsappPrimaryLink}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-brand-cocoa px-6 py-3 text-xs font-semibold tracking-[0.14em] text-white uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
-            >
-              Confirm on WhatsApp
-            </a>
-            <a
-              href={studioMapLink}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-full border border-brand-cocoa/25 bg-white/70 px-6 py-3 text-xs font-semibold tracking-[0.14em] text-brand-cocoa uppercase transition hover:-translate-y-0.5"
-            >
-              Open map
-            </a>
-          </div>
           </article>
 
-          <article className="luxury-card bg-[#f3e5dc] p-6 sm:p-8 lg:p-10">
-          <p className="text-xs tracking-[0.18em] text-brand-cocoa/70 uppercase">Booking Notes</p>
-          <h2 className="mt-3 font-serif text-3xl text-brand-cocoa sm:text-4xl">Keep your visit smooth</h2>
-          <ul className="mt-6 space-y-3 text-sm leading-7 text-muted sm:text-base">
-            <li>Arrive 10 minutes early for consultation and service calibration.</li>
-            <li>Bridal and event packages should be reserved at least 2 weeks in advance.</li>
-            <li>Product order pickups can be coordinated during your appointment window.</li>
-            <li>For private after-hours sessions, request concierge confirmation on WhatsApp.</li>
-          </ul>
+          <article className="relative overflow-hidden rounded-3xl border border-brand-cocoa/10 bg-linear-to-br from-[#f7efe8] via-[#fcf8f4] to-[#f2e0d4] p-6 shadow-[0_24px_90px_-52px_rgba(95,68,64,0.42)] sm:p-8 lg:p-10">
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.7),transparent_42%),radial-gradient(circle_at_bottom_right,rgba(202,139,120,0.12),transparent_36%)]" />
+
+            <div className="relative">
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 text-[0.64rem] font-semibold tracking-[0.18em] text-brand-cocoa/70 uppercase ring-1 ring-brand-cocoa/10">
+                <CalendarDays className="h-3.5 w-3.5 text-brand-clay" />
+                Booking Notes
+              </div>
+
+              <h2 className="mt-4 font-serif text-3xl text-brand-cocoa sm:text-4xl">Keep your visit smooth</h2>
+              <p className="mt-4 text-sm leading-7 text-muted sm:text-base">
+                A few details help us prepare your service and keep the appointment calm and on time.
+              </p>
+
+              <div className="mt-7 space-y-3">
+                <div className="flex gap-4 rounded-2xl border border-white/75 bg-white/62 p-4 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-cocoa text-xs font-semibold tracking-[0.16em] text-white">
+                    01
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-brand-cocoa">Arrive early</h3>
+                    <p className="mt-1 text-sm leading-6 text-muted">
+                      Arrive 10 minutes early so we can settle your consultation and service calibration.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4 rounded-2xl border border-white/75 bg-white/62 p-4 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-cocoa text-xs font-semibold tracking-[0.16em] text-white">
+                    02
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-brand-cocoa">Reserve in advance</h3>
+                    <p className="mt-1 text-sm leading-6 text-muted">
+                      Bridal and event packages should be reserved at least 2 weeks ahead.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4 rounded-2xl border border-white/75 bg-white/62 p-4 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-cocoa text-xs font-semibold tracking-[0.16em] text-white">
+                    03
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-brand-cocoa">Share inspiration</h3>
+                    <p className="mt-1 text-sm leading-6 text-muted">
+                      Send a reference photo before your visit so we can prepare the right shape and finish.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4 rounded-2xl border border-white/75 bg-white/62 p-4 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-cocoa text-xs font-semibold tracking-[0.16em] text-white">
+                    04
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-brand-cocoa">After-hours requests</h3>
+                    <p className="mt-1 text-sm leading-6 text-muted">
+                      Request concierge confirmation on WhatsApp for private evening sessions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 rounded-3xl border border-brand-cocoa/10 bg-white/62 p-5 shadow-[0_18px_46px_-30px_rgba(95,68,64,0.5)]">
+                <p className="text-[0.68rem] tracking-[0.18em] text-brand-cocoa/55 uppercase">
+                  Need a faster recommendation?
+                </p>
+                <p className="mt-2 text-sm leading-6 text-brand-cocoa/86">
+                  Send a reference photo on WhatsApp and we’ll guide the right service, timing, and upkeep.
+                </p>
+                <a
+                  href={whatsappPrimaryLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 inline-flex items-center gap-2 rounded-full bg-brand-cocoa px-5 py-3 text-xs font-semibold tracking-[0.14em] text-white uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
+                >
+                  Send on WhatsApp
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </a>
+              </div>
+            </div>
           </article>
         </section>
       </div>
