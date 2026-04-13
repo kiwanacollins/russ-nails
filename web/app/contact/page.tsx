@@ -43,7 +43,7 @@ export default function ContactPage() {
                 href={whatsappPrimaryLink}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-xl bg-brand-cocoa px-7 py-4 text-xs font-semibold tracking-[0.18em] !text-white uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
+                className="inline-flex items-center justify-center rounded-xl bg-brand-cocoa px-7 py-4 text-xs font-semibold tracking-[0.18em] text-white! uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
               >
                 Book via WhatsApp
               </a>
