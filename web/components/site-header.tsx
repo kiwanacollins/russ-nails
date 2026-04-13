@@ -35,13 +35,10 @@ type NavLink = {
   children?: NavChild[];
 };
 
-const serviceChildren: NavChild[] = [
-  { label: "All Services", href: "/services" },
-  ...services.map((service) => ({
-    label: service.name,
-    href: `/services/${service.slug}`,
-  })),
-];
+const serviceChildren: NavChild[] = services.map((service) => ({
+  label: service.name,
+  href: `/services/${service.slug}`,
+}));
 
 const navLinks: NavLink[] = [
   { label: "Home", href: "/" },
