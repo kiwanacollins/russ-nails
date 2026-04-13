@@ -39,7 +39,7 @@ const serviceChildren: NavChild[] = [
   { label: "All Services", href: "/services" },
   ...services.map((service) => ({
     label: service.name,
-    href: "/services",
+    href: `/services/${service.slug}`,
   })),
 ];
 
@@ -54,6 +54,13 @@ const navLinks: NavLink[] = [
 export function SiteHeader() {
   const pathname = usePathname();
   const isHome = pathname === "/";
+  const isTopLevelMatch = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isDesktopServicesOpen, setIsDesktopServicesOpen] = useState(false);
@@ -113,8 +120,9 @@ export function SiteHeader() {
         {/* Nav */}
         <nav className={`hidden items-center gap-1 md:flex ${isHome ? "text-white" : "text-[#a06070]"}`}>
           {navLinks.map((item, i) => {
+            const isItemActive = isTopLevelMatch(item.href);
             const linkClass = `rounded-full px-3 py-1.5 text-sm font-bold tracking-[0.14em] uppercase transition ${
-              pathname === item.href
+              isItemActive
                 ? isHome
                   ? "bg-white/30 text-white ring-1 ring-white/35 backdrop-blur-sm drop-shadow-[0_1px_8px_rgba(0,0,0,0.32)]"
                   : "bg-[#fce8ea] text-[#8d4f5e]"
@@ -192,10 +200,10 @@ export function SiteHeader() {
                               <Link
                                 href={child.href}
                                 onClick={closeNavigationOverlays}
-                                className="group/service-link flex items-center justify-between rounded-xl border border-transparent bg-white/60 px-3 py-2 text-sm font-medium !text-brand-cocoa transition hover:border-[#efd4d9] hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cocoa/25"
+                                className="group/service-link flex items-center justify-between rounded-xl border border-transparent bg-white/60 px-3 py-2 text-sm font-medium text-brand-cocoa transition hover:border-[#efd4d9] hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cocoa/25"
                               >
-                                <span className="!text-brand-cocoa">{child.label}</span>
-                                <span className="!text-brand-cocoa" aria-hidden="true">→</span>
+                                <span>{child.label}</span>
+                                <span aria-hidden="true">→</span>
                               </Link>
                             </li>
                           ))}
@@ -252,9 +260,10 @@ export function SiteHeader() {
               <nav className="flex-1 overflow-y-auto px-4 py-4">
                 <ul className="space-y-2">
                   {navLinks.map((item) => {
+                    const isItemActive = isTopLevelMatch(item.href);
                     const mobileLinkClass = cn(
                       "flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold tracking-[0.08em] uppercase transition",
-                      pathname === item.href
+                      isItemActive
                         ? "bg-[#f3cfd5] text-[#8d4f5e]"
                         : "text-[#6a4a50] hover:bg-[#fcecef]",
                     );
@@ -278,7 +287,7 @@ export function SiteHeader() {
                               type="button"
                               className={cn(
                                 "flex w-full items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold tracking-[0.08em] uppercase transition",
-                                isMobileServicesOpen || pathname === item.href
+                                isMobileServicesOpen || isItemActive
                                   ? "bg-[#f3cfd5] text-[#8d4f5e]"
                                   : "text-[#6a4a50] hover:bg-[#fcecef]",
                               )}

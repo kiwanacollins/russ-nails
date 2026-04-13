@@ -197,7 +197,7 @@ export function ServicesShowcaseSection({ services }: ServicesShowcaseSectionPro
                     </p>
 
                     <Link
-                      href="/services"
+                      href={`/services/${service.slug}`}
                       className="mt-6 inline-flex w-full max-w-64 items-center justify-center border border-white/70 px-4 py-3 text-xs font-semibold tracking-[0.2em] text-white uppercase transition hover:bg-white hover:text-brand-cocoa"
                     >
                       View Details

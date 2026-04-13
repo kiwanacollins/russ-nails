@@ -137,8 +137,8 @@ export default function ServicesPage() {
           <ul className="mt-4 grid gap-3 sm:grid-cols-2">
             {services.map((service) => (
               <li key={`jump-${service.slug}`}>
-                <a
-                  href={`#${service.slug}`}
+                <Link
+                  href={`/services/${service.slug}`}
                   className="group flex items-center justify-between rounded-2xl border border-white/70 bg-white/78 px-4 py-3 text-sm font-semibold text-brand-cocoa transition hover:-translate-y-0.5 hover:border-brand-cocoa/18 hover:bg-white"
                 >
                   <span>{service.name}</span>
@@ -148,7 +148,7 @@ export default function ServicesPage() {
                   >
                     →
                   </span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -163,7 +163,7 @@ export default function ServicesPage() {
             const visual = serviceVisuals[service.slug] ?? fallbackVisual;
 
             return (
-              <article id={service.slug} key={service.slug} className="stacked-card scroll-mt-32">
+              <article key={service.slug} className="stacked-card">
                 <div className="luxury-card h-full overflow-hidden">
                   <div className="relative h-56">
                     <Image
@@ -196,10 +196,10 @@ export default function ServicesPage() {
                         Book now
                       </a>
                       <Link
-                        href="/contact"
+                        href={`/services/${service.slug}`}
                         className="inline-flex items-center justify-center rounded-full border border-brand-cocoa/24 bg-white/78 px-5 py-2.5 text-xs font-semibold tracking-[0.14em] text-brand-cocoa uppercase transition hover:-translate-y-0.5"
                       >
-                        Ask first
+                        View details
                       </Link>
                     </div>
                   </div>
