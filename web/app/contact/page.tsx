@@ -255,7 +255,7 @@ export default function ContactPage() {
                     Open full map
                   </a>
                 </div>
-                <div className="aspect-[16/10] w-full">
+                <div className="aspect-16/10 w-full">
                   <iframe
                     title="Russ Nails studio map"
                     src="https://www.google.com/maps?q=Kololo,+Kampala,+Uganda&output=embed"
@@ -283,7 +283,7 @@ export default function ContactPage() {
               </p>
 
               <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                <div className="flex gap-3 rounded-2xl border border-white/75 bg-white/62 p-3.5 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
+                <div className="flex flex-col items-start gap-3 rounded-2xl border border-white/75 bg-white/62 p-4 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-cocoa text-[0.64rem] font-semibold tracking-[0.16em] text-white">
                     01
                   </div>
@@ -295,7 +295,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex gap-3 rounded-2xl border border-white/75 bg-white/62 p-3.5 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
+                <div className="flex flex-col items-start gap-3 rounded-2xl border border-white/75 bg-white/62 p-4 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-cocoa text-[0.64rem] font-semibold tracking-[0.16em] text-white">
                     02
                   </div>
@@ -307,7 +307,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex gap-3 rounded-2xl border border-white/75 bg-white/62 p-3.5 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
+                <div className="flex flex-col items-start gap-3 rounded-2xl border border-white/75 bg-white/62 p-4 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-cocoa text-[0.64rem] font-semibold tracking-[0.16em] text-white">
                     03
                   </div>
@@ -319,7 +319,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex gap-3 rounded-2xl border border-white/75 bg-white/62 p-3.5 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
+                <div className="flex flex-col items-start gap-3 rounded-2xl border border-white/75 bg-white/62 p-4 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-cocoa text-[0.64rem] font-semibold tracking-[0.16em] text-white">
                     04
                   </div>
