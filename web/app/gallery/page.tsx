@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { galleryShots } from "@/lib/static-content";
-import CircularGallery from "@/components/CircularGallery";
+import { LightGalleryGrid } from "@/components/lightgallery-grid";
 
 export const metadata: Metadata = {
   title: "Gallery",
@@ -8,10 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default function GalleryPage() {
-  const galleryItems = galleryShots.map((shot) => ({
-    image: shot.imageUrl,
-    text: shot.title,
-  }));
+  const galleryCategories = [...new Set(galleryShots.map((shot) => shot.category))];
 
   return (
     <div className="shell py-12 sm:py-16">
@@ -24,16 +21,31 @@ export default function GalleryPage() {
         </p>
       </header>
 
-      <section className="mt-10">
-        <div className="luxury-card h-110 overflow-hidden bg-[#4b5b49] sm:h-140">
-          <CircularGallery
-            items={galleryItems}
-            bend={1.2}
-            textColor="#f7f2eb"
-            borderRadius={0.06}
-            scrollSpeed={1.9}
-            scrollEase={0.04}
-          />
+      <section className="mt-10 luxury-card p-4 sm:p-5 lg:p-6">
+        <div className="px-2 sm:px-3">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <p className="max-w-3xl text-sm leading-7 text-muted sm:text-base">
+              Tap any image to open fullscreen, zoom into fine detail work, and browse the full studio collection.
+            </p>
+            <span className="inline-flex rounded-full border border-brand-cocoa/14 bg-white/70 px-4 py-2 text-xs font-semibold tracking-[0.16em] text-brand-cocoa uppercase">
+              {galleryShots.length} Looks
+            </span>
+          </div>
+
+          <div className="mt-4 flex flex-wrap gap-2">
+            {galleryCategories.map((category) => (
+              <span
+                key={category}
+                className="inline-flex rounded-full border border-brand-cocoa/14 bg-white/70 px-3 py-1.5 text-[0.62rem] font-semibold tracking-[0.16em] text-brand-cocoa/78 uppercase"
+              >
+                {category}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-5">
+          <LightGalleryGrid shots={galleryShots} />
         </div>
       </section>
     </div>

@@ -3,6 +3,10 @@ import { Manrope, Playfair_Display, Geist } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { WhatsAppFab } from "../components/whatsapp-fab";
+import "lightgallery/css/lightgallery.css";
+import "lightgallery/css/lg-fullscreen.css";
+import "lightgallery/css/lg-thumbnail.css";
+import "lightgallery/css/lg-zoom.css";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 

@@ -100,6 +100,70 @@ export const galleryShots: GalleryShot[] = [
       "https://images.unsplash.com/photo-1619451334792-150fd785ee74?auto=format&fit=crop&w=900&q=80",
     alt: "Pearl bloom manicure design",
   },
+  {
+    id: "gallery-7",
+    title: "Velvet Cocoa Gloss",
+    category: "Classic",
+    imageUrl:
+      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80",
+    alt: "Velvet cocoa gloss manicure",
+  },
+  {
+    id: "gallery-8",
+    title: "Soft Bridal Contour",
+    category: "Bridal",
+    imageUrl:
+      "https://images.unsplash.com/photo-1515688594390-b649af70d282?auto=format&fit=crop&w=900&q=80",
+    alt: "Soft bridal contour manicure",
+  },
+  {
+    id: "gallery-9",
+    title: "Midnight Detail Set",
+    category: "Editorial Set",
+    imageUrl:
+      "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=1600&q=80",
+    alt: "Midnight detail nail set",
+  },
+  {
+    id: "gallery-10",
+    title: "Studio Portrait Nails",
+    category: "Campaign",
+    imageUrl:
+      "https://images.unsplash.com/photo-1690749138086-7422f71dc159?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Beauty portrait with polished nails",
+  },
+  {
+    id: "gallery-11",
+    title: "Refined Shape Finish",
+    category: "Nail Art",
+    imageUrl:
+      "https://images.unsplash.com/photo-1619607146034-5a05296c8f9a?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Refined shape and polish finish",
+  },
+  {
+    id: "gallery-12",
+    title: "Signature Care Moment",
+    category: "Aftercare",
+    imageUrl:
+      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=80",
+    alt: "Signature nail aftercare moment",
+  },
+  {
+    id: "gallery-13",
+    title: "Gentle Removal Ritual",
+    category: "Aftercare",
+    imageUrl:
+      "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=900&q=80",
+    alt: "Gentle gel removal setup",
+  },
+  {
+    id: "gallery-14",
+    title: "Luxury Hand Care Pairing",
+    category: "Studio Care",
+    imageUrl:
+      "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=900&q=80",
+    alt: "Luxury hand care with polished nails",
+  },
 ];
 
 export const testimonials: Testimonial[] = [

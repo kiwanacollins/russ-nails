@@ -99,7 +99,7 @@ const blogHighlights = [
 
 export default function Home() {
   const featuredServices = services.slice(0, 5);
-  const galleryItems = galleryShots.map((shot) => ({
+  const galleryItems = galleryShots.slice(0, 6).map((shot) => ({
     image: shot.imageUrl,
     text: shot.title,
   }));
