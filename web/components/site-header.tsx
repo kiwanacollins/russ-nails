@@ -142,7 +142,21 @@ export function SiteHeader() {
             }
 
             return (
-              <div key={item.href} ref={servicesMenuRef} className="relative flex items-center">
+              <div
+                key={item.href}
+                ref={servicesMenuRef}
+                className="relative flex items-center"
+                onMouseEnter={() => setIsDesktopServicesOpen(true)}
+                onMouseLeave={() => setIsDesktopServicesOpen(false)}
+                onFocusCapture={() => setIsDesktopServicesOpen(true)}
+                onBlurCapture={(event) => {
+                  const nextTarget = event.relatedTarget;
+
+                  if (!nextTarget || !event.currentTarget.contains(nextTarget as Node)) {
+                    setIsDesktopServicesOpen(false);
+                  }
+                }}
+              >
                 {i !== 0 && (
                   <span className={`mx-1 text-[10px] ${isHome ? "text-white/40" : "text-[#e8a0a8]"}`}>·</span>
                 )}
@@ -151,7 +165,7 @@ export function SiteHeader() {
                   className={linkClass}
                   aria-haspopup="menu"
                   aria-expanded={isDesktopServicesOpen}
-                  onClick={() => setIsDesktopServicesOpen((previous) => !previous)}
+                  onClick={() => setIsDesktopServicesOpen(true)}
                 >
                   <span className="inline-flex items-center gap-1">
                     {item.label}
