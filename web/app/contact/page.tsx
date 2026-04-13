@@ -8,7 +8,6 @@ import {
   MapPin,
   MessageCircle,
   Phone,
-  Sparkles,
 } from "lucide-react";
 import { buildWhatsAppLink } from "@/lib/utils";
 
@@ -144,7 +143,7 @@ export default function ContactPage() {
 
       <div className="shell mt-8">
         <section className="grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
-          <article className="relative overflow-hidden rounded-3xl border border-brand-cocoa/10 bg-linear-to-br from-[#fffdf8] via-[#fff9f4] to-[#f3e6dc] p-6 shadow-[0_24px_90px_-52px_rgba(95,68,64,0.48)] sm:p-8 lg:p-10">
+          <article className="relative overflow-hidden rounded-3xl border border-brand-cocoa/10 bg-linear-to-br from-[#fffdf8] via-[#fff9f4] to-[#f3e6dc] p-5 shadow-[0_24px_90px_-52px_rgba(95,68,64,0.48)] sm:p-6 lg:p-7">
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(202,139,120,0.14),transparent_40%),radial-gradient(circle_at_bottom_left,rgba(156,122,79,0.1),transparent_32%)]" />
 
             <div className="relative">
@@ -157,50 +156,25 @@ export default function ContactPage() {
               </div>
 
               <h2 className="mt-3 font-serif text-3xl text-brand-cocoa sm:text-4xl">Visit us in Kololo</h2>
-              <p className="mt-4 max-w-2xl text-sm leading-7 text-muted sm:text-base">
+              <p className="mt-3 max-w-2xl text-sm leading-7 text-muted sm:text-base">
                 We welcome scheduled visits, quick questions, and pre-booking consultations.
               </p>
 
-              <div className="mt-7 grid gap-3 sm:grid-cols-3">
-                <div className="rounded-2xl border border-brand-cocoa/10 bg-white/65 px-4 py-4 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
-                  <div className="flex items-center gap-2 text-[0.64rem] font-semibold tracking-[0.18em] text-brand-cocoa/60 uppercase">
-                    <MapPin className="h-4 w-4 text-brand-clay" />
-                    Location
-                  </div>
-                  <p className="mt-3 text-sm leading-6 text-brand-cocoa">Kololo, Kampala</p>
-                </div>
-                <div className="rounded-2xl border border-brand-cocoa/10 bg-white/65 px-4 py-4 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
-                  <div className="flex items-center gap-2 text-[0.64rem] font-semibold tracking-[0.18em] text-brand-cocoa/60 uppercase">
-                    <MessageCircle className="h-4 w-4 text-brand-clay" />
-                    Booking
-                  </div>
-                  <p className="mt-3 text-sm leading-6 text-brand-cocoa">WhatsApp first</p>
-                </div>
-                <div className="rounded-2xl border border-brand-cocoa/10 bg-white/65 px-4 py-4 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
-                  <div className="flex items-center gap-2 text-[0.64rem] font-semibold tracking-[0.18em] text-brand-cocoa/60 uppercase">
-                    <Sparkles className="h-4 w-4 text-brand-clay" />
-                    Support
-                  </div>
-                  <p className="mt-3 text-sm leading-6 text-brand-cocoa">Concierge guidance</p>
-                </div>
-              </div>
-
-              <div className="mt-7 grid gap-3 sm:grid-cols-2">
-                <div className="rounded-2xl border border-white/75 bg-white/70 p-4 shadow-[0_16px_40px_-30px_rgba(95,68,64,0.5)] backdrop-blur-sm">
+              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                <div className="rounded-2xl border border-white/75 bg-white/70 p-3.5 shadow-[0_16px_40px_-30px_rgba(95,68,64,0.5)] backdrop-blur-sm">
                   <div className="flex items-center gap-2 text-[0.64rem] font-semibold tracking-[0.18em] text-brand-cocoa/60 uppercase">
                     <MapPin className="h-4 w-4 text-brand-clay" />
                     Address
                   </div>
-                  <p className="mt-3 text-sm leading-6 text-brand-cocoa">Kololo, Kampala, Uganda</p>
-                  <p className="mt-2 text-xs leading-5 text-muted">Private studio visits by appointment.</p>
+                  <p className="mt-2 text-sm leading-6 text-brand-cocoa">Kololo, Kampala, Uganda</p>
                 </div>
 
-                <div className="rounded-2xl border border-white/75 bg-white/70 p-4 shadow-[0_16px_40px_-30px_rgba(95,68,64,0.5)] backdrop-blur-sm">
+                <div className="rounded-2xl border border-white/75 bg-white/70 p-3.5 shadow-[0_16px_40px_-30px_rgba(95,68,64,0.5)] backdrop-blur-sm">
                   <div className="flex items-center gap-2 text-[0.64rem] font-semibold tracking-[0.18em] text-brand-cocoa/60 uppercase">
                     <Phone className="h-4 w-4 text-brand-clay" />
                     Phone
                   </div>
-                  <p className="mt-3 text-sm leading-6 text-brand-cocoa">
+                  <p className="mt-2 text-sm leading-6 text-brand-cocoa">
                     <a href="tel:+256762267569" className="transition hover:text-brand-clay">
                       +256 762 267 569
                     </a>
@@ -209,15 +183,14 @@ export default function ContactPage() {
                       +256 708 420 038
                     </a>
                   </p>
-                  <p className="mt-2 text-xs leading-5 text-muted">Call if you need a same-day confirmation.</p>
                 </div>
 
-                <div className="rounded-2xl border border-white/75 bg-white/70 p-4 shadow-[0_16px_40px_-30px_rgba(95,68,64,0.5)] backdrop-blur-sm">
+                <div className="rounded-2xl border border-white/75 bg-white/70 p-3.5 shadow-[0_16px_40px_-30px_rgba(95,68,64,0.5)] backdrop-blur-sm">
                   <div className="flex items-center gap-2 text-[0.64rem] font-semibold tracking-[0.18em] text-brand-cocoa/60 uppercase">
                     <MessageCircle className="h-4 w-4 text-brand-clay" />
                     WhatsApp
                   </div>
-                  <p className="mt-3 text-sm leading-6 text-brand-cocoa">
+                  <p className="mt-2 text-sm leading-6 text-brand-cocoa">
                     <a
                       href={whatsappPrimaryLink}
                       target="_blank"
@@ -236,25 +209,23 @@ export default function ContactPage() {
                       +256 708 420 038
                     </a>
                   </p>
-                  <p className="mt-2 text-xs leading-5 text-muted">Fastest route for bookings and updates.</p>
                 </div>
 
-                <div className="rounded-2xl border border-white/75 bg-white/70 p-4 shadow-[0_16px_40px_-30px_rgba(95,68,64,0.5)] backdrop-blur-sm">
+                <div className="rounded-2xl border border-white/75 bg-white/70 p-3.5 shadow-[0_16px_40px_-30px_rgba(95,68,64,0.5)] backdrop-blur-sm">
                   <div className="flex items-center gap-2 text-[0.64rem] font-semibold tracking-[0.18em] text-brand-cocoa/60 uppercase">
                     <Mail className="h-4 w-4 text-brand-clay" />
                     Email
                   </div>
-                  <p className="mt-3 text-sm leading-6 text-brand-cocoa">info@russnails.com</p>
-                  <p className="mt-2 text-xs leading-5 text-muted">For longer notes, references, and special requests.</p>
+                  <p className="mt-2 text-sm leading-6 text-brand-cocoa">info@russnails.com</p>
                 </div>
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-6 flex flex-wrap gap-3">
                 <a
                   href={whatsappPrimaryLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-cocoa px-6 py-3 text-xs font-semibold tracking-[0.14em] text-white uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-cocoa px-5 py-2.5 text-xs font-semibold tracking-[0.14em] text-white uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
                 >
                   Confirm on WhatsApp
                   <ArrowRight className="h-3.5 w-3.5" />
@@ -263,15 +234,41 @@ export default function ContactPage() {
                   href={studioMapLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center rounded-full border border-brand-cocoa/20 bg-white/70 px-6 py-3 text-xs font-semibold tracking-[0.14em] text-brand-cocoa uppercase transition hover:-translate-y-0.5 hover:bg-white"
+                  className="inline-flex items-center justify-center rounded-full border border-brand-cocoa/20 bg-white/70 px-5 py-2.5 text-xs font-semibold tracking-[0.14em] text-brand-cocoa uppercase transition hover:-translate-y-0.5 hover:bg-white"
                 >
                   Open map
                 </a>
               </div>
+
+              <div className="mt-6 overflow-hidden rounded-3xl border border-brand-cocoa/10 bg-white/55 shadow-[0_18px_42px_-28px_rgba(95,68,64,0.42)] backdrop-blur-sm">
+                <div className="flex items-center justify-between gap-3 border-b border-brand-cocoa/10 px-4 py-3 sm:px-5">
+                  <div>
+                    <p className="text-[0.64rem] tracking-[0.18em] text-brand-cocoa/55 uppercase">Studio map</p>
+                    <p className="mt-1 text-sm font-medium text-brand-cocoa">Find us in Kololo, Kampala</p>
+                  </div>
+                  <a
+                    href={studioMapLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center rounded-full border border-brand-cocoa/15 bg-white px-3 py-1.5 text-[0.62rem] font-semibold tracking-[0.16em] text-brand-cocoa uppercase transition hover:-translate-y-0.5 hover:bg-brand-blush/40"
+                  >
+                    Open full map
+                  </a>
+                </div>
+                <div className="aspect-[16/10] w-full">
+                  <iframe
+                    title="Russ Nails studio map"
+                    src="https://www.google.com/maps?q=Kololo,+Kampala,+Uganda&output=embed"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="h-full w-full border-0"
+                  />
+                </div>
+              </div>
             </div>
           </article>
 
-          <article className="relative overflow-hidden rounded-3xl border border-brand-cocoa/10 bg-linear-to-br from-[#f7efe8] via-[#fcf8f4] to-[#f2e0d4] p-6 shadow-[0_24px_90px_-52px_rgba(95,68,64,0.42)] sm:p-8 lg:p-10">
+          <article className="relative overflow-hidden rounded-3xl border border-brand-cocoa/10 bg-linear-to-br from-[#f7efe8] via-[#fcf8f4] to-[#f2e0d4] p-5 shadow-[0_24px_90px_-52px_rgba(95,68,64,0.42)] sm:p-6 lg:p-7">
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.7),transparent_42%),radial-gradient(circle_at_bottom_right,rgba(202,139,120,0.12),transparent_36%)]" />
 
             <div className="relative">
@@ -281,61 +278,61 @@ export default function ContactPage() {
               </div>
 
               <h2 className="mt-4 font-serif text-3xl text-brand-cocoa sm:text-4xl">Keep your visit smooth</h2>
-              <p className="mt-4 text-sm leading-7 text-muted sm:text-base">
+              <p className="mt-3 text-sm leading-7 text-muted sm:text-base">
                 A few details help us prepare your service and keep the appointment calm and on time.
               </p>
 
-              <div className="mt-7 space-y-3">
-                <div className="flex gap-4 rounded-2xl border border-white/75 bg-white/62 p-4 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-cocoa text-xs font-semibold tracking-[0.16em] text-white">
+              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                <div className="flex gap-3 rounded-2xl border border-white/75 bg-white/62 p-3.5 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-cocoa text-[0.64rem] font-semibold tracking-[0.16em] text-white">
                     01
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold text-brand-cocoa">Arrive early</h3>
-                    <p className="mt-1 text-sm leading-6 text-muted">
+                    <p className="mt-1 text-xs leading-5 text-muted">
                       Arrive 10 minutes early so we can settle your consultation and service calibration.
                     </p>
                   </div>
                 </div>
 
-                <div className="flex gap-4 rounded-2xl border border-white/75 bg-white/62 p-4 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-cocoa text-xs font-semibold tracking-[0.16em] text-white">
+                <div className="flex gap-3 rounded-2xl border border-white/75 bg-white/62 p-3.5 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-cocoa text-[0.64rem] font-semibold tracking-[0.16em] text-white">
                     02
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold text-brand-cocoa">Reserve in advance</h3>
-                    <p className="mt-1 text-sm leading-6 text-muted">
+                    <p className="mt-1 text-xs leading-5 text-muted">
                       Bridal and event packages should be reserved at least 2 weeks ahead.
                     </p>
                   </div>
                 </div>
 
-                <div className="flex gap-4 rounded-2xl border border-white/75 bg-white/62 p-4 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-cocoa text-xs font-semibold tracking-[0.16em] text-white">
+                <div className="flex gap-3 rounded-2xl border border-white/75 bg-white/62 p-3.5 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-cocoa text-[0.64rem] font-semibold tracking-[0.16em] text-white">
                     03
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold text-brand-cocoa">Share inspiration</h3>
-                    <p className="mt-1 text-sm leading-6 text-muted">
+                    <p className="mt-1 text-xs leading-5 text-muted">
                       Send a reference photo before your visit so we can prepare the right shape and finish.
                     </p>
                   </div>
                 </div>
 
-                <div className="flex gap-4 rounded-2xl border border-white/75 bg-white/62 p-4 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-cocoa text-xs font-semibold tracking-[0.16em] text-white">
+                <div className="flex gap-3 rounded-2xl border border-white/75 bg-white/62 p-3.5 shadow-[0_16px_36px_-28px_rgba(95,68,64,0.45)] backdrop-blur-sm">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-cocoa text-[0.64rem] font-semibold tracking-[0.16em] text-white">
                     04
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold text-brand-cocoa">After-hours requests</h3>
-                    <p className="mt-1 text-sm leading-6 text-muted">
+                    <p className="mt-1 text-xs leading-5 text-muted">
                       Request concierge confirmation on WhatsApp for private evening sessions.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-8 rounded-3xl border border-brand-cocoa/10 bg-white/62 p-5 shadow-[0_18px_46px_-30px_rgba(95,68,64,0.5)]">
+              <div className="mt-6 rounded-3xl border border-brand-cocoa/10 bg-white/62 p-4 shadow-[0_18px_46px_-30px_rgba(95,68,64,0.5)]">
                 <p className="text-[0.68rem] tracking-[0.18em] text-brand-cocoa/55 uppercase">
                   Need a faster recommendation?
                 </p>
@@ -346,7 +343,7 @@ export default function ContactPage() {
                   href={whatsappPrimaryLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-4 inline-flex items-center gap-2 rounded-full bg-brand-cocoa px-5 py-3 text-xs font-semibold tracking-[0.14em] text-white uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
+                  className="mt-4 inline-flex items-center gap-2 rounded-full bg-brand-cocoa px-5 py-2.5 text-xs font-semibold tracking-[0.14em] text-white uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
                 >
                   Send on WhatsApp
                   <ArrowRight className="h-3.5 w-3.5" />
