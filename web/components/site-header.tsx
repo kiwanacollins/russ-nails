@@ -167,19 +167,21 @@ export function SiteHeader() {
                 >
                   <div className="overflow-hidden rounded-3xl border border-[#efd4d9] bg-[#fff7f8]/95 p-6 shadow-[0_35px_90px_-45px_rgba(98,56,67,0.55)] backdrop-blur-xl">
                     <div className="grid gap-6 md:grid-cols-[0.95fr_1.3fr]">
-                      <div className="rounded-2xl border border-[#efccd3] bg-[#fcecef] p-5">
-                        <p className="text-xs font-semibold tracking-[0.16em] text-[#a06070] uppercase">Need Guidance?</p>
-                        <p className="mt-3 text-sm leading-6 text-[#6a4a50]">
+                      <div className="rounded-2xl border border-[#e6aab5] bg-linear-to-br from-[#fff7f8] via-[#fff0f2] to-[#fbe2e8] p-5 shadow-[0_18px_45px_-28px_rgba(98,56,67,0.48)]">
+                        <p className="inline-flex rounded-full bg-[#8d4f5e]/10 px-3 py-1 text-[0.68rem] font-semibold tracking-[0.18em] text-[#8d4f5e] uppercase">
+                          Need Guidance?
+                        </p>
+                        <p className="mt-4 text-sm leading-6 text-[#5f4440] sm:text-[0.95rem]">
                           Not sure which service fits your look? Our team can help you choose the right treatment.
                         </p>
                         <a
                           href="tel:+256762267569"
-                          className="mt-4 inline-flex rounded-full bg-[#f3cfd5] px-4 py-2 text-xs font-semibold tracking-[0.12em] text-[#8d4f5e] uppercase transition hover:-translate-y-0.5"
+                          className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-brand-cocoa px-4 py-3 text-xs font-semibold tracking-[0.16em] text-white uppercase shadow-[0_14px_32px_-18px_rgba(95,68,64,0.7)] transition hover:-translate-y-0.5 hover:bg-brand-clay"
                         >
-                          Call: +256 762 267 569
+                          Call now: +256 762 267 569
                         </a>
-                        <p className="mt-2 text-xs text-[#6a4a50]">
-                          Alt line:{" "}
+                        <p className="mt-3 text-xs leading-5 text-[#6a4a50]">
+                          Alt line available:{" "}
                           <a
                             href="tel:+256708420038"
                             className="underline decoration-dotted underline-offset-2 hover:text-[#8d4f5e]"
