@@ -108,11 +108,24 @@ export default function ContactPage() {
             <div className="absolute inset-0 bg-linear-to-l from-black/8 via-transparent to-transparent" />
 
             <div className="absolute inset-x-6 bottom-6 sm:inset-x-8 sm:bottom-8">
-              <div className="max-w-sm rounded-[2rem] border border-white/35 bg-white/48 p-5 text-brand-cocoa shadow-[0_22px_55px_-38px_rgba(50,25,28,0.65)] backdrop-blur-md sm:p-6">
-                <p className="text-xs tracking-[0.2em] text-brand-cocoa/60 uppercase">Kololo, Kampala</p>
-                <p className="mt-2 text-sm leading-6 text-brand-cocoa/88">
-                  Appointments welcomed in-studio and by WhatsApp. Private bookings available by request.
-                </p>
+              <div className="relative max-w-sm overflow-hidden rounded-3xl border border-white/45 bg-white/18 p-5 text-brand-cocoa shadow-[0_24px_80px_-42px_rgba(35,22,20,0.8)] backdrop-blur-2xl sm:p-6">
+                <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-white/40 via-white/14 to-transparent" />
+                <div className="pointer-events-none absolute inset-x-4 top-0 h-px bg-white/45" />
+
+                <div className="relative">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-white/45 bg-white/20 px-3 py-1 text-[0.66rem] font-semibold tracking-[0.18em] text-brand-cocoa uppercase shadow-[0_12px_28px_-20px_rgba(35,22,20,0.55)]">
+                    <span className="h-2 w-2 rounded-full bg-brand-clay shadow-[0_0_0_4px_rgba(202,139,120,0.18)]" />
+                    Kololo, Kampala
+                  </div>
+                  <p className="mt-4 text-sm leading-6 text-white/95">
+                    Appointments welcomed in-studio and by WhatsApp. Private bookings available by request.
+                  </p>
+
+                  <div className="mt-4 flex items-center gap-2 text-[0.62rem] font-semibold tracking-[0.2em] text-white/80 uppercase">
+                    <span className="h-2 w-2 rounded-full bg-brand-gold/90" />
+                    Concierge sessions available
+                  </div>
+                </div>
               </div>
             </div>
           </div>
