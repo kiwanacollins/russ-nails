@@ -339,17 +339,42 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
           </div>
         </article>
 
-        <article className="luxury-card p-6 sm:p-8">
-          <p className="text-xs tracking-[0.18em] text-brand-cocoa/70 uppercase">Related services</p>
-          <ul className="mt-4 space-y-3">
+        <article className="luxury-card overflow-hidden p-6 sm:p-8">
+          <div className="flex items-end justify-between gap-3">
+            <div>
+              <p className="text-xs tracking-[0.18em] text-brand-cocoa/70 uppercase">Related services</p>
+              <h3 className="mt-2 font-serif text-2xl text-brand-cocoa sm:text-3xl">Explore similar treatments</h3>
+            </div>
+            <span className="inline-flex shrink-0 whitespace-nowrap rounded-full border border-brand-cocoa/14 bg-white/75 px-3 py-1 text-[0.62rem] font-semibold tracking-[0.18em] text-brand-cocoa uppercase leading-none">
+              {relatedServices.length} options
+            </span>
+          </div>
+
+          <ul className="mt-5 space-y-3">
             {relatedServices.map((item) => (
               <li key={item.slug}>
                 <Link
                   href={`/services/${item.slug}`}
-                  className="group flex items-center justify-between rounded-2xl border border-brand-cocoa/12 bg-white/70 px-4 py-3 text-sm font-semibold text-brand-cocoa transition hover:-translate-y-0.5 hover:border-brand-cocoa/24"
+                  className="group relative flex items-center justify-between overflow-hidden rounded-2xl border border-brand-cocoa/12 bg-linear-to-r from-white/80 via-white/65 to-brand-blush/35 p-4 text-brand-cocoa shadow-[0_14px_34px_-28px_rgba(51,31,26,0.6)] transition duration-300 hover:-translate-y-0.5 hover:border-brand-cocoa/24 hover:shadow-[0_20px_42px_-26px_rgba(51,31,26,0.65)]"
                 >
-                  <span>{item.name}</span>
-                  <span aria-hidden="true" className="transition group-hover:translate-x-0.5">→</span>
+                  <div>
+                    <p className="text-sm font-semibold sm:text-base">{item.name}</p>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      <span className="inline-flex rounded-full border border-brand-cocoa/14 bg-white/90 px-2.5 py-1 text-[0.62rem] font-semibold tracking-[0.14em] text-brand-cocoa/78 uppercase">
+                        {item.duration}
+                      </span>
+                      <span className="inline-flex rounded-full border border-brand-cocoa/14 bg-white/90 px-2.5 py-1 text-[0.62rem] font-semibold tracking-[0.14em] text-brand-cocoa/78 uppercase">
+                        From {formatUGX(item.priceFrom)}
+                      </span>
+                    </div>
+                  </div>
+
+                  <span
+                    aria-hidden="true"
+                    className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-brand-cocoa/18 bg-white/85 text-base transition group-hover:translate-x-0.5 group-hover:bg-white"
+                  >
+                    →
+                  </span>
                 </Link>
               </li>
             ))}
