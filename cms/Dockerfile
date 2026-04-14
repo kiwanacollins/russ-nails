@@ -20,6 +20,11 @@ ENV NEXT_TELEMETRY_DISABLED=1
 
 RUN npm run build
 
+# Next standalone server expects static assets under .next/standalone/.next/static.
+RUN rm -rf .next/standalone/.next/static \
+	&& mkdir -p .next/standalone/.next \
+	&& cp -R .next/static .next/standalone/.next/static
+
 EXPOSE 4000
 
 CMD ["npm", "run", "start"]
