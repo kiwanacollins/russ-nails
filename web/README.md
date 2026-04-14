@@ -42,3 +42,6 @@ docker compose up --build
 ```
 
 The web app will be available at `http://localhost:3000` and will connect to the CMS container internally via `http://cms:4000`.
+
+For Coolify deployments, set the same variables in the environment UI and trigger a rebuild after updating
+`NEXT_PUBLIC_SITE_URL` or `NEXT_PUBLIC_WHATSAPP_NUMBER`, because those values are embedded at build time.
