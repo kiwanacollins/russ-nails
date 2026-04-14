@@ -31,8 +31,8 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
-    ports:
-      - "4000:4000"
+    expose:
+      - "4000"
     volumes:
       - cms_media:/app/media
 
@@ -56,8 +56,8 @@ services:
       ENABLE_WHATSAPP_INQUIRY_EMAIL: ${ENABLE_WHATSAPP_INQUIRY_EMAIL:-true}
     depends_on:
       - cms
-    ports:
-      - "3000:3000"
+    expose:
+      - "3000"
 
 volumes:
   postgres_data:
