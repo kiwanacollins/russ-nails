@@ -37,6 +37,7 @@ npm run dev
 From the repository root:
 
 ```bash
+cp .env.compose.example .env
 docker compose up --build
 ```
 

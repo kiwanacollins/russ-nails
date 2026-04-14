@@ -31,6 +31,7 @@ The Next.js app fetches products from `/api/products` with ISR and falls back to
 From the repository root:
 
 ```bash
+cp .env.compose.example .env
 docker compose up --build
 ```
 
