@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import config from "../../payload.config";
 import { RootLayout, handleServerFunctions, metadata } from "@payloadcms/next/layouts";
 import type { ServerFunctionClient } from "payload";
-import { importMap } from "./admin/importMap";
+import { importMap } from "./admin/importMap.js";
 
 type LayoutProps = {
   children: ReactNode;
@@ -10,18 +10,20 @@ type LayoutProps = {
 
 export { metadata };
 
-export default function Layout({ children }: LayoutProps) {
-  const serverFunction: ServerFunctionClient = (args) =>
-    handleServerFunctions({
-      ...args,
-      config,
-      importMap,
-    });
+const serverFunction: ServerFunctionClient = async function (args) {
+  "use server";
 
-  return RootLayout({
-    children,
+  return handleServerFunctions({
+    ...args,
     config,
     importMap,
-    serverFunction,
   });
+};
+
+export default function Layout({ children }: LayoutProps) {
+  return (
+    <RootLayout config={config} importMap={importMap} serverFunction={serverFunction}>
+      {children}
+    </RootLayout>
+  );
 }
