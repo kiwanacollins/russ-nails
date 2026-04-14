@@ -18,6 +18,11 @@ This CMS is scoped to product and media management only.
    npm run dev
    ```
 
+## Local URLs
+- Admin dashboard: `http://localhost:4000/admin`
+- REST API: `http://localhost:4000/api`
+- GraphQL endpoint: `http://localhost:4000/api/graphql`
+
 ## Frontend Integration
 Set `PAYLOAD_API_URL` in the web app environment to this CMS URL, for example:
 
@@ -37,6 +42,7 @@ docker compose up --build
 
 Useful CMS endpoints when running via Compose:
 
+- Admin dashboard: `http://localhost:4000/admin`
 - API base: `http://localhost:4000/api`
 - Products endpoint: `http://localhost:4000/api/products`
-- Health check: `http://localhost:4000/healthz`
+- GraphQL endpoint: `http://localhost:4000/api/graphql`
