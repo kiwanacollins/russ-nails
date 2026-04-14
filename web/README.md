@@ -32,3 +32,12 @@ npm run dev
 - Static pages remain code-owned for design control.
 - CMS scope is intentionally limited to products/media.
 - WhatsApp checkout and site checkout both post order events to `/api/orders`.
+
+## Docker Compose
+From the repository root:
+
+```bash
+docker compose up --build
+```
+
+The web app will be available at `http://localhost:3000` and will connect to the CMS container internally via `http://cms:4000`.

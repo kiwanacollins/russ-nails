@@ -4,8 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "payload dev",
-    "build": "payload build",
+    "dev": "node --import tsx src/server.ts",
+    "start": "node --import tsx src/server.ts",
+    "build": "payload generate:types",
     "generate:types": "payload generate:types"
   },
   "dependencies": {

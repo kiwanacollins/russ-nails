@@ -26,3 +26,16 @@ PAYLOAD_API_URL=http://localhost:4000
 ```
 
 The Next.js app fetches products from `/api/products` with ISR and falls back to local sample data if the CMS is unavailable.
+
+## Docker Compose
+From the repository root:
+
+```bash
+docker compose up --build
+```
+
+Useful CMS endpoints when running via Compose:
+
+- API base: `http://localhost:4000/api`
+- Products endpoint: `http://localhost:4000/api/products`
+- Health check: `http://localhost:4000/healthz`
