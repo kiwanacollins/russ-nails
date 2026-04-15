@@ -110,25 +110,31 @@ export default function Home() {
       <section className="relative min-h-screen overflow-hidden bg-[#221b1a] text-white" data-aos="fade-in-soft">
         <div className="absolute inset-0 grid md:grid-cols-2">
           <div className="relative">
-            <Image
-              src="https://images.unsplash.com/photo-1690749138086-7422f71dc159?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Smiling beauty portrait"
-              fill
-              priority
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover object-center"
-            />
+            <video
+              className="h-full w-full object-cover object-center"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-hidden="true"
+            >
+              <source src="/vidoes/left-hero.mp4" type="video/mp4" />
+            </video>
             <div className="absolute inset-0 bg-linear-to-r from-black/58 via-black/44 to-black/24" />
           </div>
           <div className="relative">
-            <Image
-              src="https://images.unsplash.com/photo-1619607146034-5a05296c8f9a?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Elegant manicured hand detail"
-              fill
-              priority
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover object-center"
-            />
+            <video
+              className="h-full w-full object-cover object-center"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-hidden="true"
+            >
+              <source src="/vidoes/right-hero.mp4" type="video/mp4" />
+            </video>
             <div className="absolute inset-0 bg-[rgba(89,58,70,0.5)]" />
           </div>
         </div>
