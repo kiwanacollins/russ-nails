@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Caveat } from "next/font/google";
+import { FcGoogle } from "react-icons/fc";
 import { galleryShots, services, testimonials } from "@/lib/static-content";
 import { QuickBookBar } from "@/components/quick-book-bar";
 import { PersonalizedExperienceSection } from "@/components/personalized-experience-section";
@@ -361,8 +362,17 @@ export default function Home() {
       <section className="shell mt-20" data-aos="fade-up-soft">
         <div className="mb-10 flex flex-col items-start gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-sm tracking-[0.18em] text-brand-cocoa/70 uppercase">Client Notes</p>
+            <p className="text-sm tracking-[0.18em] text-brand-cocoa/70 uppercase">Google Reviews</p>
             <h2 className="mt-2 font-serif text-3xl text-brand-cocoa sm:text-4xl">What Kampala Clients Say About Russ Nails</h2>
+          </div>
+          <div className="inline-flex items-center gap-2 rounded-full border border-brand-cocoa/15 bg-white/90 px-4 py-2 shadow-[0_10px_25px_-18px_rgba(51,31,26,0.45)] backdrop-blur">
+            <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white ring-1 ring-brand-cocoa/12">
+              <FcGoogle className="h-5 w-5" aria-hidden="true" />
+            </span>
+            <div className="leading-tight">
+              <p className="text-[0.63rem] font-semibold tracking-[0.16em] text-brand-cocoa uppercase">Rated 5.0</p>
+              <p className="text-[0.68rem] text-brand-cocoa/65">via Google</p>
+            </div>
           </div>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
@@ -374,8 +384,17 @@ export default function Home() {
               data-aos-delay={index * 80}
             >
               <blockquote className="luxury-card h-full p-6">
-                <div className="mb-4 text-brand-gold">★★★★★</div>
-                <p className="text-sm leading-7 text-muted">{`"${testimonial.quote}"`}</p>
+                <header className="flex items-center justify-between gap-3">
+                  <div className="inline-flex items-center gap-2">
+                    <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-white ring-1 ring-brand-cocoa/12">
+                      <FcGoogle className="h-4.5 w-4.5" aria-hidden="true" />
+                    </span>
+                    <p className="text-[0.62rem] font-semibold tracking-[0.16em] text-brand-cocoa/65 uppercase">Google Review</p>
+                  </div>
+                  <p className="text-[0.68rem] text-brand-cocoa/55">Verified</p>
+                </header>
+                <div className="mt-4 text-brand-gold">★★★★★</div>
+                <p className="mt-4 text-sm leading-7 text-muted">{`"${testimonial.quote}"`}</p>
                 <footer className="mt-5 text-sm font-semibold text-brand-cocoa">{testimonial.name}</footer>
               </blockquote>
             </div>
