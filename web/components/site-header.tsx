@@ -45,6 +45,10 @@ const navLinks: NavLink[] = [
   { label: "Contact", href: "/contact" },
 ];
 
+const mobileNavLinks = navLinks.filter(
+  (item) => item.href !== "/cart" && item.href !== "/checkout",
+);
+
 export function SiteHeader() {
   const pathname = usePathname();
   const isHome = pathname === "/";
@@ -282,7 +286,7 @@ export function SiteHeader() {
 
               <nav className="flex-1 overflow-y-auto px-4 py-4">
                 <ul className="space-y-2">
-                  {navLinks.map((item) => {
+                  {mobileNavLinks.map((item) => {
                     const isItemActive = isTopLevelMatch(item.href);
                     const mobileLinkClass = cn(
                       "flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold tracking-[0.08em] uppercase transition",
