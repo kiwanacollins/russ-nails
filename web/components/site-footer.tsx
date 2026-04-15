@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { services } from "@/lib/static-content";
@@ -20,10 +21,14 @@ export function SiteFooter() {
           <div className="grid gap-10 md:grid-cols-3 md:gap-8">
             <div>
               <Link href="/" className="inline-flex flex-col text-brand-cocoa">
-                <span className="font-serif text-[2.4rem] leading-[0.9] sm:text-[2.9rem]">
-                  Russ Nails
-                </span>
-                <span className="mt-2 text-xs font-semibold tracking-[0.28em] uppercase">Luxury Nail Studio</span>
+                <Image
+                  src="/russ-logo.png"
+                  alt="Russ Nails & Products"
+                  width={540}
+                  height={270}
+                  className="h-48 w-auto object-contain [filter:drop-shadow(0_0_6px_rgba(202,139,120,0.7))_drop-shadow(0_0_16px_rgba(156,122,79,0.45))]"
+                />
+                <span className="mt-1 text-xs font-semibold tracking-[0.28em] uppercase">Luxury Nail Studio</span>
               </Link>
             </div>
 

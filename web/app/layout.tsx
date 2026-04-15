@@ -31,11 +31,22 @@ export const metadata: Metadata = {
   },
   description:
     "Luxury nail services in Kampala with elegant booking journeys, curated products, and premium client care.",
+  icons: {
+    icon: [
+      { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: "/favicon-32.png",
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
     title: "Russ Nails | Luxury Nail Studio Kampala",
     description:
       "Book premium nail services in Kampala and shop curated nail products.",
     type: "website",
+    images: [{ url: "/favicon-512.png", width: 512, height: 512 }],
   },
 };
 

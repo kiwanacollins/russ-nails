@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -20,9 +21,6 @@ import {
 } from "@/components/ui/sheet";
 import { buildWhatsAppLink, cn } from "@/lib/utils";
 import { services } from "@/lib/static-content";
-import { Caveat } from "next/font/google";
-
-const script = Caveat({ subsets: ["latin"], weight: ["700"] });
 
 type NavChild = {
   label: string;
@@ -103,15 +101,19 @@ export function SiteHeader() {
       <div className="shell flex h-20 items-center justify-between gap-4">
 
         {/* Logo */}
-        <Link href="/" onClick={closeNavigationOverlays} className="flex items-center gap-1.5 group">
-          <span className="text-[#e8a0a8] text-xl select-none transition group-hover:scale-110">✿</span>
-          <span
-            className={`${script.className} text-3xl leading-none transition ${
-              isHome ? "text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.3)]" : "text-[#c4717c]"
+        <Link href="/" onClick={closeNavigationOverlays} className="flex items-center group">
+          <Image
+            src="/russ-logo.png"
+            alt="Russ Nails & Products"
+            width={390}
+            height={195}
+            priority
+            className={`mt-2.5 h-36 w-auto object-contain transition group-hover:scale-105 ${
+              isHome
+                ? "[filter:drop-shadow(0_0_8px_rgba(255,220,180,0.95))_drop-shadow(0_0_22px_rgba(202,139,120,0.85))_drop-shadow(0_0_40px_rgba(156,122,79,0.6))]"
+                : "[filter:drop-shadow(0_0_6px_rgba(202,139,120,0.7))_drop-shadow(0_0_16px_rgba(156,122,79,0.45))]"
             }`}
-          >
-            Russ Nails
-          </span>
+          />
         </Link>
 
         {/* Nav */}
@@ -264,7 +266,17 @@ export function SiteHeader() {
 
             <SheetContent side="right" className="flex h-full w-[86vw] max-w-sm flex-col border-l-[#efd4d9] bg-[#fff7f8] p-0">
               <SheetHeader className="border-b border-[#efd4d9] px-5 py-4">
-                <SheetTitle className="font-serif text-3xl text-[#8d4f5e]">Russ Nails</SheetTitle>
+                <SheetTitle asChild>
+                  <Link href="/" onClick={closeNavigationOverlays}>
+                    <Image
+                      src="/russ-logo.png"
+                      alt="Russ Nails & Products"
+                      width={420}
+                      height={210}
+                      className="h-36 w-auto object-contain"
+                    />
+                  </Link>
+                </SheetTitle>
                 <SheetDescription className="text-xs font-semibold tracking-[0.16em] text-[#a06070] uppercase">
                   Navigation
                 </SheetDescription>
