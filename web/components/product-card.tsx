@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { AddToCartButton } from "@/components/add-to-cart-button";
+import { WhatsAppOrderButton } from "@/components/whatsapp-order-button";
 import type { Product } from "@/lib/types";
 import { formatUGX } from "@/lib/utils";
 
@@ -37,7 +37,7 @@ export function ProductCard({ product }: ProductCardProps) {
             <p className="text-sm font-semibold tracking-[0.14em] text-brand-gold uppercase">
               {formatUGX(product.price)}
             </p>
-            <AddToCartButton product={product} />
+            <WhatsAppOrderButton product={product} label="Order" />
           </div>
         </div>
       </div>

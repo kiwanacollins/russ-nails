@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { AddToCartButton } from "@/components/add-to-cart-button";
+import { WhatsAppOrderButton } from "@/components/whatsapp-order-button";
 import { getProductBySlug, getProducts } from "@/lib/payload-client";
 import { formatUGX } from "@/lib/utils";
 
@@ -69,12 +69,12 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
           </p>
 
           <div className="flex flex-wrap gap-3 pt-4">
-            <AddToCartButton product={product} className="px-6 py-3" />
+            <WhatsAppOrderButton product={product} className="px-6 py-3" />
             <Link
-              href="/cart"
+              href="/products"
               className="inline-flex items-center justify-center rounded-full border border-brand-cocoa/25 bg-white/70 px-6 py-3 text-xs font-semibold tracking-[0.14em] text-brand-cocoa uppercase transition hover:-translate-y-0.5"
             >
-              Go to cart
+              Back to products
             </Link>
           </div>
         </div>

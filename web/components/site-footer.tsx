@@ -9,7 +9,6 @@ const footerPages = [
   { label: "Services", href: "/services" },
   { label: "Products", href: "/products" },
   { label: "Gallery", href: "/gallery" },
-  { label: "Checkout", href: "/checkout" },
   { label: "Contact", href: "/contact" },
 ];
 

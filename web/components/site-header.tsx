@@ -5,7 +5,6 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { CartPill } from "@/components/cart-pill";
 import {
   Collapsible,
   CollapsibleContent,
@@ -246,7 +245,6 @@ export function SiteHeader() {
           >
             ♡ Book a Visit
           </a>
-          <CartPill />
 
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
