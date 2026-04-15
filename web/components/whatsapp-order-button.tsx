@@ -27,7 +27,7 @@ export function WhatsAppOrderButton({
       )}
     >
       <FaWhatsapp className="h-3.5 w-3.5 shrink-0 text-[#25D366]" aria-hidden="true" />
-      <span>{label}</span>
+      <span className="text-white">{label}</span>
     </a>
   );
 }
