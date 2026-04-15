@@ -408,7 +408,10 @@ export default function Home() {
             <p className="text-sm tracking-[0.18em] text-brand-cocoa/70 uppercase">Photo Gallery</p>
             <h2 className="mt-2 font-serif text-3xl text-brand-cocoa sm:text-4xl">Nail Art Gallery From Our Kampala Studio</h2>
           </div>
-          <Link href="/gallery" className="text-sm font-semibold text-brand-cocoa underline-offset-4 hover:underline">
+          <Link
+            href="/gallery"
+            className="inline-flex items-center justify-center rounded-full border border-brand-cocoa/28 bg-white/80 px-5 py-2.5 text-sm font-semibold text-brand-cocoa shadow-[0_12px_28px_-18px_rgba(51,31,26,0.5)] transition hover:-translate-y-0.5 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cocoa/25"
+          >
             Open full gallery
           </Link>
         </div>
