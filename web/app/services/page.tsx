@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Caveat } from "next/font/google";
+import { FaWhatsapp } from "react-icons/fa";
 import { services } from "@/lib/static-content";
 import { buildWhatsAppLink, formatUGX } from "@/lib/utils";
 
@@ -158,7 +159,7 @@ export default function ServicesPage() {
           {services.map((service, index) => {
             const serviceBookingLink = buildWhatsAppLink(
               whatsappNumber,
-              `Hello Russ Nails, I would like to book ${service.name}.`,
+              `Hello Russ Nails, I would like to order ${service.name}.`,
             );
             const visual = serviceVisuals[service.slug] ?? fallbackVisual;
 
@@ -196,9 +197,10 @@ export default function ServicesPage() {
                         href={serviceBookingLink}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center justify-center rounded-full bg-brand-cocoa px-5 py-2.5 text-xs font-semibold tracking-[0.14em] text-white uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
+                        className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-cocoa px-5 py-2.5 text-xs font-semibold tracking-[0.14em] text-white uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
                       >
-                        Book now
+                        <FaWhatsapp className="h-3.5 w-3.5" aria-hidden="true" />
+                        Order on WhatsApp
                       </a>
                       <Link
                         href={`/services/${service.slug}`}
