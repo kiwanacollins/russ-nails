@@ -52,7 +52,7 @@ export function SiteFooter() {
                 <div>
                   <p className="font-semibold text-brand-cocoa/86">+256 762 267 569</p>
                   <p className="mt-1 font-semibold text-brand-cocoa/86">+256 708 420 038</p>
-                  <p className="mt-2 text-brand-cocoa/75">info@russnails.com</p>
+                  <p className="mt-2 text-brand-cocoa/75">angella@russnails.com</p>
                 </div>
               </div>
             </div>

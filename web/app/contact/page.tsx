@@ -222,7 +222,7 @@ export default function ContactPage() {
                     <Mail className="h-4 w-4 text-brand-clay" />
                     Email
                   </div>
-                  <p className="mt-2 text-sm leading-6 text-brand-cocoa">info@russnails.com</p>
+                  <p className="mt-2 text-sm leading-6 text-brand-cocoa">angella@russnails.com</p>
                 </div>
               </div>
 
