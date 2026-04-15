@@ -15,9 +15,9 @@ const footerPages = [
 
 export function SiteFooter() {
   return (
-    <footer className="mt-24 overflow-hidden border-t border-brand-cocoa/12 bg-[#ece9e6]">
+    <footer className="mt-24 overflow-hidden border-t border-brand-cocoa/12 bg-[#ece9e6]" data-aos="fade-up-soft">
       <div className="mx-auto max-w-355 lg:grid lg:grid-cols-[1.45fr_0.9fr]">
-        <div className="px-6 py-12 sm:px-10 lg:px-14 lg:py-16">
+        <div className="px-6 py-12 sm:px-10 lg:px-14 lg:py-16" data-aos="fade-up-soft">
           <div className="grid gap-10 md:grid-cols-3 md:gap-8">
             <div>
               <Link href="/" className="inline-flex flex-col text-brand-cocoa">
@@ -26,7 +26,7 @@ export function SiteFooter() {
                   alt="Russ Nails & Products"
                   width={540}
                   height={270}
-                  className="h-48 w-auto object-contain [filter:drop-shadow(0_0_6px_rgba(202,139,120,0.7))_drop-shadow(0_0_16px_rgba(156,122,79,0.45))]"
+                  className="h-36 w-auto object-contain filter-[drop-shadow(0_0_6px_rgba(202,139,120,0.7))_drop-shadow(0_0_16px_rgba(156,122,79,0.45))] sm:h-44 md:h-48"
                 />
                 <span className="mt-1 text-xs font-semibold tracking-[0.28em] uppercase">Luxury Nail Studio</span>
               </Link>
@@ -34,7 +34,7 @@ export function SiteFooter() {
 
             <div>
               <p className="text-xs font-semibold tracking-[0.25em] text-brand-cocoa/58 uppercase">Quick Links</p>
-              <ul className="mt-6 space-y-3 text-xl leading-none text-brand-cocoa sm:text-2xl">
+              <ul className="mt-6 space-y-3 text-lg leading-none text-brand-cocoa sm:text-xl md:text-2xl">
                 {footerPages.map((item) => (
                   <li key={item.label}>
                     <Link href={item.href} className="transition hover:text-brand-cocoa/75">
@@ -47,7 +47,7 @@ export function SiteFooter() {
 
             <div>
               <p className="text-xs font-semibold tracking-[0.25em] text-brand-cocoa/58 uppercase">Contacts</p>
-              <div className="mt-6 space-y-6 text-lg leading-normal text-brand-cocoa sm:text-xl">
+              <div className="mt-6 space-y-6 text-base leading-normal text-brand-cocoa sm:text-lg lg:text-xl">
                 <p>Kololo, Kampala, Uganda</p>
                 <p>Opens at 7:00 AM (Mon - Sat), Sunday by reservation</p>
                 <div>
@@ -78,8 +78,8 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <aside className="bg-[#b78498] px-7 py-12 sm:px-10 lg:px-12 lg:py-16">
-          <h3 className="max-w-xs font-serif text-5xl leading-[0.92] text-white sm:text-6xl">Book an appointment</h3>
+        <aside className="bg-[#b78498] px-7 py-12 sm:px-10 lg:px-12 lg:py-16" data-aos="fade-up-soft" data-aos-delay="90">
+          <h3 className="max-w-xs font-serif text-[2.4rem] leading-[0.92] text-white sm:text-5xl lg:text-6xl">Book an appointment</h3>
 
           <form className="mt-12 space-y-8">
             <div className="grid gap-6 sm:grid-cols-2">

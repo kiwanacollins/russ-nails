@@ -32,11 +32,11 @@ export function QuickBookBar() {
   }
 
   return (
-    <section className="border-b border-brand-cocoa/10 bg-surface">
+    <section className="border-b border-brand-cocoa/10 bg-surface" data-aos="fade-up-soft">
       <form
         onSubmit={handleSubmit}
         noValidate
-        className="shell flex flex-col gap-4 py-6 md:flex-row md:items-start md:gap-0"
+        className="shell flex flex-col gap-4 py-6 md:flex-row md:items-end md:gap-0"
       >
         {/* Name */}
         <div className="flex flex-1 flex-col gap-1 md:border-r md:border-brand-cocoa/15 md:pr-6">

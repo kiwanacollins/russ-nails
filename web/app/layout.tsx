@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { Manrope, Playfair_Display, Geist } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { AOSInit } from "@/components/aos-init";
 import { WhatsAppFab } from "../components/whatsapp-fab";
 import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-fullscreen.css";
 import "lightgallery/css/lg-thumbnail.css";
 import "lightgallery/css/lg-zoom.css";
+import "aos/dist/aos.css";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
@@ -59,8 +61,9 @@ export default function RootLayout({
     <html lang="en" className={cn("h-full", bodyFont.variable, headingFont.variable, "font-sans", geist.variable)}>
       <body className="min-h-full bg-background font-sans text-ink antialiased">
         <div className="relative flex min-h-full flex-col">
+          <AOSInit />
           <SiteHeader />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 overflow-x-clip">{children}</main>
           <SiteFooter />
           <WhatsAppFab />
         </div>

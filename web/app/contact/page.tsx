@@ -35,7 +35,10 @@ export default function ContactPage() {
 
   return (
     <div className="pb-12 sm:pb-16 lg:pb-20">
-      <section className="w-full overflow-hidden border-y border-brand-blush/70 bg-[#ead0d6] shadow-[0_30px_90px_-48px_rgba(95,68,64,0.42)]">
+      <section
+        className="w-full overflow-hidden border-y border-brand-blush/70 bg-[#ead0d6] shadow-[0_30px_90px_-48px_rgba(95,68,64,0.42)]"
+        data-aos="fade-in-soft"
+      >
         <div className="grid lg:min-h-[min(88svh,54rem)] lg:grid-cols-[1.05fr_0.95fr]">
           <div className="flex flex-col justify-center px-8 py-12 sm:px-10 sm:py-14 lg:px-14 lg:py-16 xl:px-16">
             <p className="text-xs tracking-[0.22em] text-brand-cocoa/60 uppercase">Contact + Location</p>
@@ -141,9 +144,12 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <div className="shell mt-8">
-        <section className="grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
-          <article className="relative overflow-hidden rounded-3xl border border-brand-cocoa/10 bg-linear-to-br from-[#fffdf8] via-[#fff9f4] to-[#f3e6dc] p-5 shadow-[0_24px_90px_-52px_rgba(95,68,64,0.48)] sm:p-6 lg:p-7">
+      <div className="shell mt-8" data-aos="fade-up-soft">
+        <section className="grid gap-6 lg:grid-cols-[1.08fr_0.92fr]" data-aos="fade-up-soft">
+          <article
+            className="relative overflow-hidden rounded-3xl border border-brand-cocoa/10 bg-linear-to-br from-[#fffdf8] via-[#fff9f4] to-[#f3e6dc] p-5 shadow-[0_24px_90px_-52px_rgba(95,68,64,0.48)] sm:p-6 lg:p-7"
+            data-aos="fade-up-soft"
+          >
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(202,139,120,0.14),transparent_40%),radial-gradient(circle_at_bottom_left,rgba(156,122,79,0.1),transparent_32%)]" />
 
             <div className="relative">
@@ -268,7 +274,11 @@ export default function ContactPage() {
             </div>
           </article>
 
-          <article className="relative overflow-hidden rounded-3xl border border-brand-cocoa/10 bg-linear-to-br from-[#f7efe8] via-[#fcf8f4] to-[#f2e0d4] p-5 shadow-[0_24px_90px_-52px_rgba(95,68,64,0.42)] sm:p-6 lg:p-7">
+          <article
+            className="relative overflow-hidden rounded-3xl border border-brand-cocoa/10 bg-linear-to-br from-[#f7efe8] via-[#fcf8f4] to-[#f2e0d4] p-5 shadow-[0_24px_90px_-52px_rgba(95,68,64,0.42)] sm:p-6 lg:p-7"
+            data-aos="fade-up-soft"
+            data-aos-delay="100"
+          >
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.7),transparent_42%),radial-gradient(circle_at_bottom_right,rgba(202,139,120,0.12),transparent_36%)]" />
 
             <div className="relative">

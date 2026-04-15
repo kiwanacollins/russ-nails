@@ -219,12 +219,12 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
   const relatedServices = services.filter((item) => item.slug !== slug).slice(0, 3);
 
   return (
-    <div className="shell py-12 sm:py-16">
+    <div className="shell py-12 sm:py-16" data-aos="fade-up-soft">
       <Link href="/services" className="text-sm font-semibold text-brand-cocoa underline-offset-4 hover:underline">
         Back to services
       </Link>
 
-      <article className="luxury-card mt-6 overflow-hidden">
+      <article className="luxury-card mt-6 overflow-hidden" data-aos="fade-up-soft">
         <div className="grid lg:grid-cols-[1fr_1.06fr]">
           <div className="relative min-h-95 lg:min-h-full">
             <Image
@@ -273,8 +273,8 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
         </div>
       </article>
 
-      <section className="mt-8 grid gap-6 md:grid-cols-3">
-        <article className="luxury-card p-6 sm:p-7">
+      <section className="mt-8 grid gap-6 md:grid-cols-3" data-aos="fade-up-soft">
+        <article className="luxury-card p-6 sm:p-7" data-aos="fade-up-soft">
           <p className="text-xs tracking-[0.18em] text-brand-cocoa/65 uppercase">What is included</p>
           <ul className="mt-4 space-y-2.5 text-sm leading-7 text-muted">
             {detail.includes.map((item) => (
@@ -286,7 +286,7 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
           </ul>
         </article>
 
-        <article className="luxury-card p-6 sm:p-7">
+        <article className="luxury-card p-6 sm:p-7" data-aos="fade-up-soft" data-aos-delay="80">
           <p className="text-xs tracking-[0.18em] text-brand-cocoa/65 uppercase">Best for</p>
           <ul className="mt-4 space-y-2.5 text-sm leading-7 text-muted">
             {detail.bestFor.map((item) => (
@@ -298,7 +298,7 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
           </ul>
         </article>
 
-        <article className="luxury-card p-6 sm:p-7">
+        <article className="luxury-card p-6 sm:p-7" data-aos="fade-up-soft" data-aos-delay="140">
           <p className="text-xs tracking-[0.18em] text-brand-cocoa/65 uppercase">Aftercare notes</p>
           <ul className="mt-4 space-y-2.5 text-sm leading-7 text-muted">
             {detail.aftercare.map((item) => (
@@ -311,8 +311,8 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
         </article>
       </section>
 
-      <section className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-        <article className="luxury-card bg-[#f3e5dc] p-6 sm:p-8">
+      <section className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]" data-aos="fade-up-soft">
+        <article className="luxury-card bg-[#f3e5dc] p-6 sm:p-8" data-aos="fade-up-soft">
           <p className="text-xs tracking-[0.18em] text-brand-cocoa/70 uppercase">Appointment note</p>
           <h2 className="mt-3 font-serif text-3xl text-brand-cocoa sm:text-4xl">
             Bring your inspiration, we will tailor the final look
@@ -339,7 +339,7 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
           </div>
         </article>
 
-        <article className="luxury-card overflow-hidden p-6 sm:p-8">
+        <article className="luxury-card overflow-hidden p-6 sm:p-8" data-aos="fade-up-soft" data-aos-delay="100">
           <div className="flex items-end justify-between gap-3">
             <div>
               <p className="text-xs tracking-[0.18em] text-brand-cocoa/70 uppercase">Related services</p>
@@ -351,11 +351,13 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
           </div>
 
           <ul className="mt-5 space-y-3">
-            {relatedServices.map((item) => (
+            {relatedServices.map((item, index) => (
               <li key={item.slug}>
                 <Link
                   href={`/services/${item.slug}`}
                   className="group relative flex items-center justify-between overflow-hidden rounded-2xl border border-brand-cocoa/12 bg-linear-to-r from-white/80 via-white/65 to-brand-blush/35 p-4 text-brand-cocoa shadow-[0_14px_34px_-28px_rgba(51,31,26,0.6)] transition duration-300 hover:-translate-y-0.5 hover:border-brand-cocoa/24 hover:shadow-[0_20px_42px_-26px_rgba(51,31,26,0.65)]"
+                  data-aos="fade-up-soft"
+                  data-aos-delay={index * 90}
                 >
                   <div>
                     <p className="text-sm font-semibold sm:text-base">{item.name}</p>

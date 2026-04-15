@@ -75,8 +75,8 @@ export default function ServicesPage() {
 
   return (
     <div className="pb-20">
-      <section className="shell py-12 sm:py-16">
-        <header className="luxury-card relative overflow-hidden p-8 sm:p-10 lg:p-12">
+      <section className="shell py-12 sm:py-16" data-aos="fade-up-soft">
+        <header className="luxury-card relative overflow-hidden p-8 sm:p-10 lg:p-12" data-aos="fade-up-soft">
           <div className="absolute inset-0">
             <Image
               src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1800&q=80"
@@ -132,7 +132,7 @@ export default function ServicesPage() {
           </div>
         </header>
 
-        <section className="mt-8 luxury-card bg-[#f2ebea] p-6 sm:p-8">
+        <section className="mt-8 luxury-card bg-[#f2ebea] p-6 sm:p-8" data-aos="fade-up-soft">
           <p className="text-xs tracking-[0.2em] text-brand-cocoa/68 uppercase">Services Menu</p>
           <ul className="mt-4 grid gap-3 sm:grid-cols-2">
             {services.map((service) => (
@@ -155,7 +155,7 @@ export default function ServicesPage() {
         </section>
 
         <section className="mt-10 grid gap-6 md:grid-cols-2">
-          {services.map((service) => {
+          {services.map((service, index) => {
             const serviceBookingLink = buildWhatsAppLink(
               whatsappNumber,
               `Hello Russ Nails, I would like to book ${service.name}.`,
@@ -163,7 +163,12 @@ export default function ServicesPage() {
             const visual = serviceVisuals[service.slug] ?? fallbackVisual;
 
             return (
-              <article key={service.slug} className="stacked-card">
+              <article
+                key={service.slug}
+                className="stacked-card"
+                data-aos="fade-up-soft"
+                data-aos-delay={index * 80}
+              >
                 <div className="luxury-card h-full overflow-hidden">
                   <div className="relative h-56">
                     <Image
@@ -209,7 +214,7 @@ export default function ServicesPage() {
           })}
         </section>
 
-        <section className="mt-10 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+        <section className="mt-10 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]" data-aos="fade-up-soft">
           <article className="luxury-card p-6 sm:p-8">
             <p className="text-xs tracking-[0.18em] text-brand-cocoa/70 uppercase">How booking works</p>
             <h2 className="mt-3 font-serif text-3xl text-brand-cocoa sm:text-4xl">Simple, premium, and fast</h2>

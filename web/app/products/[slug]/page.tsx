@@ -42,12 +42,12 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
   const image = product.images[0];
 
   return (
-    <div className="shell py-12 sm:py-16">
+    <div className="shell py-12 sm:py-16" data-aos="fade-up-soft">
       <Link href="/products" className="text-sm font-semibold text-brand-cocoa underline-offset-4 hover:underline">
         Back to products
       </Link>
 
-      <article className="luxury-card mt-6 grid overflow-hidden lg:grid-cols-[1fr_1.1fr]">
+      <article className="luxury-card mt-6 grid overflow-hidden lg:grid-cols-[1fr_1.1fr]" data-aos="fade-up-soft">
         <div className="min-h-80 bg-brand-blush">
           {image ? (
             <Image
@@ -62,7 +62,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
 
         <div className="space-y-5 p-8 sm:p-10">
           <p className="text-xs tracking-[0.18em] text-brand-cocoa/65 uppercase">{product.category}</p>
-          <h1 className="font-serif text-4xl text-brand-cocoa">{product.name}</h1>
+          <h1 className="font-serif text-3xl text-brand-cocoa sm:text-4xl">{product.name}</h1>
           <p className="text-sm leading-8 text-muted sm:text-base">{product.description}</p>
           <p className="text-lg font-semibold tracking-[0.12em] text-brand-gold uppercase">
             {formatUGX(product.price)}

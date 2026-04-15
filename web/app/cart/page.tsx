@@ -15,8 +15,8 @@ export default function CartPage() {
 
   if (items.length === 0) {
     return (
-      <div className="shell py-12 sm:py-16">
-        <div className="luxury-card p-8 sm:p-10">
+      <div className="shell py-12 sm:py-16" data-aos="fade-up-soft">
+        <div className="luxury-card p-8 sm:p-10" data-aos="fade-up-soft">
           <h1 className="font-serif text-4xl text-brand-cocoa">Your cart is currently empty</h1>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-muted sm:text-base">
             Add products from the shop and then choose whether to checkout on-site or finalize via
@@ -34,13 +34,18 @@ export default function CartPage() {
   }
 
   return (
-    <div className="shell py-12 sm:py-16">
+    <div className="shell py-12 sm:py-16" data-aos="fade-up-soft">
       <h1 className="font-serif text-4xl text-brand-cocoa sm:text-5xl">Cart</h1>
 
       <div className="mt-8 grid gap-6 lg:grid-cols-[1.5fr_1fr]">
         <section className="luxury-card divide-y divide-brand-cocoa/10 overflow-hidden">
-          {items.map((item) => (
-            <article key={item.productId} className="grid gap-4 p-5 sm:grid-cols-[108px_1fr_auto] sm:p-6">
+          {items.map((item, index) => (
+            <article
+              key={item.productId}
+              className="grid gap-4 p-5 sm:grid-cols-[108px_1fr_auto] sm:p-6"
+              data-aos="fade-up-soft"
+              data-aos-delay={index * 70}
+            >
               {item.image?.url ? (
                 <Image
                   src={item.image.url}
@@ -86,7 +91,7 @@ export default function CartPage() {
           ))}
         </section>
 
-        <aside className="luxury-card h-fit p-6 sm:p-7">
+        <aside className="luxury-card h-fit p-6 sm:p-7" data-aos="fade-up-soft" data-aos-delay="120">
           <p className="text-xs tracking-[0.18em] text-brand-cocoa/65 uppercase">Summary</p>
           <p className="mt-4 text-sm text-muted">Subtotal</p>
           <p className="mt-1 font-serif text-3xl text-brand-cocoa">{formatUGX(subtotal)}</p>

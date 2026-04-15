@@ -108,10 +108,10 @@ export function SiteHeader() {
             width={390}
             height={195}
             priority
-            className={`mt-2.5 h-36 w-auto object-contain transition group-hover:scale-105 ${
+            className={`mt-1 h-20 w-auto object-contain transition group-hover:scale-105 sm:h-24 md:mt-2.5 md:h-36 ${
               isHome
-                ? "[filter:drop-shadow(0_0_8px_rgba(255,220,180,0.95))_drop-shadow(0_0_22px_rgba(202,139,120,0.85))_drop-shadow(0_0_40px_rgba(156,122,79,0.6))]"
-                : "[filter:drop-shadow(0_0_6px_rgba(202,139,120,0.7))_drop-shadow(0_0_16px_rgba(156,122,79,0.45))]"
+                ? "filter-[drop-shadow(0_0_8px_rgba(255,220,180,0.95))_drop-shadow(0_0_22px_rgba(202,139,120,0.85))_drop-shadow(0_0_40px_rgba(156,122,79,0.6))]"
+                : "filter-[drop-shadow(0_0_6px_rgba(202,139,120,0.7))_drop-shadow(0_0_16px_rgba(156,122,79,0.45))]"
             }`}
           />
         </Link>
@@ -273,7 +273,7 @@ export function SiteHeader() {
                       alt="Russ Nails & Products"
                       width={420}
                       height={210}
-                      className="h-36 w-auto object-contain"
+                      className="h-24 w-auto object-contain sm:h-28"
                     />
                   </Link>
                 </SheetTitle>

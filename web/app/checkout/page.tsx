@@ -12,8 +12,8 @@ export default function CheckoutChoicePage() {
 
   if (items.length === 0) {
     return (
-      <div className="shell py-12 sm:py-16">
-        <div className="luxury-card p-8 sm:p-10">
+      <div className="shell py-12 sm:py-16" data-aos="fade-up-soft">
+        <div className="luxury-card p-8 sm:p-10" data-aos="fade-up-soft">
           <h1 className="font-serif text-4xl text-brand-cocoa">Checkout is empty</h1>
           <p className="mt-4 text-sm leading-7 text-muted">
             Add products first, then choose your preferred checkout method.
@@ -30,18 +30,18 @@ export default function CheckoutChoicePage() {
   }
 
   return (
-    <div className="shell py-12 sm:py-16">
-      <header className="luxury-card p-8 sm:p-10">
+    <div className="shell py-12 sm:py-16" data-aos="fade-up-soft">
+      <header className="luxury-card p-8 sm:p-10" data-aos="fade-up-soft">
         <p className="text-sm tracking-[0.18em] text-brand-cocoa/70 uppercase">Checkout Method</p>
-        <h1 className="mt-3 font-serif text-4xl text-brand-cocoa sm:text-5xl">Choose How You Want to Complete Your Order</h1>
+        <h1 className="mt-3 font-serif text-3xl text-brand-cocoa sm:text-5xl">Choose How You Want to Complete Your Order</h1>
         <p className="mt-4 max-w-3xl text-sm leading-7 text-muted sm:text-base">
           Keep the concierge experience with WhatsApp, or proceed with the on-site checkout flow.
           You can use either option for the same cart.
         </p>
       </header>
 
-      <section className="mt-8 grid gap-6 md:grid-cols-2">
-        <article className="luxury-card p-6 sm:p-8">
+      <section className="mt-8 grid gap-6 md:grid-cols-2" data-aos="fade-up-soft">
+        <article className="luxury-card p-6 sm:p-8" data-aos="fade-up-soft">
           <p className="text-xs tracking-[0.18em] text-brand-cocoa/65 uppercase">Recommended for mobile</p>
           <h2 className="mt-3 font-serif text-3xl text-brand-cocoa">Order via WhatsApp</h2>
           <p className="mt-3 text-sm leading-7 text-muted">
@@ -56,7 +56,7 @@ export default function CheckoutChoicePage() {
           </Link>
         </article>
 
-        <article className="luxury-card p-6 sm:p-8">
+        <article className="luxury-card p-6 sm:p-8" data-aos="fade-up-soft" data-aos-delay="110">
           <p className="text-xs tracking-[0.18em] text-brand-cocoa/65 uppercase">Scalable flow</p>
           <h2 className="mt-3 font-serif text-3xl text-brand-cocoa">Checkout on Site</h2>
           <p className="mt-3 text-sm leading-7 text-muted">
@@ -72,7 +72,7 @@ export default function CheckoutChoicePage() {
         </article>
       </section>
 
-      <aside className="luxury-card mt-8 p-6 sm:p-7">
+      <aside className="luxury-card mt-8 p-6 sm:p-7" data-aos="fade-up-soft" data-aos-delay="140">
         <p className="text-sm text-muted">Cart subtotal</p>
         <p className="mt-1 font-serif text-3xl text-brand-cocoa">{formatUGX(subtotal)}</p>
       </aside>

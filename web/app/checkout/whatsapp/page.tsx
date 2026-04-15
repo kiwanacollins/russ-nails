@@ -103,8 +103,8 @@ export default function WhatsAppCheckoutPage() {
 
   if (items.length === 0) {
     return (
-      <div className="shell py-12 sm:py-16">
-        <div className="luxury-card p-8 sm:p-10">
+      <div className="shell py-12 sm:py-16" data-aos="fade-up-soft">
+        <div className="luxury-card p-8 sm:p-10" data-aos="fade-up-soft">
           <h1 className="font-serif text-4xl text-brand-cocoa">No items to checkout</h1>
           <p className="mt-4 text-sm leading-7 text-muted">Add products before using WhatsApp checkout.</p>
           <Link
@@ -119,11 +119,11 @@ export default function WhatsAppCheckoutPage() {
   }
 
   return (
-    <div className="shell py-12 sm:py-16">
+    <div className="shell py-12 sm:py-16" data-aos="fade-up-soft">
       <div className="grid gap-6 lg:grid-cols-[1.35fr_1fr]">
-        <section className="luxury-card p-6 sm:p-8">
+        <section className="luxury-card p-6 sm:p-8" data-aos="fade-up-soft">
           <p className="text-sm tracking-[0.18em] text-brand-cocoa/70 uppercase">WhatsApp Checkout</p>
-          <h1 className="mt-3 font-serif text-4xl text-brand-cocoa">Send Order to Concierge</h1>
+          <h1 className="mt-3 font-serif text-3xl text-brand-cocoa sm:text-4xl">Send Order to Concierge</h1>
           <p className="mt-3 text-sm leading-7 text-muted">
             We will register this inquiry, notify the studio owner, and open WhatsApp with your cart
             details prefilled for fast confirmation.
@@ -177,7 +177,7 @@ export default function WhatsAppCheckoutPage() {
           </form>
         </section>
 
-        <aside className="luxury-card h-fit p-6 sm:p-7">
+        <aside className="luxury-card h-fit p-6 sm:p-7" data-aos="fade-up-soft" data-aos-delay="120">
           <p className="text-xs tracking-[0.18em] text-brand-cocoa/65 uppercase">Order Summary</p>
           <ul className="mt-5 space-y-3 text-sm text-muted">
             {items.map((item) => (

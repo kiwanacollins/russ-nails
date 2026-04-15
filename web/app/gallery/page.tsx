@@ -14,8 +14,8 @@ export default function GalleryPage() {
   const featuredCategories = galleryCategories.slice(0, 4);
 
   return (
-    <div className="shell py-12 sm:py-16">
-      <header className="luxury-card relative overflow-hidden">
+    <div className="shell py-12 sm:py-16" data-aos="fade-up-soft">
+      <header className="luxury-card relative overflow-hidden" data-aos="fade-up-soft">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(202,139,120,0.15),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(156,122,79,0.14),transparent_35%)]" />
 
         <div className="relative grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
@@ -51,8 +51,12 @@ export default function GalleryPage() {
           </div>
 
           <div className="border-t border-brand-cocoa/8 p-5 sm:p-6 lg:border-t-0 lg:border-l lg:border-brand-cocoa/8 lg:p-7">
-            <div className="grid h-full min-h-84 grid-cols-2 gap-3">
-              <article className="group relative col-span-2 overflow-hidden rounded-2xl border border-brand-cocoa/10 shadow-[0_18px_50px_-30px_rgba(35,23,20,0.45)]">
+            <div className="grid h-full min-h-76 grid-cols-2 gap-3 sm:min-h-84">
+              <article
+                className="group relative col-span-2 overflow-hidden rounded-2xl border border-brand-cocoa/10 shadow-[0_18px_50px_-30px_rgba(35,23,20,0.45)]"
+                data-aos="fade-up-soft"
+                data-aos-delay="90"
+              >
                 <Image
                   src={previewShots[0]?.imageUrl ?? galleryShots[0].imageUrl}
                   alt={previewShots[0]?.alt ?? galleryShots[0].alt}
@@ -71,7 +75,11 @@ export default function GalleryPage() {
                 </div>
               </article>
 
-              <article className="group relative overflow-hidden rounded-2xl border border-brand-cocoa/10 shadow-[0_18px_50px_-30px_rgba(35,23,20,0.45)]">
+              <article
+                className="group relative overflow-hidden rounded-2xl border border-brand-cocoa/10 shadow-[0_18px_50px_-30px_rgba(35,23,20,0.45)]"
+                data-aos="fade-up-soft"
+                data-aos-delay="140"
+              >
                 <Image
                   src={previewShots[1]?.imageUrl ?? galleryShots[1].imageUrl}
                   alt={previewShots[1]?.alt ?? galleryShots[1].alt}
@@ -87,7 +95,11 @@ export default function GalleryPage() {
                 </div>
               </article>
 
-              <article className="group relative overflow-hidden rounded-2xl border border-brand-cocoa/10 shadow-[0_18px_50px_-30px_rgba(35,23,20,0.45)]">
+              <article
+                className="group relative overflow-hidden rounded-2xl border border-brand-cocoa/10 shadow-[0_18px_50px_-30px_rgba(35,23,20,0.45)]"
+                data-aos="fade-up-soft"
+                data-aos-delay="190"
+              >
                 <Image
                   src={previewShots[2]?.imageUrl ?? galleryShots[2].imageUrl}
                   alt={previewShots[2]?.alt ?? galleryShots[2].alt}
@@ -107,7 +119,7 @@ export default function GalleryPage() {
         </div>
       </header>
 
-      <section className="mt-10 luxury-card p-4 sm:p-5 lg:p-6">
+      <section className="mt-10 luxury-card p-4 sm:p-5 lg:p-6" data-aos="fade-up-soft">
         <div className="px-2 sm:px-3">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <p className="max-w-3xl text-sm leading-7 text-muted sm:text-base">

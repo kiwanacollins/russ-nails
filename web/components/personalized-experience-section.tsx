@@ -28,7 +28,7 @@ export function PersonalizedExperienceSection({
   const rightImageRotate = useTransform(scrollYProgress, [0, 1], [12, 7]);
 
   return (
-    <section ref={sectionRef} className="mt-20 w-full">
+    <section ref={sectionRef} className="mt-20 w-full" data-aos="fade-up-soft">
       <div className="w-full overflow-hidden rounded-[2.4rem] border border-brand-cocoa/10 bg-[#efeeee] px-6 py-10 sm:px-10 lg:px-12 lg:py-14">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div className="max-w-xl">
@@ -42,10 +42,10 @@ export function PersonalizedExperienceSection({
             </h2>
           </div>
 
-          <div className="relative mx-auto w-full max-w-176 min-h-144 sm:min-h-168">
+          <div className="relative mx-auto w-full max-w-176 min-h-120 sm:min-h-156 lg:min-h-168">
             <motion.figure
               style={{ y: leftImageY, rotate: leftImageRotate }}
-              className="absolute left-[-1%] top-[7%] z-10 h-72 w-[54%] overflow-hidden rounded-[1.9rem] border border-white/40 shadow-[0_26px_60px_-35px_rgba(37,23,20,0.55)] sm:h-96"
+              className="absolute left-[-1%] top-[7%] z-10 h-64 w-[54%] overflow-hidden rounded-[1.9rem] border border-white/40 shadow-[0_26px_60px_-35px_rgba(37,23,20,0.55)] sm:h-88 lg:h-96"
             >
               <Image
                 src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80"
@@ -58,7 +58,7 @@ export function PersonalizedExperienceSection({
 
             <motion.figure
               style={{ y: rightImageY, rotate: rightImageRotate }}
-              className="absolute right-[-1%] top-[7%] z-20 h-72 w-[54%] overflow-hidden rounded-[1.9rem] border border-white/35 shadow-[0_26px_60px_-35px_rgba(37,23,20,0.55)] sm:h-96"
+              className="absolute right-[-1%] top-[7%] z-20 h-64 w-[54%] overflow-hidden rounded-[1.9rem] border border-white/35 shadow-[0_26px_60px_-35px_rgba(37,23,20,0.55)] sm:h-88 lg:h-96"
             >
               <Image
                 src="https://images.unsplash.com/photo-1515688594390-b649af70d282?auto=format&fit=crop&w=900&q=80"

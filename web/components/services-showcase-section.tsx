@@ -140,12 +140,12 @@ export function ServicesShowcaseSection({ services }: ServicesShowcaseSectionPro
   };
 
   return (
-    <section className="mt-20 bg-[#e7dddc] py-16 sm:py-20">
+    <section className="mt-20 bg-[#e7dddc] py-16 sm:py-20" data-aos="fade-up-soft">
       <div className="mx-auto w-full max-w-375 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:gap-10">
           <div className="max-w-xl lg:w-[30%] lg:max-w-none lg:pb-6">
             <p className="text-sm tracking-[0.2em] text-brand-cocoa/75 uppercase">Our Services</p>
-            <h2 className="mt-4 font-serif text-[3.1rem] leading-[0.9] tracking-[-0.01em] text-brand-cocoa sm:text-[4.8rem]">
+            <h2 className="mt-4 font-serif text-[2.45rem] leading-[0.9] tracking-[-0.01em] text-brand-cocoa sm:text-[4rem] lg:text-[4.8rem]">
               A range of
               <br />
               high-quality
@@ -171,7 +171,9 @@ export function ServicesShowcaseSection({ services }: ServicesShowcaseSectionPro
                   ref={(node) => {
                     cardRefs.current[index] = node;
                   }}
-                  className="group relative h-124 w-[90%] min-w-72 shrink-0 snap-start overflow-hidden border border-white/30 sm:w-[78%] sm:min-w-88 lg:w-[calc((100%-2.5rem)/3)] lg:min-w-0"
+                  className="group relative h-124 w-[88%] min-w-68 shrink-0 snap-start overflow-hidden border border-white/30 sm:w-[78%] sm:min-w-88 lg:w-[calc((100%-2.5rem)/3)] lg:min-w-0"
+                  data-aos="fade-up-soft"
+                  data-aos-delay={index * 90}
                 >
                   <Image
                     src={visual.imageUrl}
@@ -213,7 +215,7 @@ export function ServicesShowcaseSection({ services }: ServicesShowcaseSectionPro
             aria-label="Previous services"
             onClick={() => goTo("prev")}
             disabled={activeIndex <= 0}
-            className="absolute left-4 top-1/2 z-30 inline-flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#c892a8] text-white shadow-[0_20px_35px_-20px_rgba(40,20,24,0.75)] transition hover:scale-105 disabled:cursor-not-allowed disabled:opacity-45"
+            className="absolute left-4 top-1/2 z-30 hidden h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#c892a8] text-white shadow-[0_20px_35px_-20px_rgba(40,20,24,0.75)] transition hover:scale-105 disabled:cursor-not-allowed disabled:opacity-45 lg:inline-flex xl:h-20 xl:w-20"
           >
             <svg viewBox="0 0 24 24" aria-hidden="true" className="h-9 w-9">
               <path
@@ -232,7 +234,7 @@ export function ServicesShowcaseSection({ services }: ServicesShowcaseSectionPro
             aria-label="Next services"
             onClick={() => goTo("next")}
             disabled={activeIndex >= maxIndex}
-            className="absolute right-4 top-1/2 z-30 inline-flex h-20 w-20 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#c892a8] text-white shadow-[0_20px_35px_-20px_rgba(40,20,24,0.75)] transition hover:scale-105 disabled:cursor-not-allowed disabled:opacity-45"
+            className="absolute right-4 top-1/2 z-30 hidden h-16 w-16 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#c892a8] text-white shadow-[0_20px_35px_-20px_rgba(40,20,24,0.75)] transition hover:scale-105 disabled:cursor-not-allowed disabled:opacity-45 lg:inline-flex xl:h-20 xl:w-20"
           >
             <svg viewBox="0 0 24 24" aria-hidden="true" className="h-9 w-9">
               <path

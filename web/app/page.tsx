@@ -105,8 +105,8 @@ export default function Home() {
   }));
 
   return (
-    <div className="pb-20 [&_p]:text-center">
-      <section className="relative min-h-screen overflow-hidden bg-[#221b1a] text-white">
+    <div className="overflow-x-clip pb-20 [&_p]:text-center">
+      <section className="relative min-h-screen overflow-hidden bg-[#221b1a] text-white" data-aos="fade-in-soft">
         <div className="absolute inset-0 grid md:grid-cols-2">
           <div className="relative">
             <Image
@@ -136,14 +136,18 @@ export default function Home() {
 
         <div className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-px -translate-x-1/2 bg-white/22 md:block" />
 
-        <div className="relative z-10 shell flex min-h-screen flex-col items-center justify-center pt-24 pb-8 text-center sm:pb-12">
+        <div
+          className="relative z-10 shell flex min-h-screen flex-col items-center justify-center pt-24 pb-8 text-center sm:pb-12"
+          data-aos="fade-up-soft"
+          data-aos-delay="70"
+        >
           <div className="relative mx-auto max-w-5xl px-4 py-6 sm:px-8 sm:py-8">
             <div className="pointer-events-none absolute inset-0 -z-10 rounded-[2rem] border border-white/16 bg-linear-to-br from-black/55 via-black/35 to-[#9b7085]/24 shadow-[0_30px_90px_-50px_rgba(0,0,0,0.75)] backdrop-blur-[2px]" />
             <p className="text-xs font-semibold tracking-[0.22em] text-white/85 uppercase mb-5">
               Luxury Nail Salon In Kampala, Uganda
             </p>
             <h1
-              className="font-serif text-[3.2rem] leading-[0.96] tracking-[-0.01em] sm:text-[4.8rem] lg:text-[7rem]"
+              className="font-serif text-[clamp(2.45rem,11vw,3.2rem)] leading-[0.96] tracking-[-0.01em] sm:text-[4.8rem] lg:text-[7rem]"
               style={{ textShadow: "0 10px 32px rgba(0, 0, 0, 0.6)" }}
             >
               Nails done
@@ -169,7 +173,7 @@ export default function Home() {
           <div className="mt-auto">
             <Link
               href="/services"
-              className="inline-flex h-36 w-36 items-center justify-center rounded-full border border-white/50 bg-white/88 px-8 text-center text-xs font-semibold tracking-[0.28em] text-black uppercase transition hover:-translate-y-1 hover:bg-white"
+              className="inline-flex h-28 w-28 items-center justify-center rounded-full border border-white/50 bg-white/88 px-6 text-center text-[0.64rem] font-semibold tracking-[0.22em] text-black uppercase transition hover:-translate-y-1 hover:bg-white sm:h-36 sm:w-36 sm:px-8 sm:text-xs sm:tracking-[0.28em]"
               style={{ color: "#000000" }}
             >
               Our Services Menu
@@ -180,7 +184,7 @@ export default function Home() {
 
       <QuickBookBar />
 
-      <section className="shell mt-14">
+      <section className="shell mt-14" data-aos="fade-up-soft">
         <div
           className="relative overflow-hidden rounded-[2.9rem] border border-brand-cocoa/12 bg-[#efe7e2] px-4 py-8 sm:px-8 sm:py-12"
           style={{
@@ -235,7 +239,7 @@ export default function Home() {
 
       <ServicesShowcaseSection services={featuredServices} />
 
-      <section className="mt-20 w-full">
+      <section className="mt-20 w-full" data-aos="fade-up-soft">
         <div className="w-full overflow-hidden rounded-[2.4rem] border border-brand-cocoa/12">
           <div className="grid md:grid-cols-2">
             <div className="relative min-h-80 md:min-h-140">
@@ -284,7 +288,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-20 w-full">
+      <section className="mt-20 w-full" data-aos="fade-up-soft">
         <div className="w-full overflow-hidden border border-brand-cocoa/12">
           <div className="grid md:grid-cols-2">
             <div className="relative min-h-90 md:min-h-168">
@@ -331,7 +335,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="shell mt-20">
+      <section className="shell mt-20" data-aos="fade-up-soft">
         <div className="relative overflow-hidden rounded-[2.4rem] border border-brand-cocoa/15">
           <video
             className="h-75 w-full object-cover sm:h-110"
@@ -354,16 +358,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="shell mt-20">
-        <div className="mb-10 flex items-end justify-between gap-4">
+      <section className="shell mt-20" data-aos="fade-up-soft">
+        <div className="mb-10 flex flex-col items-start gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-sm tracking-[0.18em] text-brand-cocoa/70 uppercase">Client Notes</p>
             <h2 className="mt-2 font-serif text-3xl text-brand-cocoa sm:text-4xl">What Kampala Clients Say About Russ Nails</h2>
           </div>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
-          {testimonials.map((testimonial) => (
-            <div key={testimonial.name} className="stacked-card">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={testimonial.name}
+              className="stacked-card"
+              data-aos="fade-up-soft"
+              data-aos-delay={index * 80}
+            >
               <blockquote className="luxury-card h-full p-6">
                 <div className="mb-4 text-brand-gold">★★★★★</div>
                 <p className="text-sm leading-7 text-muted">{`"${testimonial.quote}"`}</p>
@@ -374,8 +383,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="shell mt-20">
-        <div className="mb-10 flex items-end justify-between gap-4">
+      <section className="shell mt-20" data-aos="fade-up-soft">
+        <div className="mb-10 flex flex-col items-start gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-sm tracking-[0.18em] text-brand-cocoa/70 uppercase">Photo Gallery</p>
             <h2 className="mt-2 font-serif text-3xl text-brand-cocoa sm:text-4xl">Nail Art Gallery From Our Kampala Studio</h2>
@@ -397,7 +406,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-20 bg-[#f4f4f4] py-14 sm:py-16">
+      <section className="mt-20 bg-[#f4f4f4] py-14 sm:py-16" data-aos="fade-up-soft">
         <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
             <div>
@@ -425,8 +434,13 @@ export default function Home() {
           </div>
 
           <div className="mt-12 grid gap-7 md:grid-cols-2 xl:grid-cols-4">
-            {polishShowcase.map((product) => (
-              <article key={product.id} className="text-center text-brand-cocoa">
+            {polishShowcase.map((product, index) => (
+              <article
+                key={product.id}
+                className="text-center text-brand-cocoa"
+                data-aos="fade-up-soft"
+                data-aos-delay={index * 70}
+              >
                 <div className="relative border border-brand-cocoa/14 bg-[#f7f7f7] px-4 pt-6 pb-5 sm:px-6 sm:pt-8 sm:pb-6">
                   {product.badge ? (
                     <span
@@ -469,7 +483,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="shell mt-20">
+      <section className="shell mt-20" data-aos="fade-up-soft">
         <div className="luxury-card overflow-hidden bg-[#f3e5dc] p-8 text-center text-brand-cocoa sm:p-12">
           <p className="text-sm tracking-[0.18em] text-brand-cocoa/70 uppercase">Booking + Shop</p>
           <h2 className="mx-auto mt-3 max-w-2xl font-serif text-3xl leading-tight sm:text-4xl">
@@ -496,8 +510,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="shell mt-20">
-        <div className="mb-10 flex items-end justify-between gap-4">
+      <section className="shell mt-20" data-aos="fade-up-soft">
+        <div className="mb-10 flex flex-col items-start gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-sm tracking-[0.18em] text-brand-cocoa/70 uppercase">Kampala Nail Care Blog</p>
             <h2 className="mt-2 font-serif text-3xl text-brand-cocoa sm:text-4xl">Nail Tips, Trends, and Bridal Prep Guides</h2>
@@ -508,8 +522,13 @@ export default function Home() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
-          {blogHighlights.map((post) => (
-            <article key={post.title} className="stacked-card group">
+          {blogHighlights.map((post, index) => (
+            <article
+              key={post.title}
+              className="stacked-card group"
+              data-aos="fade-up-soft"
+              data-aos-delay={index * 90}
+            >
               <div className="luxury-card h-full overflow-hidden transition duration-300 group-hover:-translate-y-1">
                 <Image
                   src={post.image}

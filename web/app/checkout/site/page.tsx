@@ -92,8 +92,8 @@ export default function SiteCheckoutPage() {
 
   if (orderRef) {
     return (
-      <div className="shell py-12 sm:py-16">
-        <div className="luxury-card p-8 sm:p-10">
+      <div className="shell py-12 sm:py-16" data-aos="fade-up-soft">
+        <div className="luxury-card p-8 sm:p-10" data-aos="fade-up-soft">
           <p className="text-sm tracking-[0.18em] text-brand-cocoa/70 uppercase">Order Placed</p>
           <h1 className="mt-3 font-serif text-4xl text-brand-cocoa">Thank you for your order</h1>
           <p className="mt-4 text-sm leading-7 text-muted sm:text-base">
@@ -121,8 +121,8 @@ export default function SiteCheckoutPage() {
 
   if (items.length === 0) {
     return (
-      <div className="shell py-12 sm:py-16">
-        <div className="luxury-card p-8 sm:p-10">
+      <div className="shell py-12 sm:py-16" data-aos="fade-up-soft">
+        <div className="luxury-card p-8 sm:p-10" data-aos="fade-up-soft">
           <h1 className="font-serif text-4xl text-brand-cocoa">No items to checkout</h1>
           <p className="mt-4 text-sm leading-7 text-muted">Add products before using site checkout.</p>
           <Link
@@ -137,11 +137,11 @@ export default function SiteCheckoutPage() {
   }
 
   return (
-    <div className="shell py-12 sm:py-16">
+    <div className="shell py-12 sm:py-16" data-aos="fade-up-soft">
       <div className="grid gap-6 lg:grid-cols-[1.35fr_1fr]">
-        <section className="luxury-card p-6 sm:p-8">
+        <section className="luxury-card p-6 sm:p-8" data-aos="fade-up-soft">
           <p className="text-sm tracking-[0.18em] text-brand-cocoa/70 uppercase">Site Checkout</p>
-          <h1 className="mt-3 font-serif text-4xl text-brand-cocoa">Complete Your Order</h1>
+          <h1 className="mt-3 font-serif text-3xl text-brand-cocoa sm:text-4xl">Complete Your Order</h1>
 
           <form className="mt-8 space-y-5" onSubmit={handleSubmit}>
             <label className="block text-sm text-muted">
@@ -205,7 +205,7 @@ export default function SiteCheckoutPage() {
           </form>
         </section>
 
-        <aside className="luxury-card h-fit p-6 sm:p-7">
+        <aside className="luxury-card h-fit p-6 sm:p-7" data-aos="fade-up-soft" data-aos-delay="120">
           <p className="text-xs tracking-[0.18em] text-brand-cocoa/65 uppercase">Order Summary</p>
           <ul className="mt-5 space-y-3 text-sm text-muted">
             {items.map((item) => (
