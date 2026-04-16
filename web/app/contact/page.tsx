@@ -54,7 +54,7 @@ export default function ContactPage() {
                 href={whatsappPrimaryLink}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-xl bg-brand-cocoa px-7 py-4 text-xs font-semibold tracking-[0.18em] text-white! uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
+                className="inline-flex items-center justify-center rounded-xl bg-brand-cocoa px-7 py-4 text-[0.68rem] font-semibold tracking-[0.12em] text-white! uppercase whitespace-nowrap transition hover:-translate-y-0.5 hover:bg-brand-clay sm:text-xs sm:tracking-[0.18em]"
               >
                 Book via WhatsApp
               </a>
@@ -77,7 +77,7 @@ export default function ContactPage() {
                 href={whatsappSecondaryLink}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-full border border-brand-cocoa/20 bg-white/40 px-5 py-2.5 text-xs font-semibold tracking-[0.14em] text-brand-cocoa uppercase transition hover:-translate-y-0.5 hover:bg-white/60"
+                className="inline-flex items-center justify-center rounded-full border border-brand-cocoa/20 bg-white/40 px-5 py-2.5 text-[0.68rem] font-semibold tracking-[0.12em] text-brand-cocoa uppercase whitespace-nowrap transition hover:-translate-y-0.5 hover:bg-white/60 sm:text-xs sm:tracking-[0.14em]"
               >
                 WhatsApp Line 2
               </a>
@@ -230,7 +230,7 @@ export default function ContactPage() {
                   href={whatsappPrimaryLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-cocoa px-5 py-2.5 text-xs font-semibold tracking-[0.14em] text-white! uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-cocoa px-5 py-2.5 text-[0.68rem] font-semibold tracking-widest text-white! uppercase whitespace-nowrap transition hover:-translate-y-0.5 hover:bg-brand-clay sm:text-xs sm:tracking-[0.14em]"
                 >
                   Confirm on WhatsApp
                   <ArrowRight className="h-3.5 w-3.5" />
@@ -352,7 +352,7 @@ export default function ContactPage() {
                   href={whatsappPrimaryLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-4 inline-flex items-center gap-2 rounded-full bg-brand-cocoa px-5 py-2.5 text-xs font-semibold tracking-[0.14em] text-white! uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
+                  className="mt-4 inline-flex items-center gap-2 rounded-full bg-brand-cocoa px-5 py-2.5 text-[0.68rem] font-semibold tracking-widest text-white! uppercase whitespace-nowrap transition hover:-translate-y-0.5 hover:bg-brand-clay sm:text-xs sm:tracking-[0.14em]"
                 >
                   Send on WhatsApp
                   <ArrowRight className="h-3.5 w-3.5" />

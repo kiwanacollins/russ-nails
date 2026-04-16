@@ -251,7 +251,7 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
                 href={bookingLink}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-full bg-brand-cocoa px-6 py-3 text-xs font-semibold tracking-[0.16em] text-white! uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
+                className="inline-flex items-center justify-center rounded-full bg-brand-cocoa px-6 py-3 text-[0.68rem] font-semibold tracking-widest text-white! uppercase whitespace-nowrap transition hover:-translate-y-0.5 hover:bg-brand-clay sm:text-xs sm:tracking-[0.16em]"
               >
                 Book on WhatsApp
               </a>
@@ -319,7 +319,7 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
               href={bookingLink}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-brand-cocoa px-6 py-3 text-xs font-semibold tracking-[0.16em] text-white! uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
+              className="inline-flex items-center justify-center rounded-full bg-brand-cocoa px-6 py-3 text-[0.68rem] font-semibold tracking-widest text-white! uppercase whitespace-nowrap transition hover:-translate-y-0.5 hover:bg-brand-clay sm:text-xs sm:tracking-[0.16em]"
             >
               Reserve this service
             </a>

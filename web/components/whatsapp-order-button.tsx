@@ -22,7 +22,7 @@ export function WhatsAppOrderButton({
       aria-label={`Order ${product.name} on WhatsApp`}
       title="Order on WhatsApp"
       className={cn(
-        "inline-flex items-center justify-center gap-2 rounded-full bg-brand-cocoa px-5 py-2.5 text-xs font-semibold tracking-[0.14em] text-white! uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay",
+        "inline-flex items-center justify-center gap-2 rounded-full bg-brand-cocoa px-5 py-2.5 text-[0.68rem] font-semibold tracking-widest text-white! uppercase whitespace-nowrap transition hover:-translate-y-0.5 hover:bg-brand-clay sm:text-xs sm:tracking-[0.14em]",
         className,
       )}
     >

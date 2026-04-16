@@ -101,7 +101,7 @@ export default function ServicesPage() {
                 href={bookingLink}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-full bg-brand-cocoa px-6 py-3 text-xs font-semibold tracking-[0.16em] text-white! uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
+                className="inline-flex items-center justify-center rounded-full bg-brand-cocoa px-6 py-3 text-[0.68rem] font-semibold tracking-widest text-white! uppercase whitespace-nowrap transition hover:-translate-y-0.5 hover:bg-brand-clay sm:text-xs sm:tracking-[0.16em]"
               >
                 Book on WhatsApp
               </a>
@@ -190,7 +190,7 @@ export default function ServicesPage() {
                         href={serviceBookingLink}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-cocoa px-5 py-2.5 text-xs font-semibold tracking-[0.14em] text-white! uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
+                        className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-cocoa px-5 py-2.5 text-[0.68rem] font-semibold tracking-widest text-white! uppercase whitespace-nowrap transition hover:-translate-y-0.5 hover:bg-brand-clay sm:text-xs sm:tracking-[0.14em]"
                       >
                         <FaWhatsapp className="h-3.5 w-3.5" aria-hidden="true" />
                         Order on WhatsApp
@@ -239,7 +239,7 @@ export default function ServicesPage() {
                 href={bookingLink}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-full bg-brand-cocoa px-6 py-3 text-xs font-semibold tracking-[0.16em] text-white! uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
+                className="inline-flex items-center justify-center rounded-full bg-brand-cocoa px-6 py-3 text-[0.68rem] font-semibold tracking-widest text-white! uppercase whitespace-nowrap transition hover:-translate-y-0.5 hover:bg-brand-clay sm:text-xs sm:tracking-[0.16em]"
               >
                 Chat on WhatsApp
               </a>

@@ -419,6 +419,24 @@ export default function Home() {
           </Link>
         </div>
 
+        <div className="mb-4 flex flex-wrap items-center gap-2">
+          <span className="inline-flex items-center gap-2 rounded-full border border-brand-cocoa/16 bg-white/78 px-3 py-1.5 text-[0.62rem] font-semibold tracking-[0.12em] text-brand-cocoa/82 uppercase shadow-[0_10px_24px_-20px_rgba(51,31,26,0.65)]">
+            <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-brand-cocoa/10 text-brand-cocoa/80">
+              <svg viewBox="0 0 24 24" aria-hidden="true" className="h-3.5 w-3.5">
+                <path
+                  d="M4 12h16M4 12l3-3M4 12l3 3M20 12l-3-3M20 12l-3 3"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+            Swipe or drag left/right
+          </span>
+        </div>
+
         <div className="luxury-card h-110 overflow-hidden bg-[#4b5b49] sm:h-140">
           <CircularGallery
             items={galleryItems}

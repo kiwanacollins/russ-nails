@@ -109,7 +109,7 @@ export function QuickBookBar() {
         <div className="md:pl-6">
           <button
             type="submit"
-            className="w-full border border-brand-cocoa/60 bg-surface px-10 py-4 text-xs font-semibold tracking-[0.22em] text-brand-cocoa/70 uppercase transition hover:border-brand-cocoa hover:text-brand-cocoa md:w-auto"
+            className="w-full border border-brand-cocoa/60 bg-surface px-6 py-4 text-[0.68rem] font-semibold tracking-[0.14em] text-brand-cocoa/70 uppercase whitespace-nowrap transition hover:border-brand-cocoa hover:text-brand-cocoa sm:px-10 sm:text-xs sm:tracking-[0.22em] md:w-auto"
           >
             Make an Appointment
           </button>

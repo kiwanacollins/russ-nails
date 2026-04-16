@@ -148,6 +148,46 @@ export function ServicesShowcaseSection({ services }: ServicesShowcaseSectionPro
           </div>
 
           <div className="relative w-full overflow-visible lg:w-[70%] lg:flex-1">
+            <div className="mb-4 flex flex-wrap items-center gap-2 lg:justify-end">
+              <span className="inline-flex items-center gap-2 rounded-full border border-brand-cocoa/16 bg-white/72 px-3 py-1.5 text-[0.62rem] font-semibold tracking-[0.12em] text-brand-cocoa/82 uppercase shadow-[0_10px_24px_-20px_rgba(51,31,26,0.65)]">
+                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-brand-cocoa/10 text-brand-cocoa/80">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" className="h-3.5 w-3.5">
+                    <path
+                      d="M4 12h16M4 12l3-3M4 12l3 3M20 12l-3-3M20 12l-3 3"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+                Swipe left/right
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-full border border-brand-cocoa/16 bg-white/72 px-3 py-1.5 text-[0.62rem] font-semibold tracking-[0.12em] text-brand-cocoa/82 uppercase shadow-[0_10px_24px_-20px_rgba(51,31,26,0.65)]">
+                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-brand-cocoa/10 text-brand-cocoa/80">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" className="h-3.5 w-3.5">
+                    <path
+                      d="M7 4v9a2 2 0 0 0 4 0V9a1 1 0 0 1 2 0v4a3 3 0 0 1-6 0V8"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M15.5 5.5h4M17.5 3.5v4"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+                Tap a card for details
+              </span>
+            </div>
             <div
               ref={sliderRef}
               className="flex w-full snap-x snap-mandatory gap-5 overflow-x-auto pl-0 pr-18 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
@@ -193,7 +233,7 @@ export function ServicesShowcaseSection({ services }: ServicesShowcaseSectionPro
 
                     <Link
                       href={`/services/${service.slug}`}
-                      className="mt-6 inline-flex w-full max-w-64 items-center justify-center border border-white/70 px-4 py-3 text-xs font-semibold tracking-[0.2em] text-white uppercase transition hover:bg-white hover:text-brand-cocoa"
+                      className="mt-6 inline-flex w-full max-w-64 items-center justify-center border border-white/70 px-4 py-3 text-[0.68rem] font-semibold tracking-[0.14em] text-white uppercase whitespace-nowrap transition hover:bg-white hover:text-brand-cocoa sm:text-xs sm:tracking-[0.2em]"
                     >
                       View Details
                     </Link>
