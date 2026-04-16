@@ -195,7 +195,7 @@ export function SiteHeader() {
                         </p>
                         <a
                           href="tel:+256762267569"
-                          className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-brand-cocoa px-4 py-3 text-[0.7rem] font-semibold tracking-[0.12em] !text-white uppercase whitespace-nowrap shadow-[0_14px_32px_-18px_rgba(95,68,64,0.7)] transition hover:-translate-y-0.5 hover:bg-brand-clay sm:text-xs sm:tracking-[0.16em]"
+                          className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-brand-cocoa px-4 py-3 text-[0.7rem] font-semibold tracking-[0.12em] text-white! uppercase whitespace-nowrap shadow-[0_14px_32px_-18px_rgba(95,68,64,0.7)] transition hover:-translate-y-0.5 hover:bg-brand-clay sm:text-xs sm:tracking-[0.16em]"
                         >
                           Call now: +256 762 267 569
                         </a>
@@ -355,7 +355,7 @@ export function SiteHeader() {
                   target="_blank"
                   rel="noreferrer"
                   onClick={closeNavigationOverlays}
-                  className="inline-flex w-full items-center justify-center rounded-full bg-[#b05060] px-5 py-3 text-xs font-bold tracking-[0.16em] !text-white uppercase transition hover:bg-[#9f4354]"
+                  className="inline-flex w-full items-center justify-center rounded-full bg-[#b05060] px-5 py-3 text-xs font-bold tracking-[0.16em] text-white! uppercase transition hover:bg-[#9f4354]"
                 >
                   Book a Visit
                 </a>

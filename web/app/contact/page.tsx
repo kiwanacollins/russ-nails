@@ -54,7 +54,7 @@ export default function ContactPage() {
                 href={whatsappPrimaryLink}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-xl bg-brand-cocoa px-7 py-4 text-xs font-semibold tracking-[0.18em] !text-white uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
+                className="inline-flex items-center justify-center rounded-xl bg-brand-cocoa px-7 py-4 text-xs font-semibold tracking-[0.18em] text-white! uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
               >
                 Book via WhatsApp
               </a>
@@ -230,7 +230,7 @@ export default function ContactPage() {
                   href={whatsappPrimaryLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-cocoa px-5 py-2.5 text-xs font-semibold tracking-[0.14em] !text-white uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-cocoa px-5 py-2.5 text-xs font-semibold tracking-[0.14em] text-white! uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
                 >
                   Confirm on WhatsApp
                   <ArrowRight className="h-3.5 w-3.5" />
@@ -352,7 +352,7 @@ export default function ContactPage() {
                   href={whatsappPrimaryLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-4 inline-flex items-center gap-2 rounded-full bg-brand-cocoa px-5 py-2.5 text-xs font-semibold tracking-[0.14em] !text-white uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
+                  className="mt-4 inline-flex items-center gap-2 rounded-full bg-brand-cocoa px-5 py-2.5 text-xs font-semibold tracking-[0.14em] text-white! uppercase transition hover:-translate-y-0.5 hover:bg-brand-clay"
                 >
                   Send on WhatsApp
                   <ArrowRight className="h-3.5 w-3.5" />
