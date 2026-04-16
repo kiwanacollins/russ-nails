@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   const primaryContactNumber = "256762267569";
   const secondaryContactNumber = "256708420038";
-  const studioMapLink = "https://maps.google.com/?q=Kololo+Kampala";
+  const studioMapLink = "https://maps.app.goo.gl/rUMVkgobb3uBxKnu7";
   const heroImageUrl = "/images/russ-nails-kampala-leopard-print-almond-nails.webp";
 
   const whatsappPrimaryLink = buildWhatsAppLink(
@@ -94,7 +94,7 @@ export default function ContactPage() {
             <div className="mt-10 grid gap-3 sm:grid-cols-3">
               <div className="rounded-[1.5rem] border border-white/35 bg-white/30 px-4 py-4 backdrop-blur-sm">
                 <p className="text-[0.66rem] tracking-[0.18em] text-brand-cocoa/55 uppercase">Studio</p>
-                <p className="mt-2 text-sm leading-6 text-brand-cocoa">Kololo, Kampala, Uganda</p>
+                <p className="mt-2 text-sm leading-6 text-brand-cocoa">Metropole House, Kampala, Uganda</p>
               </div>
               <div className="rounded-[1.5rem] border border-white/35 bg-white/30 px-4 py-4 backdrop-blur-sm">
                 <p className="text-[0.66rem] tracking-[0.18em] text-brand-cocoa/55 uppercase">Hours</p>
@@ -126,7 +126,7 @@ export default function ContactPage() {
                 <div className="relative">
                   <div className="inline-flex items-center gap-2 rounded-full border border-white/45 bg-white/20 px-3 py-1 text-[0.66rem] font-semibold tracking-[0.18em] text-brand-cocoa uppercase shadow-[0_12px_28px_-20px_rgba(35,22,20,0.55)]">
                     <span className="h-2 w-2 rounded-full bg-brand-clay shadow-[0_0_0_4px_rgba(202,139,120,0.18)]" />
-                    Kololo, Kampala
+                    Metropole House, Kampala
                   </div>
                   <p className="mt-4 text-sm leading-6 text-white/95">
                     Appointments welcomed in-studio and by WhatsApp. Private bookings available by request.
@@ -160,7 +160,7 @@ export default function ContactPage() {
                 </span>
               </div>
 
-              <h2 className="mt-3 font-serif text-3xl text-brand-cocoa sm:text-4xl">Visit us in Kololo</h2>
+              <h2 className="mt-3 font-serif text-3xl text-brand-cocoa sm:text-4xl">Visit us at Metropole House</h2>
               <p className="mt-3 max-w-2xl text-sm leading-7 text-muted sm:text-base">
                 We welcome scheduled visits, quick questions, and pre-booking consultations.
               </p>
@@ -171,7 +171,7 @@ export default function ContactPage() {
                     <MapPin className="h-4 w-4 text-brand-clay" />
                     Address
                   </div>
-                  <p className="mt-2 text-sm leading-6 text-brand-cocoa">Kololo, Kampala, Uganda</p>
+                  <p className="mt-2 text-sm leading-6 text-brand-cocoa">Metropole House, Kampala, Uganda</p>
                 </div>
 
                 <div className="rounded-2xl border border-white/75 bg-white/70 p-3.5 shadow-[0_16px_40px_-30px_rgba(95,68,64,0.5)] backdrop-blur-sm">
@@ -249,7 +249,7 @@ export default function ContactPage() {
                 <div className="flex items-center justify-between gap-3 border-b border-brand-cocoa/10 px-4 py-3 sm:px-5">
                   <div>
                     <p className="text-[0.64rem] tracking-[0.18em] text-brand-cocoa/55 uppercase">Studio map</p>
-                    <p className="mt-1 text-sm font-medium text-brand-cocoa">Find us in Kololo, Kampala</p>
+                    <p className="mt-1 text-sm font-medium text-brand-cocoa">Find us at Metropole House, Kampala</p>
                   </div>
                   <a
                     href={studioMapLink}
@@ -263,7 +263,7 @@ export default function ContactPage() {
                 <div className="aspect-16/10 w-full">
                   <iframe
                     title="Russ Nails studio map"
-                    src="https://www.google.com/maps?q=Kololo,+Kampala,+Uganda&output=embed"
+                    src="https://www.google.com/maps?q=Metropole+House,+Kampala,+Uganda&output=embed"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     className="h-full w-full border-0"

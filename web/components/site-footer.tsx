@@ -47,7 +47,7 @@ export function SiteFooter() {
             <div>
               <p className="text-xs font-semibold tracking-[0.25em] text-brand-cocoa/58 uppercase">Contacts</p>
               <div className="mt-6 space-y-6 text-base leading-normal text-brand-cocoa sm:text-lg lg:text-xl">
-                <p>Kololo, Kampala, Uganda</p>
+                <p>Metropole House, Kampala, Uganda</p>
                 <p>Opens at 7:00 AM (Mon - Sat), Sunday by reservation</p>
                 <div>
                   <p className="font-semibold text-brand-cocoa/86">+256 762 267 569</p>
