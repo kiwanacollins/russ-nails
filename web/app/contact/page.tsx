@@ -20,8 +20,7 @@ export default function ContactPage() {
   const primaryContactNumber = "256762267569";
   const secondaryContactNumber = "256708420038";
   const studioMapLink = "https://maps.google.com/?q=Kololo+Kampala";
-  const heroImageUrl =
-    "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1600&q=80";
+  const heroImageUrl = "/images/russ-nails-kampala-leopard-print-almond-nails.webp";
 
   const whatsappPrimaryLink = buildWhatsAppLink(
     process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? primaryContactNumber,

@@ -87,14 +87,12 @@ const blogHighlights = [
   {
     title: "How To Make Gel Nails Last Longer In Kampala",
     excerpt: "Protect your manicure against daily wear with simple aftercare tips our Kampala nail technicians recommend.",
-    image:
-      "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/russ-nails-kampala-red-french-tip-nail-art.webp",
   },
   {
     title: "Bridal Nail Booking Timeline For Kampala Brides",
     excerpt: "Know exactly when to book your trial, final set, and touch-up so your wedding nails stay flawless.",
-    image:
-      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/russ-nails-kampala-hot-pink-ombre-almond-nails.webp",
   },
 ];
 
@@ -195,8 +193,7 @@ export default function Home() {
         <div
           className="relative overflow-hidden rounded-[2.9rem] border border-brand-cocoa/12 bg-[#efe7e2] px-4 py-8 sm:px-8 sm:py-12"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1604654894610-df63bc536371?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmFpbHxlbnwwfHwwfHx8MA%3D%3D')",
+            backgroundImage: "url('/images/russ-nails-kampala-pink-french-heart-nail-design.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -251,8 +248,8 @@ export default function Home() {
           <div className="grid md:grid-cols-2">
             <div className="relative min-h-80 md:min-h-140">
               <Image
-                src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1400&q=80"
-                alt="Elegant woman showing manicure"
+                src="/images/russ-nails-kampala-soft-pink-square-acrylic-nails.webp"
+                alt="Soft pink square acrylic nails with a clean luxury finish"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
@@ -300,8 +297,8 @@ export default function Home() {
           <div className="grid md:grid-cols-2">
             <div className="relative min-h-90 md:min-h-168">
               <Image
-                src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=1600&q=80"
-                alt="Nail technician applying treatment during a manicure"
+                src="/images/russ-nails-kampala-white-glitter-accent-square-nails.webp"
+                alt="White glitter accent square nails photographed at the studio"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"

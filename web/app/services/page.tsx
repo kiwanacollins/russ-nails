@@ -18,41 +18,34 @@ const accentScript = Caveat({
 
 const serviceVisuals: Record<string, { imageUrl: string; alt: string }> = {
   "gel-extensions": {
-    imageUrl:
-      "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1400&q=80",
-    alt: "Gel extension set with soft pink finish",
+    imageUrl: "/images/russ-nails-kampala-hot-pink-ombre-almond-nails.webp",
+    alt: "Hot pink ombre almond gel extension set",
   },
   "gel-overlay": {
-    imageUrl:
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1400&q=80",
-    alt: "Close-up overlay manicure with glossy finish",
+    imageUrl: "/images/russ-nails-kampala-soft-pink-square-acrylic-nails.webp",
+    alt: "Soft pink square overlay manicure with glossy finish",
   },
   "gel-manicure": {
-    imageUrl:
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1400&q=80",
-    alt: "Gel manicure session in progress",
+    imageUrl: "/images/russ-nails-kampala-pink-square-french-tip-nails.webp",
+    alt: "Pink square french tip gel manicure",
   },
   "gel-toe-nails": {
-    imageUrl:
-      "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=1400&q=80",
-    alt: "Gel toe nails with clean polish finish",
+    imageUrl: "/images/russ-nails-kampala-white-polka-dot-french-tips.webp",
+    alt: "White polka-dot french tip gel nails",
   },
   "gel-with-pedicure": {
-    imageUrl:
-      "https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=1400&q=80",
-    alt: "Pedicure and gel treatment setup",
+    imageUrl: "/images/russ-nails-kampala-red-glossy-french-manicure.webp",
+    alt: "Red glossy french manicure after a gel pedicure treatment",
   },
   pedicure: {
-    imageUrl:
-      "https://images.unsplash.com/photo-1619451334792-150fd785ee74?auto=format&fit=crop&w=1400&q=80",
-    alt: "Classic luxury pedicure moment",
+    imageUrl: "/images/russ-nails-kampala-white-glitter-accent-square-nails.webp",
+    alt: "Classic luxury pedicure-inspired clean white set",
   },
 };
 
 const fallbackVisual = {
-  imageUrl:
-    "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1400&q=80",
-  alt: "Luxury nail studio service",
+  imageUrl: "/images/russ-nails-kampala-red-french-tip-nail-art.webp",
+  alt: "Luxury nail studio service result",
 };
 
 const serviceHighlights = [
@@ -80,8 +73,8 @@ export default function ServicesPage() {
         <header className="luxury-card relative overflow-hidden p-8 sm:p-10 lg:p-12" data-aos="fade-up-soft">
           <div className="absolute inset-0">
             <Image
-              src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1800&q=80"
-              alt="Luxury manicure with soft blush tones"
+              src="/images/russ-nails-kampala-leopard-print-almond-nails.webp"
+              alt="Luxury manicure with leopard print almond nails"
               fill
               priority
               sizes="(max-width: 1280px) 100vw, 1200px"

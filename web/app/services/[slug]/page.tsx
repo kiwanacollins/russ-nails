@@ -22,9 +22,8 @@ type ServiceDetailContent = {
 
 const serviceDetailContent: Record<string, ServiceDetailContent> = {
   "gel-extensions": {
-    imageUrl:
-      "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1800&q=80",
-    imageAlt: "Soft pink gel extension manicure",
+    imageUrl: "/images/russ-nails-kampala-hot-pink-ombre-almond-nails.webp",
+    imageAlt: "Hot pink ombre almond gel extension manicure",
     lead:
       "Structured extensions designed for elegant length, balanced shape, and long-wear polish retention.",
     includes: [
@@ -45,9 +44,8 @@ const serviceDetailContent: Record<string, ServiceDetailContent> = {
     ],
   },
   "gel-overlay": {
-    imageUrl:
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1800&q=80",
-    imageAlt: "Close-up gel overlay finish",
+    imageUrl: "/images/russ-nails-kampala-soft-pink-square-acrylic-nails.webp",
+    imageAlt: "Soft pink square gel overlay finish",
     lead:
       "A strengthening gel layer over natural nails to improve resilience while keeping a refined natural profile.",
     includes: [
@@ -68,9 +66,8 @@ const serviceDetailContent: Record<string, ServiceDetailContent> = {
     ],
   },
   "gel-manicure": {
-    imageUrl:
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1800&q=80",
-    imageAlt: "Gel manicure color application",
+    imageUrl: "/images/russ-nails-kampala-pink-square-french-tip-nails.webp",
+    imageAlt: "Pink square french tip gel manicure color application",
     lead:
       "Clean prep and precision gel color application for a polished manicure that keeps its shine through busy weeks.",
     includes: [
@@ -91,9 +88,8 @@ const serviceDetailContent: Record<string, ServiceDetailContent> = {
     ],
   },
   "gel-toe-nails": {
-    imageUrl:
-      "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=1800&q=80",
-    imageAlt: "Gel toe nails in salon setting",
+    imageUrl: "/images/russ-nails-kampala-white-polka-dot-french-tips.webp",
+    imageAlt: "White polka-dot french tip gel nails in salon setting",
     lead:
       "Toe nail prep and gel application focused on neat finish, long wear, and clean detail work.",
     includes: [
@@ -114,9 +110,8 @@ const serviceDetailContent: Record<string, ServiceDetailContent> = {
     ],
   },
   "gel-with-pedicure": {
-    imageUrl:
-      "https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=1800&q=80",
-    imageAlt: "Luxury gel pedicure treatment",
+    imageUrl: "/images/russ-nails-kampala-red-glossy-french-manicure.webp",
+    imageAlt: "Luxury gel pedicure treatment with red glossy french finish",
     lead:
       "A complete pedicure ritual finished with gel polish for extended wear and a consistently polished look.",
     includes: [
@@ -137,9 +132,8 @@ const serviceDetailContent: Record<string, ServiceDetailContent> = {
     ],
   },
   pedicure: {
-    imageUrl:
-      "https://images.unsplash.com/photo-1619451334792-150fd785ee74?auto=format&fit=crop&w=1800&q=80",
-    imageAlt: "Classic pedicure in luxury studio",
+    imageUrl: "/images/russ-nails-kampala-white-glitter-accent-square-nails.webp",
+    imageAlt: "Classic pedicure style in luxury studio",
     lead:
       "A restorative pedicure with careful prep, grooming, and hydration to keep feet neat, comfortable, and refreshed.",
     includes: [
@@ -162,8 +156,7 @@ const serviceDetailContent: Record<string, ServiceDetailContent> = {
 };
 
 const fallbackDetail: ServiceDetailContent = {
-  imageUrl:
-    "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1800&q=80",
+  imageUrl: "/images/russ-nails-kampala-red-french-tip-nail-art.webp",
   imageAlt: "Luxury nail studio service detail",
   lead: "Personalized service built around clean prep, premium care, and long-lasting results.",
   includes: [

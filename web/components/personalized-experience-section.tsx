@@ -48,8 +48,8 @@ export function PersonalizedExperienceSection({
               className="absolute left-[-1%] top-[7%] z-10 h-64 w-[54%] overflow-hidden rounded-[1.9rem] border border-white/40 shadow-[0_26px_60px_-35px_rgba(37,23,20,0.55)] sm:h-88 lg:h-96"
             >
               <Image
-                src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80"
-                alt="Luxury manicure setup"
+                src="/images/russ-nails-kampala-leopard-accent-gold-line-nails.webp"
+                alt="Leopard accent gold-line manicure setup"
                 fill
                 sizes="(max-width: 1024px) 54vw, 24vw"
                 className="object-cover"
@@ -61,8 +61,8 @@ export function PersonalizedExperienceSection({
               className="absolute right-[-1%] top-[7%] z-20 h-64 w-[54%] overflow-hidden rounded-[1.9rem] border border-white/35 shadow-[0_26px_60px_-35px_rgba(37,23,20,0.55)] sm:h-88 lg:h-96"
             >
               <Image
-                src="https://images.unsplash.com/photo-1515688594390-b649af70d282?auto=format&fit=crop&w=900&q=80"
-                alt="Nail mood board"
+                src="/images/russ-nails-kampala-fuchsia-ombre-french-nails-closeup.webp"
+                alt="Fuchsia ombre french nails mood board"
                 fill
                 sizes="(max-width: 1024px) 54vw, 24vw"
                 className="object-cover"

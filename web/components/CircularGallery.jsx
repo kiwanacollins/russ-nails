@@ -336,18 +336,18 @@ class App {
   }
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
-      { image: `https://picsum.photos/seed/1/800/600?grayscale`, text: 'Bridge' },
-      { image: `https://picsum.photos/seed/2/800/600?grayscale`, text: 'Desk Setup' },
-      { image: `https://picsum.photos/seed/3/800/600?grayscale`, text: 'Waterfall' },
-      { image: `https://picsum.photos/seed/4/800/600?grayscale`, text: 'Strawberries' },
-      { image: `https://picsum.photos/seed/5/800/600?grayscale`, text: 'Deep Diving' },
-      { image: `https://picsum.photos/seed/16/800/600?grayscale`, text: 'Train Track' },
-      { image: `https://picsum.photos/seed/17/800/600?grayscale`, text: 'Santorini' },
-      { image: `https://picsum.photos/seed/8/800/600?grayscale`, text: 'Blurry Lights' },
-      { image: `https://picsum.photos/seed/9/800/600?grayscale`, text: 'New York' },
-      { image: `https://picsum.photos/seed/10/800/600?grayscale`, text: 'Good Boy' },
-      { image: `https://picsum.photos/seed/21/800/600?grayscale`, text: 'Coastline' },
-      { image: `https://picsum.photos/seed/12/800/600?grayscale`, text: 'Palm Trees' }
+      { image: '/images/russ-nails-kampala-red-french-tip-nail-art.webp', text: 'Red French Tips' },
+      { image: '/images/russ-nails-kampala-hot-pink-ombre-almond-nails.webp', text: 'Pink Ombre Almond' },
+      { image: '/images/russ-nails-kampala-leopard-accent-gold-line-nails.webp', text: 'Leopard Accent' },
+      { image: '/images/russ-nails-kampala-leopard-print-almond-nails.webp', text: 'Leopard Almond' },
+      { image: '/images/russ-nails-kampala-pink-french-heart-nail-design.webp', text: 'Pink Heart French' },
+      { image: '/images/russ-nails-kampala-pink-square-french-tip-nails.webp', text: 'Pink Square French' },
+      { image: '/images/russ-nails-kampala-red-glossy-french-manicure.webp', text: 'Red Gloss French' },
+      { image: '/images/russ-nails-kampala-soft-pink-square-acrylic-nails.webp', text: 'Soft Pink Acrylic' },
+      { image: '/images/russ-nails-kampala-white-glitter-accent-square-nails.webp', text: 'White Glitter Accent' },
+      { image: '/images/russ-nails-kampala-white-polka-dot-french-tips.webp', text: 'Polka Dot French' },
+      { image: '/images/russ-nails-kampala-fuchsia-ombre-french-nails-closeup.webp', text: 'Fuchsia Ombre' },
+      { image: '/images/russ-nails-kampala-hot-pink-ombre-almond-nails.webp', text: 'Studio Pink Ombre' }
     ];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);

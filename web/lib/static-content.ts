@@ -54,115 +54,101 @@ export const services: Service[] = [
 export const galleryShots: GalleryShot[] = [
   {
     id: "gallery-1",
-    title: "Soft Nude Almond Set",
-    category: "Editorial Set",
-    imageUrl:
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=80",
-    alt: "Luxury nude almond nail set",
+    title: "Red French Tip Nail Art",
+    category: "French",
+    imageUrl: "/images/russ-nails-kampala-red-french-tip-nail-art.webp",
+    alt: "Red french tip nail art by Russ Nails Kampala",
   },
   {
     id: "gallery-2",
-    title: "Chrome Bridal Finish",
-    category: "Bridal",
-    imageUrl:
-      "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=900&q=80",
-    alt: "Chrome bridal manicure",
+    title: "Hot Pink Ombre Almond Set",
+    category: "Editorial Set",
+    imageUrl: "/images/russ-nails-kampala-hot-pink-ombre-almond-nails.webp",
+    alt: "Hot pink ombre almond nail set",
   },
   {
     id: "gallery-3",
-    title: "Rose Quartz Design",
+    title: "Leopard Accent Gold Line Set",
     category: "Nail Art",
-    imageUrl:
-      "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=900&q=80",
-    alt: "Rose quartz nail art",
+    imageUrl: "/images/russ-nails-kampala-leopard-accent-gold-line-nails.webp",
+    alt: "Leopard accent nails with gold line detail",
   },
   {
     id: "gallery-4",
-    title: "Minimal French Sculpt",
+    title: "Pink Square French Tips",
     category: "French",
-    imageUrl:
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80",
-    alt: "Minimal french nails",
+    imageUrl: "/images/russ-nails-kampala-pink-square-french-tip-nails.webp",
+    alt: "Pink square french tip nails",
   },
   {
     id: "gallery-5",
-    title: "Editorial Red Gloss",
+    title: "Glossy Red French Manicure",
     category: "Classic",
-    imageUrl:
-      "https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=900&q=80",
-    alt: "Glossy red manicure",
+    imageUrl: "/images/russ-nails-kampala-red-glossy-french-manicure.webp",
+    alt: "Glossy red french manicure",
   },
   {
     id: "gallery-6",
-    title: "Pearl Bloom Detail",
+    title: "White Glitter Accent Square Set",
     category: "Bespoke",
-    imageUrl:
-      "https://images.unsplash.com/photo-1619451334792-150fd785ee74?auto=format&fit=crop&w=900&q=80",
-    alt: "Pearl bloom manicure design",
+    imageUrl: "/images/russ-nails-kampala-white-glitter-accent-square-nails.webp",
+    alt: "White glitter accent square nail set",
   },
   {
     id: "gallery-7",
-    title: "Velvet Cocoa Gloss",
-    category: "Classic",
-    imageUrl:
-      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80",
-    alt: "Velvet cocoa gloss manicure",
+    title: "Fuchsia Ombre French Closeup",
+    category: "Editorial Set",
+    imageUrl: "/images/russ-nails-kampala-fuchsia-ombre-french-nails-closeup.webp",
+    alt: "Fuchsia ombre french nails close-up",
   },
   {
     id: "gallery-8",
-    title: "Soft Bridal Contour",
+    title: "Soft Pink Square Acrylic Nails",
     category: "Bridal",
-    imageUrl:
-      "https://images.unsplash.com/photo-1515688594390-b649af70d282?auto=format&fit=crop&w=900&q=80",
-    alt: "Soft bridal contour manicure",
+    imageUrl: "/images/russ-nails-kampala-soft-pink-square-acrylic-nails.webp",
+    alt: "Soft pink square acrylic nails",
   },
   {
     id: "gallery-9",
-    title: "Midnight Detail Set",
-    category: "Editorial Set",
-    imageUrl:
-      "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=1600&q=80",
-    alt: "Midnight detail nail set",
+    title: "Leopard Print Almond Nails",
+    category: "Nail Art",
+    imageUrl: "/images/russ-nails-kampala-leopard-print-almond-nails.webp",
+    alt: "Leopard print almond nail design",
   },
   {
     id: "gallery-10",
-    title: "Studio Portrait Nails",
-    category: "Campaign",
-    imageUrl:
-      "https://images.unsplash.com/photo-1690749138086-7422f71dc159?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Beauty portrait with polished nails",
+    title: "White Polka Dot French Tips",
+    category: "Nail Art",
+    imageUrl: "/images/russ-nails-kampala-white-polka-dot-french-tips.webp",
+    alt: "White polka dot french tip nails",
   },
   {
     id: "gallery-11",
-    title: "Refined Shape Finish",
-    category: "Nail Art",
-    imageUrl:
-      "https://images.unsplash.com/photo-1619607146034-5a05296c8f9a?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Refined shape and polish finish",
+    title: "Pink French Heart Nail Design",
+    category: "Bridal",
+    imageUrl: "/images/russ-nails-kampala-pink-french-heart-nail-design.webp",
+    alt: "Pink french heart nail design",
   },
   {
     id: "gallery-12",
-    title: "Signature Care Moment",
-    category: "Aftercare",
-    imageUrl:
-      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=80",
-    alt: "Signature nail aftercare moment",
+    title: "Classic Red French Finish",
+    category: "Classic",
+    imageUrl: "/images/russ-nails-kampala-red-french-tip-nail-art.webp",
+    alt: "Classic red french finish",
   },
   {
     id: "gallery-13",
-    title: "Gentle Removal Ritual",
-    category: "Aftercare",
-    imageUrl:
-      "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=900&q=80",
-    alt: "Gentle gel removal setup",
+    title: "Bold Pink Ombre Finish",
+    category: "Editorial Set",
+    imageUrl: "/images/russ-nails-kampala-hot-pink-ombre-almond-nails.webp",
+    alt: "Bold pink ombre nail finish",
   },
   {
     id: "gallery-14",
-    title: "Luxury Hand Care Pairing",
+    title: "Signature Soft Pink Finish",
     category: "Studio Care",
-    imageUrl:
-      "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=900&q=80",
-    alt: "Luxury hand care with polished nails",
+    imageUrl: "/images/russ-nails-kampala-soft-pink-square-acrylic-nails.webp",
+    alt: "Signature soft pink manicure finish",
   },
 ];
 
@@ -196,8 +182,8 @@ export const fallbackProducts: Product[] = [
     featured: true,
     images: [
       {
-        url: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=80",
-        alt: "Cuticle oil bottle",
+        url: "/images/product1.png",
+        alt: "Russ Nails signature cuticle oil bottle",
       },
     ],
   },
@@ -212,8 +198,8 @@ export const fallbackProducts: Product[] = [
     featured: false,
     images: [
       {
-        url: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80",
-        alt: "Top coat bottle",
+        url: "/images/product2.png",
+        alt: "Russ Nails high gloss top coat bottle",
       },
     ],
   },
@@ -228,8 +214,8 @@ export const fallbackProducts: Product[] = [
     featured: true,
     images: [
       {
-        url: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=900&q=80",
-        alt: "Gel removal kit",
+        url: "/images/product3.png",
+        alt: "Russ Nails gentle gel removal kit",
       },
     ],
   },
@@ -244,8 +230,8 @@ export const fallbackProducts: Product[] = [
     featured: false,
     images: [
       {
-        url: "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=900&q=80",
-        alt: "Luxury hand cream",
+        url: "/images/product4.png",
+        alt: "Russ Nails luxury hand cream",
       },
     ],
   },

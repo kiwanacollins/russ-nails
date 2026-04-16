@@ -11,40 +11,33 @@ type ServicesShowcaseSectionProps = {
 
 const serviceVisuals: Record<string, { imageUrl: string; alt: string }> = {
   "gel-extensions": {
-    imageUrl:
-      "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1200&q=80",
-    alt: "Gel extension treatment",
+    imageUrl: "/images/russ-nails-kampala-hot-pink-ombre-almond-nails.webp",
+    alt: "Gel extension treatment with hot pink ombre almond nails",
   },
   "gel-overlay": {
-    imageUrl:
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=80",
-    alt: "Gel overlay manicure close-up",
+    imageUrl: "/images/russ-nails-kampala-soft-pink-square-acrylic-nails.webp",
+    alt: "Gel overlay manicure close-up with soft pink square nails",
   },
   "gel-manicure": {
-    imageUrl:
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80",
-    alt: "Gel manicure styling",
+    imageUrl: "/images/russ-nails-kampala-pink-square-french-tip-nails.webp",
+    alt: "Gel manicure styling with pink square french tips",
   },
   "gel-toe-nails": {
-    imageUrl:
-      "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=1200&q=80",
-    alt: "Gel toe nails treatment",
+    imageUrl: "/images/russ-nails-kampala-white-polka-dot-french-tips.webp",
+    alt: "Gel nails treatment with white polka-dot french tips",
   },
   "gel-with-pedicure": {
-    imageUrl:
-      "https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=1200&q=80",
-    alt: "Gel with pedicure session",
+    imageUrl: "/images/russ-nails-kampala-red-glossy-french-manicure.webp",
+    alt: "Gel with pedicure session and red glossy french finish",
   },
   "pedicure": {
-    imageUrl:
-      "https://images.unsplash.com/photo-1619451334792-150fd785ee74?auto=format&fit=crop&w=1200&q=80",
-    alt: "Classic pedicure treatment",
+    imageUrl: "/images/russ-nails-kampala-white-glitter-accent-square-nails.webp",
+    alt: "Classic pedicure-inspired white glitter accent square nails",
   },
 };
 
 const fallbackVisual = {
-  imageUrl:
-    "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=80",
+  imageUrl: "/images/russ-nails-kampala-red-french-tip-nail-art.webp",
   alt: "Luxury nail service",
 };
 
